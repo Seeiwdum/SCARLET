@@ -2,7 +2,8 @@ using System.Collections;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
-public class PlayerHealth : MonoBehaviour
+// 1. นำ IDamageable มาสวมให้ PlayerHealth
+public class PlayerHealth : MonoBehaviour, IDamageable 
 {
     [Header("Health Settings")]
     [SerializeField] private int maxHealth = 5;
@@ -23,7 +24,6 @@ public class PlayerHealth : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private PlayerController2D playerController;
 
-    // Public Properties สำหรับให้ระบบ UI หรือระบบอื่นมาดึงค่าไปใช้
     public int CurrentHealth => currentHealth;
     public int MaxHealth => maxHealth;
     public bool IsInvincible => isInvincible;
@@ -33,30 +33,28 @@ public class PlayerHealth : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
-        if (spriteRenderer == null)
-        {
-            spriteRenderer = GetComponentInChildren<SpriteRenderer>();
-        }
+        if (spriteRenderer == null) spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         playerController = GetComponent<PlayerController2D>();
-
     }
 
     private void Start()
     {
         currentHealth = maxHealth;
+        // 2. ส่งค่าเริ่มต้นไปให้ระบบ UI
+        GameEvents.OnPlayerHealthChanged?.Invoke(currentHealth, maxHealth);
     }
-    /// <summary>
-    /// ฟังก์ชันรับความเสียหาย (Take Damage)
-    /// </summary>
-    /// <param name="damage">จำนวนความเสียหาย</param>
-    /// <param name="damageSourcePosition">ตำแหน่งของจุดที่สร้างดาเมจ (เช่น ตำแหน่งศัตรู/กับดัก)</param>
+
+    // 3. ฟังก์ชันนี้ตรงตามสัญญาของ IDamageable เป๊ะ
     public void TakeDamage(int damage, Vector3 damageSourcePosition)
     {
-        // หากอยู่อินวินซิเบิล (อมตะ) หรือกำลังโดน Knockback จะไม่ได้รับดาเมจซ้ำ
         if (isInvincible || currentHealth <= 0) return;
 
         currentHealth -= damage;
         currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
+
+        // 4. ประกาศผ่านวิทยุสื่อสารว่า "ผู้เล่นโดนตีนะ เลือดเหลือเท่านี้!"
+        GameEvents.OnPlayerHealthChanged?.Invoke(currentHealth, maxHealth);
+        CameraController2D.Instance?.TriggerShake(0.2f, 0.4f);
 
         Debug.Log($"<color=red>[PLAYER HIT] เลือดเหลือ: {currentHealth}/{maxHealth}</color>");
 
@@ -66,91 +64,71 @@ public class PlayerHealth : MonoBehaviour
         }
         else
         {
-            // คำนวณทิศทาง Knockback (ดันออกจากจุดกำเนิดดาเมจ)
             float knockbackDirection = transform.position.x < damageSourcePosition.x ? -1f : 1f;
             StartCoroutine(ApplyKnockbackRoutine(knockbackDirection));
             StartCoroutine(InvincibilityRoutine());
         }
-        CameraController2D.Instance?.TriggerShake(0.2f, 0.4f);
     }
 
-    /// <summary>
-    /// ฟังก์ชันฮีลเลือด
-    /// </summary>
     public void Heal(int amount)
     {
         if (currentHealth <= 0) return;
 
         currentHealth += amount;
         currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
+        
+        // ส่งอัปเดตตอนฮีลด้วย
+        GameEvents.OnPlayerHealthChanged?.Invoke(currentHealth, maxHealth);
         Debug.Log($"<color=green>[HEAL] ฟื้นฟูเลือด: +{amount} (ปัจจุบัน: {currentHealth}/{maxHealth})</color>");
     }
 
     private IEnumerator ApplyKnockbackRoutine(float directionX)
     {
         isKnockedBack = true;
+        if (playerController != null) playerController.enabled = false;
 
-        // หากมี PlayerController ให้ปิดการควบคุมของผู้เล่นชั่วคราว
-        if (playerController != null)
-        {
-            playerController.enabled = false;
-        }
-
-        // รีเซ็ตความเร็วเดิมก่อนใส่แรง Knockback
-        rb.linearVelocity = Vector2.zero;
+        rb.linearVelocity = Vector2.zero; // Unity 6.3 syntax ถูกต้องแล้ว
         Vector2 force = new Vector2(directionX * knockbackForce.x, knockbackForce.y);
         rb.AddForce(force, ForceMode2D.Impulse);
 
         yield return new WaitForSeconds(knockbackDuration);
 
-        // คืนการควบคุมให้ผู้เล่น
-        if (playerController != null)
-        {
-            playerController.enabled = true;
-        }
-
+        if (playerController != null) playerController.enabled = true;
         isKnockedBack = false;
     }
 
     private IEnumerator InvincibilityRoutine()
     {
         isInvincible = true;
-
         float timer = 0f;
-        Color originalColor = spriteRenderer != null ? spriteRenderer.color : Color.white;
-
-        // กะพริบ Sprite ขณะอยู่ใน i-frames
+        
         while (timer < invincibilityDuration)
         {
             if (spriteRenderer != null)
             {
                 Color c = spriteRenderer.color;
-                c.a = (c.a == 1f) ? 0.3f : 1f; // สลับความโปร่งใส
+                c.a = (c.a == 1f) ? 0.3f : 1f; 
                 spriteRenderer.color = c;
             }
-
             yield return new WaitForSeconds(flashInterval);
             timer += flashInterval;
         }
 
-        // คืนค่า Sprite เป็นปกติเมื่อหมด i-frames
         if (spriteRenderer != null)
         {
             Color c = spriteRenderer.color;
             c.a = 1f;
             spriteRenderer.color = c;
         }
-
         isInvincible = false;
     }
 
     private void Die()
     {
         Debug.Log("<color=black><b>[GAME OVER] ตัวละครเสียชีวิต!</b></color>");
-
-        // ปิดการควบคุม
         if (playerController != null) playerController.enabled = false;
-
-        // สามารถใส่ Event / Animation การตาย หรือสั่ง Reload Scene ได้ที่นี่
+        
+        // 5. ส่ง Event เพื่อบอก GameManager ให้ขึ้นจอ Game Over
+        GameEvents.OnPlayerDied?.Invoke();
     }
 }
