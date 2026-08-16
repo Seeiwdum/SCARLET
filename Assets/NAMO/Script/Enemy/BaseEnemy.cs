@@ -2,7 +2,7 @@ using System.Collections;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D), typeof(Collider2D))]
-public class BaseEnemy : MonoBehaviour
+public class BaseEnemy : MonoBehaviour, IDamageable
 {
     public enum EnemyState { Patrol, Chase, Stunned }
 
