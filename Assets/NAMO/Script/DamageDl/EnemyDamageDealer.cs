@@ -8,11 +8,8 @@ public class EnemyDamageDealer : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            PlayerHealth playerHealth = collision.gameObject.GetComponent<PlayerHealth>();
-            if (playerHealth != null)
-            {
-                playerHealth.TakeDamage(damageAmount, transform.position);
-            }
+            IDamageable damageable = collision.gameObject.GetComponent<IDamageable>();
+            damageable?.TakeDamage(damageAmount, transform.position);
         }
     }
 
@@ -20,11 +17,8 @@ public class EnemyDamageDealer : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            PlayerHealth playerHealth = other.GetComponent<PlayerHealth>();
-            if (playerHealth != null)
-            {
-                playerHealth.TakeDamage(damageAmount, transform.position);
-            }
+            IDamageable damageable = other.GetComponent<IDamageable>();
+            damageable?.TakeDamage(damageAmount, transform.position);
         }
     }
 }
