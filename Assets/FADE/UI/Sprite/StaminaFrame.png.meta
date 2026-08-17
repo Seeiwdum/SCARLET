@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: 1de2c4393315a9340a721e1fed842d75
+guid: d8293f4da3f358f4b80bffcc4d4fa79e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7761794303880344006
-    second: Rectangle 20_0
+      213: -2283475552243996991
+    second: StaminaFrame_0
+  - first:
+      213: 8158957033815435268
+    second: StaminaFrame_1
+  - first:
+      213: -7429510789842956750
+    second: StaminaFrame_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +106,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Rectangle 20_0
+      name: StaminaFrame_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 385
-        height: 60
+        x: 24
+        y: 113
+        width: 2046
+        height: 503
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +121,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6c1307eabce67bb60800000000000000
-      internalID: 7761794303880344006
+      spriteID: 1c6253765177f40e0800000000000000
+      internalID: -2283475552243996991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StaminaFrame_1
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 139
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4086e3ab1307a3170800000000000000
+      internalID: 8158957033815435268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StaminaFrame_2
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 132
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23e8a74cc4315e890800000000000000
+      internalID: -7429510789842956750
       vertices: []
       indices: 
       edges: []
@@ -135,7 +185,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Rectangle 20_0: 7761794303880344006
+      StaminaFrame_0: -2283475552243996991
+      StaminaFrame_1: 8158957033815435268
+      StaminaFrame_2: -7429510789842956750
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
