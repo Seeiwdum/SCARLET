@@ -30,6 +30,11 @@ public class ThrownSword : MonoBehaviour, IDamageable
     [SerializeField] private Collider2D solidCollider;    // Platform แข็ง
     [SerializeField] private GameObject warpVFXPrefab;
 
+    [Header("Prompt Bobbing (ลอยขึ้น-ลง)")]
+    [SerializeField] private float bobbingSpeed = 6f;
+    [SerializeField] private float bobbingAmount = 0.15f;
+    private Vector3 promptInitialLocalPos;
+
     private Vector3 startPos;
     private Vector2 flyDirection;
     private SwordThrowType throwType;
@@ -67,15 +72,11 @@ public class ThrownSword : MonoBehaviour, IDamageable
 
     private void Update()
     {
-        if (!isStopped)
-        {
-            transform.position += (Vector3)(flyDirection * flightSpeed * Time.deltaTime);
-
-            if (Vector3.Distance(startPos, transform.position) >= maxTravelDistance)
-            {
-                StopSword();
-            }
-        }
+        if (isStopped && promptSprite != null)
+    {
+        float newY = promptInitialLocalPos.y + Mathf.Sin(Time.time * bobbingSpeed) * bobbingAmount;
+        promptSprite.transform.localPosition = new Vector3(promptInitialLocalPos.x, newY, promptInitialLocalPos.z);
+    }
         else
         {
             HandleInteractionInput();
@@ -110,7 +111,7 @@ public class ThrownSword : MonoBehaviour, IDamageable
     private void HandleInteractionInput()
     {
         // ผู้เล่นกดปุ่ม J เพื่อสั่ง Warp หรือเด้งตัว
-        if (Input.GetKeyDown(KeyCode.J) || Input.GetMouseButtonDown(1))
+        if (Input.GetMouseButtonDown(1) || Input.GetMouseButtonDown(1))
         {
             if (throwType == SwordThrowType.DownwardVault)
             {

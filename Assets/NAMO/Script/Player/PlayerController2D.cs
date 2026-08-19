@@ -24,6 +24,12 @@ public class PlayerController2D : MonoBehaviour
     [SerializeField] private float dashDuration = 0.2f;
     [SerializeField] private float dashCooldown = 0.6f;
 
+    [Header("Juice: Squash & Stretch Settings")]
+    [SerializeField] private Transform spriteTransform; // Drag ส่วน Sprite ของ Player มาใส่
+    [SerializeField] private Vector3 jumpStretch = new Vector3(0.75f, 1.25f, 1f);
+    [SerializeField] private Vector3 landSquash = new Vector3(1.25f, 0.75f, 1f);
+    [SerializeField] private float squashRecoverySpeed = 10f;
+
     [Header("Ground Check")]
     [SerializeField] private Transform groundCheck;
     [SerializeField] private Vector2 groundCheckSize = new Vector2(0.6f, 0.1f);
@@ -32,27 +38,31 @@ public class PlayerController2D : MonoBehaviour
     // Components & Private Variables
     private Rigidbody2D rb;
     private Collider2D col;
+    private SpriteRenderer spriteRenderer;
     private float horizontalInput;
     private bool isFacingRight = true;
     private bool isGrounded;
+    private bool wasGroundedLastFrame;
     private int jumpsRemaining;
     private float coyoteTimer;
     private float jumpBufferTimer;
     private bool isDashing;
     private bool canDash = true;
-    
-    // 🔥 ตัวแปรเก็บสถานะ Overheat ที่เพิ่มกลับมา
-    private bool isOverheated = false; 
+    private bool isOverheated = false;
+    private Coroutine squashCoroutine;
 
-    // Public Properties สำหรับส่งให้ระบบอื่นเช็ก
     public bool IsFacingRight => isFacingRight;
     public bool IsGroundedCheck => isGrounded;
     public bool IsDashing => isDashing;
+    public bool IsOverheated => isOverheated;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         col = GetComponent<Collider2D>();
+        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+        if (spriteTransform == null && spriteRenderer != null) spriteTransform = spriteRenderer.transform;
+        
         moveSpeed = baseMoveSpeed;
         rb.gravityScale = gravityScale;
     }
@@ -62,22 +72,12 @@ public class PlayerController2D : MonoBehaviour
         if (isDashing) return;
 
         horizontalInput = Input.GetAxisRaw("Horizontal");
-
         CheckGrounded();
 
-        if (Input.GetButtonDown("Jump"))
-        {
-            jumpBufferTimer = jumpBufferTime;
-        }
-        else
-        {
-            jumpBufferTimer -= Time.deltaTime;
-        }
+        if (Input.GetButtonDown("Jump")) jumpBufferTimer = jumpBufferTime;
+        else jumpBufferTimer -= Time.deltaTime;
 
-        if (jumpBufferTimer > 0f)
-        {
-            TryJump();
-        }
+        if (jumpBufferTimer > 0f) TryJump();
 
         if (Input.GetButtonUp("Jump") && GetVelocityY() > 0f)
         {
@@ -90,14 +90,8 @@ public class PlayerController2D : MonoBehaviour
             StartCoroutine(DashRoutine());
         }
 
-        if (horizontalInput > 0 && !isFacingRight)
-        {
-            Flip();
-        }
-        else if (horizontalInput < 0 && isFacingRight)
-        {
-            Flip();
-        }
+        if (horizontalInput > 0 && !isFacingRight) Flip();
+        else if (horizontalInput < 0 && isFacingRight) Flip();
 
         ApplyGravityAdjustments();
     }
@@ -112,6 +106,7 @@ public class PlayerController2D : MonoBehaviour
 
     private void CheckGrounded()
     {
+        wasGroundedLastFrame = isGrounded;
         if (groundCheck != null)
         {
             isGrounded = Physics2D.OverlapBox(groundCheck.position, groundCheckSize, 0f, groundLayer);
@@ -121,6 +116,12 @@ public class PlayerController2D : MonoBehaviour
         {
             coyoteTimer = coyoteTime;
             jumpsRemaining = maxJumps;
+
+            // จังหวะเท้าแตะพื้น (Landing Squash!)
+            if (!wasGroundedLastFrame && GetVelocityY() <= 0.1f)
+            {
+                TriggerSquashAndStretch(landSquash);
+            }
         }
         else
         {
@@ -142,15 +143,10 @@ public class PlayerController2D : MonoBehaviour
 
     private void TryJump()
     {
-        if (coyoteTimer > 0f)
+        if (coyoteTimer > 0f || jumpsRemaining > 0)
         {
             ExecuteJump();
             coyoteTimer = 0f;
-            jumpBufferTimer = 0f;
-        }
-        else if (jumpsRemaining > 0)
-        {
-            ExecuteJump();
             jumpBufferTimer = 0f;
         }
     }
@@ -159,6 +155,7 @@ public class PlayerController2D : MonoBehaviour
     {
         SetVelocity(GetVelocityX(), jumpForce);
         jumpsRemaining--;
+        TriggerSquashAndStretch(jumpStretch); // ยืดตัวตอนกระโดด
     }
 
     private IEnumerator DashRoutine()
@@ -171,6 +168,10 @@ public class PlayerController2D : MonoBehaviour
 
         float dashDir = isFacingRight ? 1f : -1f;
         SetVelocity(dashDir * dashSpeed, 0f);
+
+        // เสก Ghost Trail เงาตามตัว
+        VisualEffectsManager.Instance?.StartGhostTrail(spriteRenderer, dashDuration);
+        TriggerSquashAndStretch(new Vector3(1.3f, 0.7f, 1f));
 
         yield return new WaitForSeconds(dashDuration);
 
@@ -197,13 +198,39 @@ public class PlayerController2D : MonoBehaviour
 
     #endregion
 
+    #region Juice: Squash & Stretch
+
+    public void TriggerSquashAndStretch(Vector3 targetScale)
+    {
+        if (spriteTransform == null) return;
+        if (squashCoroutine != null) StopCoroutine(squashCoroutine);
+        squashCoroutine = StartCoroutine(SquashRoutine(targetScale));
+    }
+
+    private IEnumerator SquashRoutine(Vector3 squashedScale)
+    {
+        spriteTransform.localScale = squashedScale;
+        Vector3 originalScale = Vector3.one;
+
+        while (Vector3.Distance(spriteTransform.localScale, originalScale) > 0.01f)
+        {
+            spriteTransform.localScale = Vector3.Lerp(spriteTransform.localScale, originalScale, Time.deltaTime * squashRecoverySpeed);
+            yield return null;
+        }
+
+        spriteTransform.localScale = originalScale;
+    }
+
+    #endregion
+
     #region Sword Vault & Warp Mechanics
 
     public void ExecuteSwordVaultBounce(float bounceForce)
     {
         SetVelocity(GetVelocityX(), bounceForce);
         ResetJumps();
-        Debug.Log("<color=orange>[SWORD VAULT] กระโดดเด้งตัวจากดาบสำเร็จ!</color>");
+        TriggerSquashAndStretch(new Vector3(0.6f, 1.4f, 1f)); // ยืดตัวพุ่งสูง
+        GameEvents.OnSwordVaultPerformed?.Invoke();
     }
 
     public void ExecuteFireWarp(Vector3 targetPosition)
@@ -211,69 +238,48 @@ public class PlayerController2D : MonoBehaviour
         transform.position = targetPosition;
         SetVelocity(0f, 0f);
         ResetJumps();
-        Debug.Log("<color=cyan>[FIRE WARP] วาร์ปไปหาดาบสำเร็จ!</color>");
+        VisualEffectsManager.Instance?.StartGhostTrail(spriteRenderer, 0.15f);
+        TriggerSquashAndStretch(new Vector3(1.2f, 1.2f, 1f));
+        GameEvents.OnSwordVaultPerformed?.Invoke();
     }
 
-    public void ResetJumps()
-    {
-        jumpsRemaining = maxJumps;
-    }
+    public void ResetJumps() => jumpsRemaining = maxJumps;
 
     public void Bounce(float bounceForce)
     {
         SetVelocity(GetVelocityX(), bounceForce);
         jumpsRemaining = maxJumps - 1;
+        TriggerSquashAndStretch(jumpStretch);
     }
 
     #endregion
 
-    #region Pure Flame & Buff Support
+    #region Buffs & Overheat
 
-    // 🔥 เพิ่มเมธอดนี้กลับมาให้ PlayerCombatSystem เรียกใช้
-    public bool IsOverheated => isOverheated;
+    public void ApplySpeedBuff(float multiplier) => moveSpeed = baseMoveSpeed * multiplier;
+    public void RemoveSpeedBuff() => moveSpeed = baseMoveSpeed;
 
-    public void ApplySpeedBuff(float multiplier)
+    public void ApplyOverheatPenalty(float duration, float slowMultiplier)
     {
-        moveSpeed = baseMoveSpeed * multiplier;
+        StartCoroutine(OverheatRoutine(duration, slowMultiplier));
     }
 
-    public void RemoveSpeedBuff()
+    private IEnumerator OverheatRoutine(float duration, float slowMultiplier)
     {
-        moveSpeed = baseMoveSpeed;
-    }
-
-    public void ApplyOverheatPenalty(float slowMultiplier, float duration)
-    {
-        StartCoroutine(OverheatRoutine(slowMultiplier, duration));
-    }
-
-    private IEnumerator OverheatRoutine(float slowMultiplier, float duration)
-    {
-        isOverheated = true; // เปิดสถานะ Overheat
+        isOverheated = true;
         moveSpeed = baseMoveSpeed * slowMultiplier;
-        
         yield return new WaitForSeconds(duration);
-        
         moveSpeed = baseMoveSpeed;
-        isOverheated = false; // ปิดสถานะ Overheat
+        isOverheated = false;
     }
 
     #endregion
 
-    #region Helper Methods
+    #region Velocity Helpers
 
     private float GetVelocityX() => rb.velocity.x;
     private float GetVelocityY() => rb.velocity.y;
     private void SetVelocity(float x, float y) => rb.velocity = new Vector2(x, y);
 
     #endregion
-
-    private void OnDrawGizmosSelected()
-    {
-        if (groundCheck != null)
-        {
-            Gizmos.color = Color.green;
-            Gizmos.DrawWireCube(groundCheck.position, groundCheckSize);
-        }
-    }
 }
