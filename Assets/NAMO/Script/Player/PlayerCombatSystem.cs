@@ -15,10 +15,13 @@ public class PlayerCombat : MonoBehaviour
     [SerializeField] private int baseAttackDamage = 1;
     [SerializeField] private float attackRate = 3.5f;
 
-    [Header("3-Hit Combo Settings")]
+    [Header("3-Hit Combo & Sheathe Settings")]
     [SerializeField] private float comboResetTime = 0.8f;
+    [Tooltip("ระยะเวลาหลังจากหยุดโจมตี ก่อนที่ดาบจะสลายไป")]
+    [SerializeField] private float sheatheDelay = 1.5f; 
     private int currentComboStep = 1;
     private float lastAttackTime = 0f;
+    private bool isWeaponDrawn = false;
 
     [Header("Pure Flame Gauge Settings")]
     [SerializeField] private float maxFlameEnergy = 100f;
@@ -34,10 +37,11 @@ public class PlayerCombat : MonoBehaviour
     [SerializeField] private float flameModeDamageMultiplier = 1.8f;
     [SerializeField] private float moveSpeedBuffMultiplier = 1.35f;
 
+    // Components
     private bool isFlameActive = false;
     private float nextAttackTime = 0f;
     private PlayerController2D playerController;
-    private Rigidbody2D rb;
+    private Animator anim;
 
     public float CurrentFlameEnergy => currentFlameEnergy;
     public float MaxFlameEnergy => maxFlameEnergy;
@@ -47,11 +51,88 @@ public class PlayerCombat : MonoBehaviour
     private void Awake()
     {
         playerController = GetComponent<PlayerController2D>();
-        rb = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
+        if (anim == null) anim = GetComponentInChildren<Animator>();
         DisableAllHitboxes();
     }
 
     private void Update()
+    {
+        HandlePureFlameMode();
+        HandleComboAndSheatheTimer();
+        HandleAttackInput();
+    }
+
+    private void HandleAttackInput()
+    {
+        if (Time.time >= nextAttackTime)
+        {
+            if (Input.GetButtonDown("Fire1") || Input.GetKeyDown(KeyCode.Z))
+            {
+                PerformAttack();
+                nextAttackTime = Time.time + (1f / attackRate);
+            }
+        }
+    }
+
+    private void PerformAttack()
+    {
+        float verticalInput = Input.GetAxisRaw("Vertical");
+        DisableAllHitboxes();
+        lastAttackTime = Time.time;
+
+        // สั่งชักดาบ / เล่นสถานะถือดาบ
+        if (!isWeaponDrawn)
+        {
+            isWeaponDrawn = true;
+            if (anim != null) anim.SetBool("IsWeaponDrawn", true);
+        }
+
+        if (verticalInput > 0.1f && upHitbox != null)
+        {
+            if (anim != null) anim.SetTrigger("AttackUp");
+            StartCoroutine(ActivateHitboxRoutine(upHitbox));
+        }
+        else if (verticalInput < -0.1f && !playerController.IsGrounded() && downHitbox != null)
+        {
+            if (anim != null) anim.SetTrigger("AttackDown");
+            StartCoroutine(ActivateHitboxRoutine(downHitbox));
+        }
+        else if (sideHitbox != null)
+        {
+            if (anim != null)
+            {
+                anim.SetInteger("ComboStep", currentComboStep);
+                anim.SetTrigger("AttackSide");
+            }
+            StartCoroutine(ActivateHitboxRoutine(sideHitbox));
+            currentComboStep = (currentComboStep % 3) + 1;
+        }
+    }
+
+    private void HandleComboAndSheatheTimer()
+    {
+        // รีเซ็ตสเต็ปคอมโบ
+        if (Time.time - lastAttackTime > comboResetTime && currentComboStep != 1)
+        {
+            currentComboStep = 1;
+            if (anim != null) anim.SetInteger("ComboStep", 1);
+        }
+
+        // เช็กเวลาเพื่อสลายดาบ
+        if (isWeaponDrawn && (Time.time - lastAttackTime > sheatheDelay))
+        {
+            isWeaponDrawn = false;
+            if (anim != null)
+            {
+                anim.SetBool("IsWeaponDrawn", false);
+                anim.SetTrigger("SheatheSword"); // เล่นแอนิเมชันดาบสลาย
+            }
+            Debug.Log("<color=grey>[SWORD] ดาบสลายกลับไปแล้ว...</color>");
+        }
+    }
+
+    private void HandlePureFlameMode()
     {
         if (Input.GetKeyDown(pureFlameKey))
         {
@@ -88,44 +169,25 @@ public class PlayerCombat : MonoBehaviour
                 currentFlameEnergy = Mathf.Clamp(currentFlameEnergy, 0f, maxFlameEnergy);
             }
         }
-
-        if (Time.time - lastAttackTime > comboResetTime && currentComboStep != 1)
-        {
-            currentComboStep = 1;
-            Debug.Log("<color=grey>[COMBO RESET] หมดเวลาคอมโบ!</color>");
-        }
-
-        if (Time.time >= nextAttackTime)
-        {
-            if (Input.GetButtonDown("Fire1") || Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.J))
-            {
-                PerformAttack();
-                nextAttackTime = Time.time + (1f / attackRate);
-            }
-        }
-
     }
 
     private void ActivatePureFlameMode()
     {
         isFlameActive = true;
         playerController.ApplySpeedBuff(moveSpeedBuffMultiplier);
-        Debug.Log($"<color=orange>[PURE FLAME] 💥 เปิดโหมดไฟ! ({currentFlameEnergy:F1}/{maxFlameEnergy})</color>");
+        if (anim != null) anim.SetBool("IsPureFlame", true);
+        Debug.Log($"<color=orange>[PURE FLAME] 💥 เปิดโหมดไฟ!</color>");
     }
 
     private void DeactivatePureFlameMode(bool isOverheated)
     {
         isFlameActive = false;
         playerController.RemoveSpeedBuff();
+        if (anim != null) anim.SetBool("IsPureFlame", false);
 
         if (isOverheated)
         {
-            Debug.Log("<color=red>[OVERHEAT!] ⚠️ เกจหมด ติด Overheat 2 วินาที!</color>");
             playerController.ApplyOverheatPenalty(2f, 0.5f);
-        }
-        else
-        {
-            Debug.Log("<color=cyan>[PURE FLAME] ❄️ ปิดโหมดไฟ</color>");
         }
     }
 
@@ -134,41 +196,9 @@ public class PlayerCombat : MonoBehaviour
         if (currentFlameEnergy >= skillEnergyCost)
         {
             currentFlameEnergy -= skillEnergyCost;
-            Debug.Log($"<color=red>[SKILL] 💥 Flame Burst! (เหลือ: {currentFlameEnergy:F1}/{maxFlameEnergy})</color>");
-
-            if (flameBurstHitbox != null)
-            {
-                StartCoroutine(ActivateHitboxRoutine(flameBurstHitbox));
-            }
-        }
-        else
-        {
-            Debug.Log($"<color=yellow>[SKILL FAILED] ❌ เกจไม่พอ!</color>");
-        }
-        CameraController2D.Instance?.TriggerShake(0.25f, 0.5f);
-    }
-
-    private void PerformAttack()
-    {
-        float verticalInput = Input.GetAxisRaw("Vertical");
-        DisableAllHitboxes();
-        lastAttackTime = Time.time;
-
-        if (verticalInput > 0.1f && upHitbox != null)
-        {
-            Debug.Log($"<color=yellow>[ATTACK] 👆 UP (DMG: {CurrentDamage})</color>");
-            StartCoroutine(ActivateHitboxRoutine(upHitbox));
-        }
-        else if (verticalInput < -0.1f && !playerController.IsGrounded() && downHitbox != null)
-        {
-            Debug.Log($"<color=yellow>[ATTACK] 👇 DOWN (DMG: {CurrentDamage})</color>");
-            StartCoroutine(ActivateHitboxRoutine(downHitbox));
-        }
-        else if (sideHitbox != null)
-        {
-            Debug.Log($"<color=red>[ATTACK] ⚔️ SIDE (Combo: {currentComboStep}/3 | DMG: {CurrentDamage})</color>");
-            StartCoroutine(ActivateHitboxRoutine(sideHitbox));
-            currentComboStep = (currentComboStep % 3) + 1;
+            if (anim != null) anim.SetTrigger("FlameBurst");
+            if (flameBurstHitbox != null) StartCoroutine(ActivateHitboxRoutine(flameBurstHitbox));
+            CameraController2D.Instance?.TriggerShake(0.25f, 0.5f);
         }
     }
 
@@ -190,6 +220,5 @@ public class PlayerCombat : MonoBehaviour
     public void AddFlameEnergyOnHit()
     {
         currentFlameEnergy = Mathf.Clamp(currentFlameEnergy + energyGainOnHit, 0f, maxFlameEnergy);
-        Debug.Log($"<color=orange>[HIT RECOVER] +{energyGainOnHit} Energy ({currentFlameEnergy:F1}/{maxFlameEnergy})</color>");
     }
 }
