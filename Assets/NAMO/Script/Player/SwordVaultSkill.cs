@@ -41,20 +41,17 @@ public class SwordVaultSkill : MonoBehaviour
 
         Vector3 spawnPos = throwPoint != null ? throwPoint.position : transform.position;
 
-        // 1. ปาลงล่าง: ต้องกด S ค้าง + ไม่อยู่บนพื้น (กลางอากาศเท่านั้น)
         if (Input.GetKey(downwardModifierKey) && !player.IsGrounded())
         {
             SpawnSword(Vector2.down, ThrownSword.SwordThrowType.DownwardVault, spawnPos);
             nextThrowTime = Time.time + throwCooldown;
         }
-        // 2. ปาขึ้นบน: กด Space ค้าง + กด Key ดาบ
         else if (Input.GetKey(upwardModifierKey))
         {
             Vector2 upDir = player.IsFacingRight ? new Vector2(0.5f, 1f) : new Vector2(-0.5f, 1f);
             SpawnSword(upDir, ThrownSword.SwordThrowType.UpwardWarp, spawnPos);
             nextThrowTime = Time.time + throwCooldown;
         }
-        // 3. ปาไปข้างหน้าตามปกติ
         else
         {
             Vector2 forwardDir = player.IsFacingRight ? Vector2.right : Vector2.left;
@@ -71,6 +68,16 @@ public class SwordVaultSkill : MonoBehaviour
         if (swordScript != null)
         {
             swordScript.Initialize(direction, type, player);
+            
+            // ไม่ให้ชนกับ Collider ของตัวผู้เล่นทันทีที่ปล่อย
+            if (player.PlayerCollider != null)
+            {
+                Collider2D[] swordCols = swordObj.GetComponentsInChildren<Collider2D>();
+                foreach (var c in swordCols)
+                {
+                    Physics2D.IgnoreCollision(c, player.PlayerCollider, true);
+                }
+            }
         }
     }
 }
