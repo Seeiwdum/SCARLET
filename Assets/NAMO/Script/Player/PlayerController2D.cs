@@ -74,6 +74,15 @@ public class PlayerController2D : MonoBehaviour
 
     private void Update()
     {
+        if (GetComponentInChildren<Animator>() != null) 
+        {
+            Animator a = GetComponentInChildren<Animator>();
+            a.SetFloat("MoveSpeed", Mathf.Clamp01(Mathf.Abs(GetVelocityX()) / baseMoveSpeed));
+            a.SetFloat("VerticalVelocity", GetVelocityY());
+            a.SetBool("IsGrounded", isGrounded);
+            a.SetBool("IsDashing", isDashing);
+        }
+        
         if (isDashing || isKnockedBack) return;
 
         horizontalInput = Input.GetAxisRaw("Horizontal");
