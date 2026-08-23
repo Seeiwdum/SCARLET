@@ -45,11 +45,11 @@ public class BaseEnemy : MonoBehaviour, IDamageable
     {
         currentHealth = maxHealth;
         
-        // ค้นหา Player ใน Scene อัตโนมัติด้วย Tag "Player"
-        GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
-        if (playerObj != null)
+        // ค้นหา PlayerController2D ใน Scene แทนการใช้ Tag ที่มีโอกาสสะกดผิดและทำงานช้า
+        PlayerController2D player = FindFirstObjectByType<PlayerController2D>();
+        if (player != null)
         {
-            playerTransform = playerObj.transform;
+            playerTransform = player.transform;
         }
     }
 

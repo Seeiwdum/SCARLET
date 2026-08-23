@@ -51,12 +51,15 @@ public class PlayerController2D : MonoBehaviour
     private bool isDashing;
     private bool canDash = true;
     private bool isOverheated = false;
+    private bool isKnockedBack = false;
     private Coroutine squashCoroutine;
 
     public bool IsFacingRight => isFacingRight;
     public bool IsGroundedCheck => isGrounded;
     public bool IsDashing => isDashing;
     public bool IsOverheated => isOverheated;
+
+    public void SetKnockbackState(bool state) => isKnockedBack = state;
 
     private void Awake()
     {
@@ -71,7 +74,7 @@ public class PlayerController2D : MonoBehaviour
 
     private void Update()
     {
-        if (isDashing) return;
+        if (isDashing || isKnockedBack) return;
 
         horizontalInput = Input.GetAxisRaw("Horizontal");
         CheckGrounded();
@@ -100,7 +103,7 @@ public class PlayerController2D : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (isDashing) return;
+        if (isDashing || isKnockedBack) return;
         ApplyMovement();
     }
 
@@ -292,9 +295,9 @@ public class PlayerController2D : MonoBehaviour
 
     #region Velocity Helpers
 
-    private float GetVelocityX() => rb.velocity.x;
-    private float GetVelocityY() => rb.velocity.y;
-    private void SetVelocity(float x, float y) => rb.velocity = new Vector2(x, y);
+    private float GetVelocityX() => rb.linearVelocity.x;
+    private float GetVelocityY() => rb.linearVelocity.y;
+    private void SetVelocity(float x, float y) => rb.linearVelocity = new Vector2(x, y);
 
     #endregion
 }

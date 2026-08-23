@@ -85,7 +85,10 @@ public class PlayerHealth : MonoBehaviour, IDamageable
     private IEnumerator ApplyKnockbackRoutine(float directionX)
     {
         isKnockedBack = true;
-        if (playerController != null) playerController.enabled = false;
+        
+        // เราจะไม่ปิด playerController.enabled แบบดื้อๆ เพราะมันจะไปปิด Input & Cooldown timers ทุกอย่าง!
+        // ใช้ DisableControl แบบเฉพาะเจาะจง หรือถ้าไม่มี ให้พึ่งพา Velocity Override แทน
+        if (playerController != null) playerController.SetKnockbackState(true);
 
         rb.linearVelocity = Vector2.zero; // Unity 6.3 syntax ถูกต้องแล้ว
         Vector2 force = new Vector2(directionX * knockbackForce.x, knockbackForce.y);
@@ -93,7 +96,7 @@ public class PlayerHealth : MonoBehaviour, IDamageable
 
         yield return new WaitForSeconds(knockbackDuration);
 
-        if (playerController != null) playerController.enabled = true;
+        if (playerController != null) playerController.SetKnockbackState(false);
         isKnockedBack = false;
     }
 

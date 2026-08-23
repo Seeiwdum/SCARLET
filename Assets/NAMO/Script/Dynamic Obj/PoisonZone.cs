@@ -19,6 +19,7 @@ public class PoisonZone : MonoBehaviour
     {
         // ถ้าสิ่งที่เข้ามา มีความสามารถในการรับดาเมจ (IDamageable)
         IDamageable target = other.GetComponent<IDamageable>();
+        
         if (target != null && !targetsInZone.Contains(target))
         {
             targetsInZone.Add(target);
@@ -57,6 +58,17 @@ public class PoisonZone : MonoBehaviour
             // วนทำดาเมจถอยหลัง (กัน Error เวลามีตัวละครตายและถูกเตะออกจาก List กลางทาง)
             for (int i = targetsInZone.Count - 1; i >= 0; i--)
             {
+                // ตรวจสอบว่าเป้าหมายนี้คือ Player และใส่ฮู้ดอยู่หรือไม่
+                if (targetsInZone[i] is MonoBehaviour mb)
+                {
+                    PlayerHood playerHood = mb.GetComponent<PlayerHood>();
+                    if (playerHood != null && playerHood.IsProtectedFromPoison())
+                    {
+                        // สวมฮู้ดอยู่ ไม่ได้รับดาเมจจากหมอกพิษในรอบนี้
+                        continue;
+                    }
+                }
+
                 // บังคับทำดาเมจใส่ (ทิศทาง = จากจุดศูนย์กลางหมอก)
                 targetsInZone[i].TakeDamage(damagePerTick, transform.position);
             }

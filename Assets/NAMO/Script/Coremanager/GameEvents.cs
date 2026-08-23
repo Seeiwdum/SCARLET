@@ -17,6 +17,9 @@ public static class GameEvents
     
     public static Action OnPlayerDied;
 
+    // ส่งค่าบูลีนแจ้งเตือนว่าผู้เล่นกำลังสวมหรือถอดฮู้ดอยู่ (true = สวม, false = ถอด)
+    public static Action<bool> OnHoodToggled;
+
     // ==========================================
     // [ Combat Events ] สัญญาณเกี่ยวกับการต่อสู้
     // ==========================================
