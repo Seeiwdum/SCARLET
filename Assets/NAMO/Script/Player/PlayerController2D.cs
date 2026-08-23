@@ -74,6 +74,11 @@ public class PlayerController2D : MonoBehaviour
 
     private void Update()
     {
+        // [FIXED] Commented this out because if the Animator 'AnimTest' doesn't have these exact parameters 
+        // ("MoveSpeed", "VerticalVelocity", etc.) created in the Animator window, Unity will throw an error 
+        // every single frame. When an error is thrown here, the rest of the Update() method stops running, 
+        // which means horizontalInput is never read, and the player can't move!
+        /*
         if (GetComponentInChildren<Animator>() != null) 
         {
             Animator a = GetComponentInChildren<Animator>();
@@ -82,6 +87,7 @@ public class PlayerController2D : MonoBehaviour
             a.SetBool("IsGrounded", isGrounded);
             a.SetBool("IsDashing", isDashing);
         }
+        */
         
         if (isDashing || isKnockedBack) return;
 
