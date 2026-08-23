@@ -38,6 +38,8 @@ public class PlayerController2D : MonoBehaviour
     public Collider2D PlayerCollider => col; // 🔥 เพิ่มบรรทัดนี้เข้ามา
 
     // Components & Private Variables
+
+    private Animator anim;
     private Rigidbody2D rb;
     private Collider2D col;
     private SpriteRenderer spriteRenderer;
@@ -66,6 +68,7 @@ public class PlayerController2D : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         col = GetComponent<Collider2D>();
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+        anim = GetComponentInChildren<Animator>(); // ค้นหา Animator จาก Capsule
         if (spriteTransform == null && spriteRenderer != null) spriteTransform = spriteRenderer.transform;
         
         moveSpeed = baseMoveSpeed;
@@ -74,21 +77,6 @@ public class PlayerController2D : MonoBehaviour
 
     private void Update()
     {
-        // [FIXED] Commented this out because if the Animator 'AnimTest' doesn't have these exact parameters 
-        // ("MoveSpeed", "VerticalVelocity", etc.) created in the Animator window, Unity will throw an error 
-        // every single frame. When an error is thrown here, the rest of the Update() method stops running, 
-        // which means horizontalInput is never read, and the player can't move!
-        /*
-        if (GetComponentInChildren<Animator>() != null) 
-        {
-            Animator a = GetComponentInChildren<Animator>();
-            a.SetFloat("MoveSpeed", Mathf.Clamp01(Mathf.Abs(GetVelocityX()) / baseMoveSpeed));
-            a.SetFloat("VerticalVelocity", GetVelocityY());
-            a.SetBool("IsGrounded", isGrounded);
-            a.SetBool("IsDashing", isDashing);
-        }
-        */
-        
         if (isDashing || isKnockedBack) return;
 
         horizontalInput = Input.GetAxisRaw("Horizontal");
@@ -114,12 +102,26 @@ public class PlayerController2D : MonoBehaviour
         else if (horizontalInput < 0 && isFacingRight) Flip();
 
         ApplyGravityAdjustments();
+
+        // 2. ส่งค่าเข้า Animator ทุกเฟรม (แก้บั๊ก Airborne ค้างและเดินไม่ได้)
+        UpdateAnimationParameters();
     }
 
     private void FixedUpdate()
     {
         if (isDashing || isKnockedBack) return;
         ApplyMovement();
+    }
+
+    private void UpdateAnimationParameters()
+    {
+        if (anim == null) return;
+
+        float normalizedSpeed = Mathf.Clamp01(Mathf.Abs(GetVelocityX()) / baseMoveSpeed);
+        anim.SetFloat("MoveSpeed", normalizedSpeed);
+        anim.SetFloat("VerticalVelocity", GetVelocityY());
+        anim.SetBool("IsGrounded", isGrounded);
+        anim.SetBool("IsDashing", isDashing);
     }
 
     #region Movement & Physics
