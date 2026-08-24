@@ -9,40 +9,44 @@ public class ThrownSword : MonoBehaviour, IDamageable
     [SerializeField] private float flightSpeed = 22f;
     [SerializeField] private float maxTravelDistance = 6.5f;
 
+    [Header("Floating & Juice Settings")]
+    [SerializeField] private float bobbingSpeed = 6f;
+    [SerializeField] private float bobbingAmount = 0.12f;
+    [SerializeField] private float flashDuration = 0.08f;
+
+    [Header("Warp Slash Settings")]
+    [SerializeField] private float slashRadius = 2.2f;
+    [SerializeField] private int slashDamage = 2;
+    [SerializeField] private LayerMask enemyLayer;
+
+    [Header("Perch Settings (ยืนบนมีด)")]
+    [SerializeField] private Vector3 perchOffset = new Vector3(0f, 1.1f, 0f);
+
     [Header("Timers")]
-    [Tooltip("ระยะเวลารอให้กด Warp กลางอากาศ (ปาขึ้น/หน้า)")]
-    [SerializeField] private float warpWindowDuration = 2.0f;
-
-    [Tooltip("ระยะเวลาที่ยืนพักบนดาบได้ก่อนดาบสลาย (ปาลงล่าง)")]
-    [SerializeField] private float platformStandDuration = 1.8f;
-
-    [Header("Vault Settings")]
-    [Tooltip("แรงเด้งขึ้นฟ้าเมื่อกด Interact หรือฟันใส่ดาบ")]
+    [SerializeField] private float warpWindowDuration = 2.5f;
+    [SerializeField] private float platformStandDuration = 2.0f;
     [SerializeField] private float vaultBounceForce = 18f;
 
-    [Header("Dynamic Prompt (Fade-in & ขยายนูน)")]
-    [Tooltip("SpriteRenderer ของปุ่มกด (เช่น ปุ่ม J) ลอยอยู่เหนือดาบ")]
+    [Header("Dynamic Prompt")]
     [SerializeField] private SpriteRenderer promptSprite;
     [SerializeField] private Vector3 promptTargetScale = new Vector3(1f, 1f, 1f);
     [SerializeField] private float promptAnimSpeed = 10f;
 
-    [Header("Prompt Bobbing (ลอยขึ้น-ลงอย่างนุ่มนวล)")]
-    [SerializeField] private float bobbingSpeed = 6f;
-    [SerializeField] private float bobbingAmount = 0.15f;
-
-    [Header("Colliders & VFX")]
-    [SerializeField] private Collider2D triggerCollider;  // Trigger เช็กชน/สัมผัส
-    [SerializeField] private Collider2D solidCollider;    // Platform แข็งสำหรับยืนพัก
+    [Header("Components & VFX")]
+    [SerializeField] private SpriteRenderer swordRenderer;
+    [SerializeField] private Collider2D solidCollider;
     [SerializeField] private GameObject warpVFXPrefab;
+    [SerializeField] private LineRenderer flameTether;
 
     private Vector3 startPos;
     private Vector2 flyDirection;
     private SwordThrowType throwType;
     private PlayerController2D playerRef;
     private bool isStopped = false;
-    private bool isPlayerTouching = false;
-    private Coroutine promptCoroutine;
+    private bool isPlayerPerched = false;
     private Vector3 promptInitialLocalPos;
+    private Vector3 baseStoppedPos;
+    private Color originalSwordColor;
 
     public void Initialize(Vector2 direction, SwordThrowType type, PlayerController2D player)
     {
@@ -51,24 +55,32 @@ public class ThrownSword : MonoBehaviour, IDamageable
         playerRef = player;
         startPos = transform.position;
 
+        if (swordRenderer == null) swordRenderer = GetComponent<SpriteRenderer>();
+        if (swordRenderer != null) originalSwordColor = swordRenderer.color;
+
         if (solidCollider != null) solidCollider.enabled = false;
 
-        // ซ่อน Prompt ไว้ก่อนตอนเริ่มปา
         if (promptSprite != null)
         {
             promptInitialLocalPos = promptSprite.transform.localPosition;
             SetPromptAlpha(0f);
             promptSprite.transform.localScale = Vector3.zero;
-            promptSprite.transform.rotation = Quaternion.identity;
         }
 
-        // หมุนตัวดาบตามทิศทางการปา
         float angle = Mathf.Atan2(flyDirection.y, flyDirection.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(0, 0, angle);
+
+        if (flameTether != null)
+        {
+            flameTether.positionCount = 2;
+            flameTether.enabled = true;
+        }
     }
 
     private void Update()
     {
+        UpdateFlameTether();
+
         if (!isStopped)
         {
             transform.position += (Vector3)(flyDirection * flightSpeed * Time.deltaTime);
@@ -80,8 +92,17 @@ public class ThrownSword : MonoBehaviour, IDamageable
         }
         else
         {
+            HandleFloatingMotion();
             HandleInteractionInput();
-            HandlePromptFloating();
+        }
+    }
+
+    private void UpdateFlameTether()
+    {
+        if (flameTether != null && playerRef != null)
+        {
+            flameTether.SetPosition(0, playerRef.transform.position + new Vector3(0, 0.5f, 0));
+            flameTether.SetPosition(1, transform.position);
         }
     }
 
@@ -89,13 +110,15 @@ public class ThrownSword : MonoBehaviour, IDamageable
     {
         if (isStopped) return;
         isStopped = true;
+        baseStoppedPos = transform.position;
 
-        // เริ่มแอนิเมชัน Fade-in และขยายปุ่มขึ้นมา
+        StartCoroutine(FlashWhiteRoutine());
         AnimatePrompt(true);
 
         if (throwType == SwordThrowType.DownwardVault)
         {
             if (solidCollider != null) solidCollider.enabled = true;
+            SnapPlayerToPerch();
             StartCoroutine(PlatformTimeoutRoutine());
         }
         else
@@ -104,35 +127,47 @@ public class ThrownSword : MonoBehaviour, IDamageable
         }
     }
 
+    private void HandleFloatingMotion()
+    {
+        if (throwType == SwordThrowType.DownwardVault) return;
+
+        float offset = Mathf.Sin(Time.time * bobbingSpeed) * bobbingAmount;
+        transform.position = baseStoppedPos + new Vector3(0f, offset, 0f);
+
+        if (promptSprite != null)
+        {
+            promptSprite.transform.rotation = Quaternion.identity;
+        }
+    }
+
     private void HandleInteractionInput()
     {
-        // ปุ่มปาดาบ/Interact (J หรือคลิกขวา)
         if (Input.GetKeyDown(KeyCode.J) || Input.GetMouseButtonDown(1))
         {
             if (throwType == SwordThrowType.DownwardVault)
             {
-                if (isPlayerTouching) ExecuteVault();
+                ExecuteVault();
             }
             else
             {
-                ExecuteWarp();
+                bool isAttackHeld = Input.GetKey(KeyCode.Z) || Input.GetMouseButton(0);
+                ExecuteWarp(isAttackHeld);
             }
         }
     }
 
-    private void HandlePromptFloating()
+    private void SnapPlayerToPerch()
     {
-        if (promptSprite == null) return;
-
-        // ล็อกไม่ให้ Prompt เอียงตามมุมดาบ
-        promptSprite.transform.rotation = Quaternion.identity;
-
-        // คำนวณการลอยขึ้น-ลงแบบ Sine Wave
-        float newY = promptInitialLocalPos.y + (Mathf.Sin(Time.time * bobbingSpeed) * bobbingAmount);
-        promptSprite.transform.localPosition = new Vector3(promptInitialLocalPos.x, newY, promptInitialLocalPos.z);
+        if (playerRef != null)
+        {
+            isPlayerPerched = true;
+            playerRef.transform.position = transform.position + perchOffset;
+            playerRef.ResetJumps();
+            playerRef.SetKnockbackState(false);
+        }
     }
 
-    private void ExecuteWarp()
+    private void ExecuteWarp(bool isWarpSlash)
     {
         StopAllCoroutines();
         SpawnVFX();
@@ -140,9 +175,25 @@ public class ThrownSword : MonoBehaviour, IDamageable
         if (playerRef != null)
         {
             playerRef.ExecuteFireWarp(transform.position);
+
+            if (isWarpSlash)
+            {
+                PerformWarpSlash();
+            }
         }
 
-        Destroy(gameObject);
+        CleanupAndDestroy();
+    }
+
+    private void PerformWarpSlash()
+    {
+        Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, slashRadius, enemyLayer);
+        foreach (var hit in hits)
+        {
+            IDamageable target = hit.GetComponent<IDamageable>();
+            target?.TakeDamage(slashDamage, transform.position);
+        }
+        GameEvents.OnEnemyHit?.Invoke();
     }
 
     private void ExecuteVault()
@@ -155,24 +206,35 @@ public class ThrownSword : MonoBehaviour, IDamageable
             playerRef.ExecuteSwordVaultBounce(vaultBounceForce);
         }
 
+        CleanupAndDestroy();
+    }
+
+    private IEnumerator FlashWhiteRoutine()
+    {
+        if (swordRenderer != null)
+        {
+            swordRenderer.color = Color.white;
+            yield return new WaitForSeconds(flashDuration);
+            swordRenderer.color = originalSwordColor;
+        }
+    }
+
+    private void CleanupAndDestroy()
+    {
+        if (flameTether != null) flameTether.enabled = false;
         Destroy(gameObject);
     }
 
     private void SpawnVFX()
     {
-        if (warpVFXPrefab != null)
-        {
-            Instantiate(warpVFXPrefab, transform.position, Quaternion.identity);
-        }
+        if (warpVFXPrefab != null) Instantiate(warpVFXPrefab, transform.position, Quaternion.identity);
     }
 
     #region Dynamic Prompt Animation
-
     private void AnimatePrompt(bool show)
     {
         if (promptSprite == null) return;
-        if (promptCoroutine != null) StopCoroutine(promptCoroutine);
-        promptCoroutine = StartCoroutine(PromptRoutine(show));
+        StartCoroutine(PromptRoutine(show));
     }
 
     private IEnumerator PromptRoutine(bool show)
@@ -200,7 +262,6 @@ public class ThrownSword : MonoBehaviour, IDamageable
             promptSprite.color = c;
         }
     }
-
     #endregion
 
     private IEnumerator WarpWindowTimeoutRoutine()
@@ -208,7 +269,7 @@ public class ThrownSword : MonoBehaviour, IDamageable
         yield return new WaitForSeconds(warpWindowDuration);
         AnimatePrompt(false);
         yield return new WaitForSeconds(0.2f);
-        Destroy(gameObject);
+        CleanupAndDestroy();
     }
 
     private IEnumerator PlatformTimeoutRoutine()
@@ -216,32 +277,17 @@ public class ThrownSword : MonoBehaviour, IDamageable
         yield return new WaitForSeconds(platformStandDuration);
         AnimatePrompt(false);
         yield return new WaitForSeconds(0.2f);
-        Destroy(gameObject);
+        CleanupAndDestroy();
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            isPlayerTouching = true;
-            if (throwType == SwordThrowType.DownwardVault && !isStopped)
-            {
-                StopSword();
-            }
-        }
-    }
-
-    private void OnTriggerExit2D(Collider2D other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            isPlayerTouching = false;
-        }
-    }
-
-    // รองรับ Polymorphism: หากใช้การโจมตีฟันใส่ดาบ จะสั่งเด้งตัว Vault
     public void TakeDamage(int damage, Vector3 sourcePosition)
     {
         ExecuteVault();
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, slashRadius);
     }
 }
