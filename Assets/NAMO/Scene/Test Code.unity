@@ -2674,8 +2674,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.0014486313, y: -0.030790687}
-  m_Size: {x: 1.8252659, y: 3.3324873}
+  m_Offset: {x: 0.0014486313, y: 0.009221554}
+  m_Size: {x: 1.8252659, y: 3.2524629}
   m_Direction: 0
 --- !u!212 &1606002951
 SpriteRenderer:
@@ -2838,7 +2838,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: df68cc87b22ec1d42b70d457fe92c1b7, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 1
+  m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_AnimatePhysics: 0
