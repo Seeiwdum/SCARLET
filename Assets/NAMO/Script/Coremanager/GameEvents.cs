@@ -31,4 +31,14 @@ public static class GameEvents
     // ==========================================
     // เรียกเมื่อวาร์ปไปหาดาบ หรือ เหยียบดาบเด้งตัวสำเร็จ
     public static Action OnSwordVaultPerformed; 
+
+    // ==========================================
+    // [ Quest & Dialogue Events ] สัญญาณเควสต์และบทสนทนา
+    // ==========================================
+    // ส่งค่า (หัวใจเพลิงที่เก็บได้, หัวใจเพลิงทั้งหมด) เพื่อให้อัปเดต UI และประภาคาร
+    public static System.Action<int, int> OnFlameHeartCollected;
+    
+    // ส่งสัญญาณเมื่อเริ่มและจบบทสนทนา (เพื่อให้ PlayerController หยุดเดินชั่วคราว)
+    public static System.Action OnDialogueStarted;
+    public static System.Action OnDialogueEnded;
 }
