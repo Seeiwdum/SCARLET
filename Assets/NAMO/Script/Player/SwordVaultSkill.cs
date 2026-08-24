@@ -13,7 +13,7 @@ public class SwordVaultSkill : MonoBehaviour
     [SerializeField] private KeyCode downwardModifierKey = KeyCode.S;
 
     [Header("Skill Cooldown")]
-    [SerializeField] private float throwCooldown = 1.0f;
+    [SerializeField] private float throwCooldown = 0.8f;
     private float nextThrowTime = 0f;
 
     private PlayerController2D player;
@@ -33,17 +33,14 @@ public class SwordVaultSkill : MonoBehaviour
 
     private void HandleThrowInput()
     {
-        if (swordPrefab == null)
-        {
-            Debug.LogWarning("[SwordVaultSkill] ยังไม่ได้ลาก swordPrefab มาใส่ใน Inspector!");
-            return;
-        }
+        if (swordPrefab == null) return;
 
         Vector3 spawnPos = throwPoint != null ? throwPoint.position : transform.position;
 
         if (Input.GetKey(downwardModifierKey) && !player.IsGrounded())
         {
-            SpawnSword(Vector2.down, ThrownSword.SwordThrowType.DownwardVault, spawnPos);
+            // ปักมีดลงใต้เท้าพร้อมเสกตัวมีด
+            SpawnSword(Vector2.down, ThrownSword.SwordThrowType.DownwardVault, player.transform.position + Vector3.down * 0.8f);
             nextThrowTime = Time.time + throwCooldown;
         }
         else if (Input.GetKey(upwardModifierKey))
@@ -69,7 +66,6 @@ public class SwordVaultSkill : MonoBehaviour
         {
             swordScript.Initialize(direction, type, player);
             
-            // ไม่ให้ชนกับ Collider ของตัวผู้เล่นทันทีที่ปล่อย
             if (player.PlayerCollider != null)
             {
                 Collider2D[] swordCols = swordObj.GetComponentsInChildren<Collider2D>();
