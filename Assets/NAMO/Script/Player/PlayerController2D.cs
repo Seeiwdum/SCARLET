@@ -37,6 +37,8 @@ public class PlayerController2D : MonoBehaviour
 
     public Collider2D PlayerCollider => col; // 🔥 เพิ่มบรรทัดนี้เข้ามา
 
+    private bool isInDialogue = false;
+
     // Components & Private Variables
 
     private Animator anim;
@@ -111,6 +113,29 @@ public class PlayerController2D : MonoBehaviour
     {
         if (isDashing || isKnockedBack) return;
         ApplyMovement();
+    }
+
+    private void OnEnable()
+    {
+        GameEvents.OnDialogueStarted += LockMovementForDialogue;
+        GameEvents.OnDialogueEnded += UnlockMovementForDialogue;
+    }
+
+    private void OnDisable()
+    {
+        GameEvents.OnDialogueStarted -= LockMovementForDialogue;
+        GameEvents.OnDialogueEnded -= UnlockMovementForDialogue;
+    }
+
+    private void LockMovementForDialogue()
+    {
+        isInDialogue = true;
+        SetVelocity(0f, GetVelocityY());
+    }
+
+    private void UnlockMovementForDialogue()
+    {
+        isInDialogue = false;
     }
 
     private void UpdateAnimationParameters()
