@@ -270,10 +270,17 @@ public class PlayerController2D : MonoBehaviour
 
     public void ExecuteFireWarp(Vector3 targetPosition)
     {
+        Vector3 startPosition = transform.position;
+
+        // เสกเงาร่างไฟเรียงตามแนวเส้นทางวาร์ป 4 จุด
+        if (spriteRenderer != null && VisualEffectsManager.Instance != null)
+        {
+            VisualEffectsManager.Instance.CreateWarpGhostTrail(spriteRenderer, startPosition, targetPosition, 4);
+        }
+
         transform.position = targetPosition;
         SetVelocity(0f, 0f);
         ResetJumps();
-        VisualEffectsManager.Instance?.StartGhostTrail(spriteRenderer, 0.15f);
         TriggerSquashAndStretch(new Vector3(1.2f, 1.2f, 1f));
         GameEvents.OnSwordVaultPerformed?.Invoke();
     }

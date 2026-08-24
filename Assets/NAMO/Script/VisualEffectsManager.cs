@@ -104,4 +104,31 @@ public class VisualEffectsManager : MonoBehaviour
         }
         Destroy(sr.gameObject);
     }
+
+    /// <summary>
+    /// เสกเงาร่างไฟเรียงตามแนวเส้นทางวาร์ปจากจุดเริ่มต้นไปยังจุดเป้าหมาย
+    /// </summary>
+    public void CreateWarpGhostTrail(SpriteRenderer sourceRenderer, Vector3 startPos, Vector3 targetPos, int ghostCount = 4)
+    {
+        if (sourceRenderer == null || ghostPrefab == null) return;
+
+        for (int i = 0; i < ghostCount; i++)
+        {
+            float t = (float)i / (ghostCount - 1);
+            Vector3 spawnPos = Vector3.Lerp(startPos, targetPos, t);
+
+            GameObject ghost = new GameObject("WarpGhostTrail");
+            ghost.transform.position = spawnPos;
+            ghost.transform.rotation = sourceRenderer.transform.rotation;
+            ghost.transform.localScale = sourceRenderer.transform.lossyScale;
+
+            SpriteRenderer sr = ghost.AddComponent<SpriteRenderer>();
+            sr.sprite = sourceRenderer.sprite;
+            sr.color = ghostColor;
+            sr.flipX = sourceRenderer.flipX;
+            sr.sortingOrder = sourceRenderer.sortingOrder - 1;
+
+            StartCoroutine(FadeAndDestroyGhost(sr, 0.2f + (t * 0.1f)));
+        }
+    }
 }

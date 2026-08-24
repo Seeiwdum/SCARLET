@@ -8,6 +8,7 @@ public class ThrownSword : MonoBehaviour, IDamageable
     [Header("Movement Settings")]
     [SerializeField] private float flightSpeed = 22f;
     [SerializeField] private float maxTravelDistance = 6.5f;
+    [SerializeField] private LayerMask collisionLayers; // เลือก Layer พื้นและกำแพง (เช่น Ground, Wall, Obstacle)
 
     [Header("Floating & Juice Settings")]
     [SerializeField] private float bobbingSpeed = 6f;
@@ -83,7 +84,18 @@ public class ThrownSword : MonoBehaviour, IDamageable
 
         if (!isStopped)
         {
-            transform.position += (Vector3)(flyDirection * flightSpeed * Time.deltaTime);
+            float moveStep = flightSpeed * Time.deltaTime;
+
+            // ตรวจจับการชนพื้น/กำแพงล่วงหน้าก่อนเคลื่อนที่จริง เพื่อป้องกันการพุ่งทะลุ
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, flyDirection, moveStep + 0.1f, collisionLayers);
+            if (hit.collider != null)
+            {
+                transform.position = hit.point;
+                StopSword();
+                return;
+            }
+
+            transform.position += (Vector3)(flyDirection * moveStep);
 
             if (Vector3.Distance(startPos, transform.position) >= maxTravelDistance)
             {
@@ -129,6 +141,7 @@ public class ThrownSword : MonoBehaviour, IDamageable
 
     private void HandleFloatingMotion()
     {
+        // ท่าปักพื้นไม่ต้องลอยขึ้นลง เพื่อให้ตำแหน่งยืนบนมีดมั่นคง
         if (throwType == SwordThrowType.DownwardVault) return;
 
         float offset = Mathf.Sin(Time.time * bobbingSpeed) * bobbingAmount;
@@ -278,6 +291,15 @@ public class ThrownSword : MonoBehaviour, IDamageable
         AnimatePrompt(false);
         yield return new WaitForSeconds(0.2f);
         CleanupAndDestroy();
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        // ตรวจจับเมื่อชนเข้ากับ Layer พื้น/กำแพง
+        if (((1 << other.gameObject.layer) & collisionLayers) != 0)
+        {
+            StopSword();
+        }
     }
 
     public void TakeDamage(int damage, Vector3 sourcePosition)
