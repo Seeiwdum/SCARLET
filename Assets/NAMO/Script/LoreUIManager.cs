@@ -48,6 +48,8 @@ public class LoreUIManager : MonoBehaviour
 
     private void OpenLore(LoreData data)
     {
+        Debug.Log("3. ฝั่ง UI ได้รับสัญญาณแล้ว! กำลังวาดหน้าจอ!");
+        
         if (isReading) return;
         isReading = true;
 
