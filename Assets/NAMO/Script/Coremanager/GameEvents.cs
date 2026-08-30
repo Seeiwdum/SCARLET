@@ -7,6 +7,12 @@ using UnityEngine;
 public static class GameEvents
 {
     // ==========================================
+    // [ Lore System ] สัญญาณระบบบันทึกโบราณ
+    // ==========================================
+    public static System.Action<LoreData> OnLoreOpened;
+    public static System.Action OnLoreClosed;
+    
+    // ==========================================
     // [ Player Events ] สัญญาณเกี่ยวกับตัวละครผู้เล่น
     // ==========================================
     // ส่งค่า (เลือดปัจจุบัน, เลือดสูงสุด) เพื่อให้ UI อัปเดต
