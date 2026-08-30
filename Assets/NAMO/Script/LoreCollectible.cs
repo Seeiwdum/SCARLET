@@ -33,11 +33,20 @@ public class LoreCollectible : MonoBehaviour, IInteractable
 
     public void Interact()
     {
+        Debug.Log("1. กดปุ่ม W แล้ว!");
+
         if (loreData != null)
         {
+            Debug.Log("2. มีข้อมูล Lore Data ส่งสัญญาณเปิด UI!");
             GameEvents.OnLoreOpened?.Invoke(loreData);
-            AnimatePrompt(false); // ซ่อนปุ่ม W ตอนกำลังอ่าน
+            AnimatePrompt(false);
         }
+        else 
+        {
+            Debug.LogWarning("ไม่มีข้อมูล Lore Data ในช่อง Inspector!");
+        }
+    
+        
     }
 
     private void OnTriggerEnter2D(Collider2D other)
