@@ -13,19 +13,45 @@ public class LoreCollectible : MonoBehaviour, IInteractable
     [SerializeField] private float animationSpeed = 8f;
 
     private bool isPlayerInRange = false;
+    private bool isCurrentlyReading = false;
+    private Coroutine promptCoroutine;
 
-    private void Start()
+    private void Awake()
     {
         if (promptSprite != null)
         {
-            SetPromptAlpha(0f); // ตอนนี้มีฟังก์ชันรองรับแล้วครับ
+            SetPromptAlpha(0f);
             promptSprite.transform.localScale = Vector3.zero;
         }
     }
 
+    private void OnEnable()
+    {
+        GameEvents.OnLoreOpened += HandleLoreOpened;
+        GameEvents.OnLoreClosed += HandleLoreClosed;
+    }
+
+    private void OnDisable()
+    {
+        GameEvents.OnLoreOpened -= HandleLoreOpened;
+        GameEvents.OnLoreClosed -= HandleLoreClosed;
+    }
+
+    private void HandleLoreOpened(LoreData data)
+    {
+        isCurrentlyReading = true;
+        AnimatePrompt(false);
+    }
+
+    private void HandleLoreClosed()
+    {
+        isCurrentlyReading = false;
+        if (isPlayerInRange) AnimatePrompt(true);
+    }
+
     private void Update()
     {
-        if (isPlayerInRange && Input.GetKeyDown(KeyCode.W))
+        if (isPlayerInRange && !isCurrentlyReading && Input.GetKeyDown(KeyCode.W))
         {
             Interact();
         }
@@ -33,20 +59,10 @@ public class LoreCollectible : MonoBehaviour, IInteractable
 
     public void Interact()
     {
-        Debug.Log("1. กดปุ่ม W แล้ว!");
-
-        if (loreData != null)
+        if (loreData != null && !isCurrentlyReading)
         {
-            Debug.Log("2. มีข้อมูล Lore Data ส่งสัญญาณเปิด UI!");
             GameEvents.OnLoreOpened?.Invoke(loreData);
-            AnimatePrompt(false);
         }
-        else 
-        {
-            Debug.LogWarning("ไม่มีข้อมูล Lore Data ในช่อง Inspector!");
-        }
-    
-        
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -54,7 +70,16 @@ public class LoreCollectible : MonoBehaviour, IInteractable
         if (other.CompareTag("Player"))
         {
             isPlayerInRange = true;
-            AnimatePrompt(true);
+            if (!isCurrentlyReading) AnimatePrompt(true);
+        }
+    }
+
+    private void OnTriggerStay2D(Collider2D other)
+    {
+        if (other.CompareTag("Player") && !isPlayerInRange)
+        {
+            isPlayerInRange = true;
+            if (!isCurrentlyReading) AnimatePrompt(true);
         }
     }
 
@@ -70,8 +95,8 @@ public class LoreCollectible : MonoBehaviour, IInteractable
     private void AnimatePrompt(bool show)
     {
         if (promptSprite == null) return;
-        StopAllCoroutines();
-        StartCoroutine(PromptRoutine(show));
+        if (promptCoroutine != null) StopCoroutine(promptCoroutine);
+        promptCoroutine = StartCoroutine(PromptRoutine(show));
     }
 
     private IEnumerator PromptRoutine(bool show)
@@ -79,22 +104,17 @@ public class LoreCollectible : MonoBehaviour, IInteractable
         float targetAlpha = show ? 1f : 0f;
         Vector3 finalScale = show ? targetScale : Vector3.zero;
 
-        while (Mathf.Abs(promptSprite.color.a - targetAlpha) > 0.01f)
+        while (Mathf.Abs(promptSprite.color.a - targetAlpha) > 0.02f)
         {
-            // ใช้ Lerp เพื่อให้ปุ่ม W ค่อยๆ เด้งขึ้นมา
-            Color c = promptSprite.color;
-            c.a = Mathf.Lerp(c.a, targetAlpha, Time.deltaTime * animationSpeed);
-            promptSprite.color = c;
-
-            promptSprite.transform.localScale = Vector3.Lerp(promptSprite.transform.localScale, finalScale, Time.deltaTime * (animationSpeed * 1.2f));
+            SetPromptAlpha(Mathf.Lerp(promptSprite.color.a, targetAlpha, Time.unscaledDeltaTime * animationSpeed));
+            promptSprite.transform.localScale = Vector3.Lerp(promptSprite.transform.localScale, finalScale, Time.unscaledDeltaTime * (animationSpeed * 1.2f));
             yield return null;
         }
-        
+
         SetPromptAlpha(targetAlpha);
         promptSprite.transform.localScale = finalScale;
     }
 
-    // ฟังก์ชันที่ขาดหายไป เพิ่มเข้ามาตรงนี้ครับ
     private void SetPromptAlpha(float alpha)
     {
         if (promptSprite != null)
