@@ -57,6 +57,7 @@ public class GuardianBoss : MonoBehaviour, IDamageable, IParryable // เพิ�
         if (currentState == BossState.Dormant && distanceToPlayer <= detectionRange)
         {
             currentState = BossState.Chase;
+            BossHealthBarUI.Instance?.ShowBossBar("Guardian Boss", maxHealth);
         }
         else if (currentState == BossState.Chase)
         {
@@ -159,28 +160,21 @@ public class GuardianBoss : MonoBehaviour, IDamageable, IParryable // เพิ�
     {
         currentState = BossState.Stunned;
         
-        // 1. เด้งกระเด็นถอยหลัง (Knockback)
-        Vector2 knockbackDir = (transform.position - sourcePos).normalized;
-        knockbackDir.y = 0; // ไม่กระเด็นลอยขึ้นฟ้า
-        rb.linearVelocity = knockbackDir * knockbackForce;
-
-        // 2. เปลี่ยนสีแสดงอาการ Stun
-        if (bossSprite != null) bossSprite.color = stunColor;
-
-        // 3. ค่อยๆ เบรกลดความเร็วการกระเด็น
-        float dragTimer = 0f;
-        while (dragTimer < 0.3f)
-        {
-            rb.linearVelocity = Vector2.Lerp(rb.linearVelocity, Vector2.zero, Time.deltaTime * 10f);
-            dragTimer += Time.deltaTime;
-            yield return null;
-        }
+        // 1. หยุดบอสให้อยู่กับที่ ไม่กระเด็นทะลุฉาก
         rb.linearVelocity = Vector2.zero;
 
-        // 4. ค้างสถานะ Stun ให้ผู้เล่นตีฟรี
+        // 2. เปลี่ยนสีแสดงอาการ Stun (บังคับให้ Alpha = 1 เพื่อไม่ให้บอสหักเหหายไป)
+        if (bossSprite != null) 
+        {
+            Color solidStun = stunColor;
+            solidStun.a = 1f;
+            bossSprite.color = solidStun;
+        }
+
+        // 3. ค้างสถานะ Stun ให้ผู้เล่นตีฟรี
         yield return new WaitForSeconds(stunDuration);
 
-        // 5. กลับเข้าสู่โหมดปกติ
+        // 4. กลับเข้าสู่โหมดปกติ
         if (bossSprite != null) bossSprite.color = originalColor;
         currentState = BossState.Chase;
     }
@@ -189,13 +183,32 @@ public class GuardianBoss : MonoBehaviour, IDamageable, IParryable // เพิ�
     {
         if (currentState == BossState.Dead) return;
         currentHealth -= damage;
+        
+        BossHealthBarUI.Instance?.UpdateHealth(currentHealth);
+        StartCoroutine(HitFlashRoutine());
+
         if (currentHealth <= 0) Die();
+    }
+
+    private IEnumerator HitFlashRoutine()
+    {
+        if (bossSprite != null)
+        {
+            bossSprite.color = Color.white;
+            yield return new WaitForSeconds(0.1f);
+            // คืนค่าสีเดิมถ้าไม่ได้อยู่ในสถานะ Stun หรือ Charge
+            if (currentState != BossState.Stunned && currentState != BossState.AttackCharge)
+            {
+                bossSprite.color = originalColor;
+            }
+        }
     }
 
     private void Die()
     {
         currentState = BossState.Dead;
         rb.linearVelocity = Vector2.zero;
+        BossHealthBarUI.Instance?.HideBossBar();
         Destroy(gameObject, 0.2f);
     }
 }

@@ -107,6 +107,18 @@ public class PlayerCombat : MonoBehaviour
             }
             StartCoroutine(ActivateHitboxRoutine(sideHitbox));
             currentComboStep = (currentComboStep % 3) + 1;
+            
+            // Forward Thrust (Game Feel) - ขยับไปข้างหน้าเล็กน้อยตอนโจมตี
+            if (playerController.IsGrounded())
+            {
+                Rigidbody2D rb = GetComponent<Rigidbody2D>();
+                if (rb != null)
+                {
+                    float thrustForce = 5f;
+                    Vector2 thrustDir = playerController.IsFacingRight ? Vector2.right : Vector2.left;
+                    rb.linearVelocity = new Vector2(thrustDir.x * thrustForce, rb.linearVelocity.y);
+                }
+            }
         }
     }
 

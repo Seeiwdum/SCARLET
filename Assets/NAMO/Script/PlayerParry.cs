@@ -16,7 +16,8 @@ public class PlayerParry : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(parryKey) && canParry)
+        // เปลี่ยนมาใช้คลิกขวา (Mouse 1) แทนปุ่ม F
+        if (Input.GetMouseButtonDown(1) && canParry)
         {
             StartCoroutine(ParryRoutine());
         }
@@ -27,9 +28,9 @@ public class PlayerParry : MonoBehaviour
         canParry = false;
         IsParrying = true;
 
-        // วนลูปเช็กศัตรูในระยะช่วงที่ Parry Window เปิดอยู่
         float timer = 0f;
         bool parrySuccess = false;
+        PlayerController2D playerCtrl = GetComponent<PlayerController2D>();
 
         while (timer < parryWindowDuration && !parrySuccess)
         {
@@ -39,19 +40,27 @@ public class PlayerParry : MonoBehaviour
                 IParryable parryTarget = hit.GetComponent<IParryable>();
                 if (parryTarget != null)
                 {
-                    // 1. Parry สำเร็จ!
-                    parrySuccess = true;
-                    
-                    // 2. สั่งบอสให้กระเด็น/สตั้น
-                    parryTarget.OnParrySuccess(transform.position);
-                    
-                    // 3. เรียก Game Feel (Hit Stop + Flash)
-                    if (HitStopManager.Instance != null)
+                    // Directional Parry: ตรวจสอบว่าศัตรูอยู่ด้านหน้าผู้เล่นหรือไม่
+                    float dirToEnemy = Mathf.Sign(hit.transform.position.x - transform.position.x);
+                    float playerFacingDir = (playerCtrl != null && playerCtrl.IsFacingRight) ? 1f : -1f;
+
+                    if (dirToEnemy == playerFacingDir)
                     {
-                        HitStopManager.Instance.TriggerParryHitStop(0.15f);
+                        parrySuccess = true;
+                        
+                        parryTarget.OnParrySuccess(transform.position);
+                        
+                        if (HitStopManager.Instance != null)
+                        {
+                            HitStopManager.Instance.TriggerParryHitStop(0.15f);
+                        }
+                        
+                        // ให้ i-frames สั้นๆ แก่ผู้เล่นเมื่อ Parry สำเร็จ
+                        PlayerHealth health = GetComponent<PlayerHealth>();
+                        if (health != null) health.StartCoroutine("InvincibilityRoutine");
+
+                        break; 
                     }
-                    
-                    break; // หยุดเช็กตัวอื่น
                 }
             }
             timer += Time.deltaTime;
