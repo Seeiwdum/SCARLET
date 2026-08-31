@@ -2,47 +2,42 @@ using System.Collections;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D), typeof(Collider2D))]
-public class GuardianBoss : MonoBehaviour, IDamageable
+public class GuardianBoss : MonoBehaviour, IDamageable, IParryable // เพิ่ม IParryable
 {
-    public enum BossState { Dormant, Chase, AttackSmash, AttackShockwave, EnrageTransition, Dead }
+    public enum BossState { Dormant, Chase, AttackCharge, Stunned, Dead }
 
-    [Header("Boss Identity & Health")]
-    [SerializeField] private string bossName = "ผู้พิทักษ์แห่งพงไพร (Guardian of Thorns)";
+    [Header("Boss Identity")]
     [SerializeField] private int maxHealth = 30;
     private int currentHealth;
-    private bool isPhase2 = false;
 
-    [Header("Movement & Range Settings")]
+    [Header("Movement & Range")]
     [SerializeField] private float chaseSpeed = 3.5f;
-    [SerializeField] private float enrageSpeed = 5.2f;
-    [SerializeField] private float attackRange = 2.2f;
     [SerializeField] private float detectionRange = 10f;
-    [SerializeField] private LayerMask groundLayer;
+    [SerializeField] private float attackRange = 5f; // ระยะเริ่มชาร์จ
 
-    [Header("Attack Settings")]
-    [SerializeField] private Transform attackPoint;
-    [SerializeField] private float attackRadius = 1.8f;
+    [Header("Charge Attack Settings")]
+    [SerializeField] private float chargeSpeed = 12f;
     [SerializeField] private int attackDamage = 1;
     [SerializeField] private LayerMask playerLayer;
-    [SerializeField] private float attackCooldown = 2.0f;
 
-    [Header("Drops & VFX")]
-    [SerializeField] private GameObject flameHeartPrefab; // Prefab หัวใจเพลิง
-    [SerializeField] private GameObject deathVFX;
-    [SerializeField] private SpriteRenderer bossSprite;
-    [SerializeField] private Color hitColor = Color.red;
+    [Header("Parry & Stun Feedback")]
+    [SerializeField] private float knockbackForce = 5f;
+    [SerializeField] private float stunDuration = 2.0f; // เวลาสตั้นให้ตีฟรี
+    [SerializeField] private Color chargeTelegraphColor = new Color(1f, 0.5f, 0f); // สีส้มตอนชาร์จ
+    [SerializeField] private Color stunColor = Color.gray;
+    private SpriteRenderer bossSprite;
+    private Color originalColor;
 
     private BossState currentState = BossState.Dormant;
     private Transform playerTransform;
     private Rigidbody2D rb;
-    private bool isAttacking = false;
     private bool isFacingRight = false;
-    private Color originalColor;
+    private Coroutine currentAttackRoutine;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        if (bossSprite == null) bossSprite = GetComponent<SpriteRenderer>();
+        bossSprite = GetComponent<SpriteRenderer>();
         if (bossSprite != null) originalColor = bossSprite.color;
         currentHealth = maxHealth;
     }
@@ -55,60 +50,39 @@ public class GuardianBoss : MonoBehaviour, IDamageable
 
     private void Update()
     {
-        if (currentState == BossState.Dead || isAttacking || playerTransform == null) return;
+        if (currentState == BossState.Dead || currentState == BossState.AttackCharge || currentState == BossState.Stunned || playerTransform == null) return;
 
         float distanceToPlayer = Vector2.Distance(transform.position, playerTransform.position);
 
-        switch (currentState)
+        if (currentState == BossState.Dormant && distanceToPlayer <= detectionRange)
         {
-            case BossState.Dormant:
-                if (distanceToPlayer <= detectionRange)
-                {
-                    WakeUpBoss();
-                }
-                break;
-
-            case BossState.Chase:
-                LookAtPlayer();
-                if (distanceToPlayer <= attackRange)
-                {
-                    StartCoroutine(PerformSmashAttack());
-                }
-                else
-                {
-                    MoveTowardsPlayer();
-                }
-                break;
+            currentState = BossState.Chase;
         }
-    }
-
-    private void WakeUpBoss()
-    {
-        currentState = BossState.Chase;
-        if (BossHealthBarUI.Instance != null)
+        else if (currentState == BossState.Chase)
         {
-            BossHealthBarUI.Instance.ShowBossBar(bossName, maxHealth);
+            LookAtPlayer();
+            if (distanceToPlayer <= attackRange)
+            {
+                currentAttackRoutine = StartCoroutine(PerformChargeAttack());
+            }
+            else
+            {
+                MoveTowardsPlayer();
+            }
         }
     }
 
     private void MoveTowardsPlayer()
     {
-        float speed = isPhase2 ? enrageSpeed : chaseSpeed;
         Vector2 target = new Vector2(playerTransform.position.x, rb.position.y);
-        Vector2 newPos = Vector2.MoveTowards(rb.position, target, speed * Time.deltaTime);
+        Vector2 newPos = Vector2.MoveTowards(rb.position, target, chaseSpeed * Time.deltaTime);
         rb.MovePosition(newPos);
     }
 
     private void LookAtPlayer()
     {
-        if (playerTransform.position.x > transform.position.x && !isFacingRight)
-        {
-            Flip();
-        }
-        else if (playerTransform.position.x < transform.position.x && isFacingRight)
-        {
-            Flip();
-        }
+        if (playerTransform.position.x > transform.position.x && !isFacingRight) Flip();
+        else if (playerTransform.position.x < transform.position.x && isFacingRight) Flip();
     }
 
     private void Flip()
@@ -117,118 +91,111 @@ public class GuardianBoss : MonoBehaviour, IDamageable
         transform.Rotate(0f, 180f, 0f);
     }
 
-    private IEnumerator PerformSmashAttack()
+    // ==========================================
+    // [ Boss Pattern ] ท่าชาร์จพุ่งชน
+    // ==========================================
+    private IEnumerator PerformChargeAttack()
     {
-        isAttacking = true;
+        currentState = BossState.AttackCharge;
         rb.linearVelocity = Vector2.zero;
 
-        // หน่วงเวลาเตือนก่อนทุบ (Telegraph)
-        if (bossSprite != null) bossSprite.color = Color.yellow;
-        yield return new WaitForSeconds(0.6f);
-        if (bossSprite != null) bossSprite.color = originalColor;
-
-        // วงดาเมจตอนทุบ
-        if (attackPoint != null)
+        // 1. Telegraph (ส่งสัญญาณเตือนว่าจะพุ่ง) เปลี่ยนเป็นสีส้ม
+        if (bossSprite != null) bossSprite.color = chargeTelegraphColor;
+        
+        // สั่นตัวเตือน
+        Vector3 origPos = transform.position;
+        for (int i = 0; i < 10; i++)
         {
-            Collider2D[] hits = Physics2D.OverlapCircleAll(attackPoint.position, attackRadius, playerLayer);
-            foreach (var hit in hits)
+            transform.position = origPos + (Vector3)(Random.insideUnitCircle * 0.1f);
+            yield return new WaitForSeconds(0.05f);
+        }
+        transform.position = origPos;
+
+        // 2. Dash (พุ่งชน)
+        if (bossSprite != null) bossSprite.color = Color.red;
+        Vector2 dashDirection = isFacingRight ? Vector2.right : Vector2.left;
+        rb.linearVelocity = dashDirection * chargeSpeed;
+
+        // พุ่งเป็นเวลา 0.5 วินาที
+        float timer = 0f;
+        while (timer < 0.5f)
+        {
+            // ทำดาเมจถ้าชนผู้เล่นระหว่างพุ่ง (เว้นแต่ผู้เล่นกำลัง Parry อยู่)
+            Collider2D hit = Physics2D.OverlapBox(transform.position, new Vector2(1.5f, 1.5f), 0, playerLayer);
+            if (hit != null)
             {
-                IDamageable target = hit.GetComponent<IDamageable>();
-                target?.TakeDamage(attackDamage, transform.position);
+                PlayerParry pp = hit.GetComponent<PlayerParry>();
+                if (pp == null || !pp.IsParrying) // ถ้าผู้เล่นไม่ได้กด Parry ให้ทำดาเมจ
+                {
+                    hit.GetComponent<IDamageable>()?.TakeDamage(attackDamage, transform.position);
+                }
             }
+            timer += Time.deltaTime;
+            yield return null;
         }
 
-        yield return new WaitForSeconds(isPhase2 ? attackCooldown * 0.6f : attackCooldown);
-        isAttacking = false;
+        // 3. Recovery (ฟื้นตัวหลังพุ่ง)
+        rb.linearVelocity = Vector2.zero;
+        if (bossSprite != null) bossSprite.color = originalColor;
+        yield return new WaitForSeconds(1.0f);
+        
+        currentState = BossState.Chase;
+    }
+
+    // ==========================================
+    // [ Parry Reaction ] การตอบสนองเมื่อถูกปัดป้อง
+    // ==========================================
+    public void OnParrySuccess(Vector3 parrySourcePosition)
+    {
+        if (currentState == BossState.Dead) return;
+
+        // ยกเลิกท่าโจมตีปัจจุบันทันที
+        if (currentAttackRoutine != null) StopCoroutine(currentAttackRoutine);
+
+        StartCoroutine(StunRoutine(parrySourcePosition));
+    }
+
+    private IEnumerator StunRoutine(Vector3 sourcePos)
+    {
+        currentState = BossState.Stunned;
+        
+        // 1. เด้งกระเด็นถอยหลัง (Knockback)
+        Vector2 knockbackDir = (transform.position - sourcePos).normalized;
+        knockbackDir.y = 0; // ไม่กระเด็นลอยขึ้นฟ้า
+        rb.linearVelocity = knockbackDir * knockbackForce;
+
+        // 2. เปลี่ยนสีแสดงอาการ Stun
+        if (bossSprite != null) bossSprite.color = stunColor;
+
+        // 3. ค่อยๆ เบรกลดความเร็วการกระเด็น
+        float dragTimer = 0f;
+        while (dragTimer < 0.3f)
+        {
+            rb.linearVelocity = Vector2.Lerp(rb.linearVelocity, Vector2.zero, Time.deltaTime * 10f);
+            dragTimer += Time.deltaTime;
+            yield return null;
+        }
+        rb.linearVelocity = Vector2.zero;
+
+        // 4. ค้างสถานะ Stun ให้ผู้เล่นตีฟรี
+        yield return new WaitForSeconds(stunDuration);
+
+        // 5. กลับเข้าสู่โหมดปกติ
+        if (bossSprite != null) bossSprite.color = originalColor;
+        currentState = BossState.Chase;
     }
 
     public void TakeDamage(int damage, Vector3 sourcePosition)
     {
         if (currentState == BossState.Dead) return;
-
-        if (currentState == BossState.Dormant)
-        {
-            WakeUpBoss();
-        }
-
         currentHealth -= damage;
-        if (BossHealthBarUI.Instance != null)
-        {
-            BossHealthBarUI.Instance.UpdateHealth(currentHealth);
-        }
-
-        StartCoroutine(HitFlashRoutine());
-
-        // ตรวจสอบเข้าสู่ Phase 2 (Enrage) เมื่อเลือดต่ำกว่าครึ่ง
-        if (!isPhase2 && currentHealth <= maxHealth / 2)
-        {
-            StartCoroutine(TriggerPhase2Routine());
-        }
-
-        if (currentHealth <= 0)
-        {
-            Die();
-        }
-    }
-
-    private IEnumerator TriggerPhase2Routine()
-    {
-        isPhase2 = true;
-        isAttacking = true;
-        currentState = BossState.EnrageTransition;
-        rb.linearVelocity = Vector2.zero;
-
-        // กระพริบตัวแดงเข้าสู่โหมดคลั่ง
-        if (bossSprite != null) bossSprite.color = Color.red;
-        yield return new WaitForSeconds(1.0f);
-        if (bossSprite != null) bossSprite.color = originalColor;
-
-        isAttacking = false;
-        currentState = BossState.Chase;
-    }
-
-    private IEnumerator HitFlashRoutine()
-    {
-        if (bossSprite != null)
-        {
-            bossSprite.color = hitColor;
-            yield return new WaitForSeconds(0.08f);
-            bossSprite.color = isPhase2 ? new Color(1f, 0.6f, 0.6f) : originalColor;
-        }
+        if (currentHealth <= 0) Die();
     }
 
     private void Die()
     {
         currentState = BossState.Dead;
         rb.linearVelocity = Vector2.zero;
-
-        if (BossHealthBarUI.Instance != null)
-        {
-            BossHealthBarUI.Instance.HideBossBar();
-        }
-
-        if (deathVFX != null)
-        {
-            Instantiate(deathVFX, transform.position, Quaternion.identity);
-        }
-
-        // เสกดรอปหัวใจเพลิง
-        if (flameHeartPrefab != null)
-        {
-            Instantiate(flameHeartPrefab, transform.position + Vector3.up * 0.5f, Quaternion.identity);
-        }
-
         Destroy(gameObject, 0.2f);
-    }
-
-    private void OnDrawGizmosSelected()
-    {
-        if (attackPoint != null)
-        {
-            Gizmos.color = Color.red;
-            Gizmos.DrawWireSphere(attackPoint.position, attackRadius);
-        }
-        Gizmos.color = Color.yellow;
-        Gizmos.DrawWireSphere(transform.position, detectionRange);
     }
 }
