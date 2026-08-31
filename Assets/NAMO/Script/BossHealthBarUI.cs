@@ -23,14 +23,26 @@ public class BossHealthBarUI : MonoBehaviour
     private void Awake()
     {
         if (Instance == null) Instance = this;
-        else Destroy(gameObject);
+        else { Destroy(gameObject); return; }
 
         canvasGroup = GetComponent<CanvasGroup>();
         canvasGroup.alpha = 0f;
+        
+        // Hide completely at start by disabling the first child (which usually contains the UI elements)
+        if (transform.childCount > 0)
+        {
+            transform.GetChild(0).gameObject.SetActive(false);
+        }
     }
 
     public void ShowBossBar(string bossName, int maxHealth)
     {
+        // Re-enable the UI visuals when waking up
+        if (transform.childCount > 0)
+        {
+            transform.GetChild(0).gameObject.SetActive(true);
+        }
+
         if (bossNameText != null) bossNameText.text = bossName;
         if (healthSlider != null)
         {

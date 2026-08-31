@@ -30,20 +30,19 @@ public class HitStopManager : MonoBehaviour
 
     private IEnumerator HitStopRoutine(float duration)
     {
-        // 1. หยุดเวลาทันที
-        Time.timeScale = 0f;
+        // 1. หยุดเวลาเกือบสนิททันที (ZZZ Style)
+        Time.timeScale = 0.01f;
         
-        // 2. รอเวลา (ต้องใช้ WaitForSecondsRealtime เพราะ timeScale เป็น 0)
+        // 2. ค้างจังหวะเฟรมหยุดไว้แบบรู้สึกได้ชัดเจน
         yield return new WaitForSecondsRealtime(duration);
         
-        // 3. ค่อยๆ สโลว์กลับเป็นความเร็วปกติ (Smooth Recovery)
-        Time.timeScale = 0.1f;
+        // 3. ค่อยๆ สโลว์กลับอย่างช้าๆ (Smooth Cinema Recovery) แบบภาพยนตร์
         while (Time.timeScale < 1f)
         {
-            Time.timeScale += Time.unscaledDeltaTime * 2f;
+            Time.timeScale += Time.unscaledDeltaTime * 1.25f; 
+            if (Time.timeScale > 1f) Time.timeScale = 1f;
             yield return null;
         }
-        Time.timeScale = 1f;
     }
 
     private IEnumerator ScreenFlashRoutine()
