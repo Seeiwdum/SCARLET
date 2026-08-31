@@ -163,12 +163,10 @@ public class GuardianBoss : MonoBehaviour, IDamageable, IParryable // เพิ�
         // 1. หยุดบอสให้อยู่กับที่ ไม่กระเด็นทะลุฉาก
         rb.linearVelocity = Vector2.zero;
 
-        // 2. เปลี่ยนสีแสดงอาการ Stun (บังคับให้ Alpha = 1 เพื่อไม่ให้บอสหักเหหายไป)
+        // 2. เปลี่ยนสีแสดงอาการ Stun (บังคับใช้สีเทาเพื่อกันบั๊กที่เกิดจากการตั้งค่าใน Inspector)
         if (bossSprite != null) 
         {
-            Color solidStun = stunColor;
-            solidStun.a = 1f;
-            bossSprite.color = solidStun;
+            bossSprite.color = Color.gray; // บังคับเป็นสีเทาแบบโปร่งแสงปกติ จะได้มองเห็นแน่นอน
         }
 
         // 3. ค้างสถานะ Stun ให้ผู้เล่นตีฟรี

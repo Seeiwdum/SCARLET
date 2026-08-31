@@ -55,6 +55,12 @@ public class PlayerParry : MonoBehaviour
                             HitStopManager.Instance.TriggerParryHitStop(0.15f);
                         }
                         
+                        // Add Screen Shake for impact!
+                        if (CameraController2D.Instance != null)
+                        {
+                            CameraController2D.Instance.TriggerShake(0.15f, 0.5f);
+                        }
+                        
                         // ให้ i-frames สั้นๆ แก่ผู้เล่นเมื่อ Parry สำเร็จ
                         PlayerHealth health = GetComponent<PlayerHealth>();
                         if (health != null) health.StartCoroutine("InvincibilityRoutine");

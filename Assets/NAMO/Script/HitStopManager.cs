@@ -4,7 +4,19 @@ using UnityEngine.UI;
 
 public class HitStopManager : MonoBehaviour
 {
-    public static HitStopManager Instance { get; private set; }
+    private static HitStopManager _instance;
+    public static HitStopManager Instance 
+    { 
+        get 
+        { 
+            if (_instance == null) 
+            {
+                GameObject go = new GameObject("HitStopManager_AutoCreated");
+                _instance = go.AddComponent<HitStopManager>();
+            }
+            return _instance; 
+        } 
+    }
 
     [Header("Flash Effect")]
     [Tooltip("ใส่ Image สีขาวเต็มจอที่ปรับ Alpha เป็น 0 ไว้")]
@@ -13,8 +25,8 @@ public class HitStopManager : MonoBehaviour
 
     private void Awake()
     {
-        if (Instance == null) Instance = this;
-        else Destroy(gameObject);
+        if (_instance == null) _instance = this;
+        else if (_instance != this) Destroy(gameObject);
     }
 
     /// <summary>
@@ -30,16 +42,16 @@ public class HitStopManager : MonoBehaviour
 
     private IEnumerator HitStopRoutine(float duration)
     {
-        // 1. หยุดเวลาเกือบสนิททันที (ZZZ Style)
-        Time.timeScale = 0.01f;
+        // 1. ZZZ Style: หยุดเวลาแทบสนิททันที (0.005f) ให้ภาพแทบจะค้าง 
+        Time.timeScale = 0.005f;
         
-        // 2. ค้างจังหวะเฟรมหยุดไว้แบบรู้สึกได้ชัดเจน
-        yield return new WaitForSecondsRealtime(duration);
+        // 2. ค้างเฟรมแห่ง Impact นานขึ้นเพื่อความสะใจ (0.25 วินาที realtime)
+        yield return new WaitForSecondsRealtime(0.25f);
         
-        // 3. ค่อยๆ สโลว์กลับอย่างช้าๆ (Smooth Cinema Recovery) แบบภาพยนตร์
+        // 3. Smooth Cinema Recovery: ค่อยๆ เร่งเวลากลับมาอย่างเท่ๆ
         while (Time.timeScale < 1f)
         {
-            Time.timeScale += Time.unscaledDeltaTime * 1.25f; 
+            Time.timeScale += Time.unscaledDeltaTime * 1.5f; 
             if (Time.timeScale > 1f) Time.timeScale = 1f;
             yield return null;
         }
