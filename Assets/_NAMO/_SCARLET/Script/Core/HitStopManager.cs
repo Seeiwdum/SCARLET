@@ -40,6 +40,24 @@ public class HitStopManager : MonoBehaviour
         StartCoroutine(ScreenFlashRoutine());
     }
 
+    /// <summary>
+    /// เรียกใช้เมื่อโจมตีโดนศัตรูปกติ (หยุดสั้นๆ ไม่ใช่ ZZZ Slow-Mo เต็มๆ)
+    /// </summary>
+    public void TriggerHit(float duration = 0.06f)
+    {
+        // Don't interrupt an ongoing parry ZZZ slow-mo
+        if (Time.timeScale < 0.5f) return;
+        StopAllCoroutines();
+        StartCoroutine(QuickHitStopRoutine(duration));
+    }
+
+    private IEnumerator QuickHitStopRoutine(float duration)
+    {
+        Time.timeScale = 0f;
+        yield return new WaitForSecondsRealtime(duration);
+        Time.timeScale = 1f;
+    }
+
     private IEnumerator HitStopRoutine(float duration)
     {
         // 1. ZZZ Style: หยุดเวลาแทบสนิททันที (0.005f) ให้ภาพแทบจะค้าง 

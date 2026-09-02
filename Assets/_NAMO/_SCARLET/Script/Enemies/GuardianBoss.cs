@@ -2,7 +2,7 @@ using System.Collections;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D), typeof(Collider2D))]
-public class GuardianBoss : MonoBehaviour, IDamageable, IParryable // เพิ่ม IParryable
+public class GuardianBoss : MonoBehaviour, IDamageable, IParryable, IFormSwappable // เพิ่ม IFormSwappable
 {
     public enum BossState { Dormant, Chase, AttackCharge, Stunned, Dead }
 
@@ -25,6 +25,9 @@ public class GuardianBoss : MonoBehaviour, IDamageable, IParryable // เพิ�
     [SerializeField] private float stunDuration = 2.0f; // เวลาสตั้นให้ตีฟรี
     [SerializeField] private Color chargeTelegraphColor = new Color(1f, 0.5f, 0f); // สีส้มตอนชาร์จ
     [SerializeField] private Color stunColor = Color.gray;
+    [Header("Form Swapping")]
+    [SerializeField] private Sprite monsterSprite;
+    [SerializeField] private Sprite villagerSprite;
     private SpriteRenderer bossSprite;
     private Color originalColor;
 
@@ -209,4 +212,40 @@ public class GuardianBoss : MonoBehaviour, IDamageable, IParryable // เพิ�
         BossHealthBarUI.Instance?.HideBossBar();
         Destroy(gameObject, 0.2f);
     }
+
+    #region IFormSwappable Implementation
+
+    public void SwapForm(bool isHoodWorn)
+    {
+        if (bossSprite != null)
+        {
+            // Only swap the sprite, do NOT touch bossSprite.color here.
+            // The color system (originalColor, stun, flash) is managed separately
+            // and will be broken if we overwrite it from here.
+            bossSprite.sprite = isHoodWorn ? monsterSprite : villagerSprite;
+        }
+    }
+
+    private void OnEnable()
+    {
+        GameEvents.OnHoodToggled += OnHoodToggled;
+        // Initialize form based on current hood state (default to villager form)
+        if (bossSprite != null && villagerSprite != null)
+        {
+            bossSprite.sprite = villagerSprite;
+            bossSprite.color = Color.white;
+        }
+    }
+
+    private void OnDisable()
+    {
+        GameEvents.OnHoodToggled -= OnHoodToggled;
+    }
+
+    private void OnHoodToggled(bool isHoodWorn)
+    {
+        SwapForm(isHoodWorn);
+    }
+
+    #endregion
 }

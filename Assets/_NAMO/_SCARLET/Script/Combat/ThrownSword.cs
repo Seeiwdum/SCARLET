@@ -8,7 +8,7 @@ public class ThrownSword : MonoBehaviour, IDamageable
     [Header("Movement Settings")]
     [SerializeField] private float flightSpeed = 22f;
     [SerializeField] private float maxTravelDistance = 6.5f;
-    [SerializeField] private LayerMask collisionLayers; // เลือก Layer พื้นและกำแพง (เช่น Ground, Wall, Obstacle)
+    [SerializeField] private LayerMask collisionLayers;
 
     [Header("Floating & Juice Settings")]
     [SerializeField] private float bobbingSpeed = 6f;
@@ -27,6 +27,9 @@ public class ThrownSword : MonoBehaviour, IDamageable
     [SerializeField] private float warpWindowDuration = 2.5f;
     [SerializeField] private float platformStandDuration = 2.0f;
     [SerializeField] private float vaultBounceForce = 18f;
+
+    [Header("Key Bindings")]
+    [SerializeField] private KeyCode warpInteractKey = KeyCode.Q; // ปุ่มวาร์ป/เด้งตัว
 
     [Header("Dynamic Prompt")]
     [SerializeField] private SpriteRenderer promptSprite;
@@ -86,7 +89,6 @@ public class ThrownSword : MonoBehaviour, IDamageable
         {
             float moveStep = flightSpeed * Time.deltaTime;
 
-            // ตรวจจับการชนพื้น/กำแพงล่วงหน้าก่อนเคลื่อนที่จริง เพื่อป้องกันการพุ่งทะลุ
             RaycastHit2D hit = Physics2D.Raycast(transform.position, flyDirection, moveStep + 0.1f, collisionLayers);
             if (hit.collider != null)
             {
@@ -141,7 +143,6 @@ public class ThrownSword : MonoBehaviour, IDamageable
 
     private void HandleFloatingMotion()
     {
-        // ท่าปักพื้นไม่ต้องลอยขึ้นลง เพื่อให้ตำแหน่งยืนบนมีดมั่นคง
         if (throwType == SwordThrowType.DownwardVault) return;
 
         float offset = Mathf.Sin(Time.time * bobbingSpeed) * bobbingAmount;
@@ -155,7 +156,8 @@ public class ThrownSword : MonoBehaviour, IDamageable
 
     private void HandleInteractionInput()
     {
-        if (Input.GetKeyDown(KeyCode.J) || Input.GetMouseButtonDown(1))
+        // ปรับเป็นกดปุ่ม Q เพื่อใช้งาน
+        if (Input.GetKeyDown(warpInteractKey))
         {
             if (throwType == SwordThrowType.DownwardVault)
             {
@@ -295,7 +297,6 @@ public class ThrownSword : MonoBehaviour, IDamageable
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        // ตรวจจับเมื่อชนเข้ากับ Layer พื้น/กำแพง
         if (((1 << other.gameObject.layer) & collisionLayers) != 0)
         {
             StopSword();

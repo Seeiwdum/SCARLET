@@ -1,8 +1,8 @@
-using System.Collections;
+﻿using System.Collections;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D), typeof(Collider2D))]
-public class BaseEnemy : MonoBehaviour, IDamageable
+public class BaseEnemy : MonoBehaviour, IDamageable, IFormSwappable
 {
     public enum EnemyState { Patrol, Chase, Stunned }
 
@@ -30,6 +30,10 @@ public class BaseEnemy : MonoBehaviour, IDamageable
     [SerializeField] private float knockbackForce = 5f;
     [SerializeField] private float stunDuration = 0.2f;
 
+    [Header("Form Swapping")]
+    [SerializeField] private Sprite monsterSprite;
+    [SerializeField] private Sprite villagerSprite;
+
     private Rigidbody2D rb;
     private SpriteRenderer spriteRenderer;
     private Transform playerTransform;
@@ -44,29 +48,30 @@ public class BaseEnemy : MonoBehaviour, IDamageable
     private void Start()
     {
         currentHealth = maxHealth;
-        
-        // ค้นหา PlayerController2D ใน Scene แทนการใช้ Tag ที่มีโอกาสสะกดผิดและทำงานช้า
         PlayerController2D player = FindFirstObjectByType<PlayerController2D>();
-        if (player != null)
-        {
-            playerTransform = player.transform;
-        }
+        if (player != null) playerTransform = player.transform;
+    }
+
+    private void OnEnable()
+    {
+        GameEvents.OnHoodToggled += OnHoodToggled;
+        if (spriteRenderer != null && villagerSprite != null)
+            spriteRenderer.sprite = villagerSprite;
+    }
+
+    private void OnDisable()
+    {
+        GameEvents.OnHoodToggled -= OnHoodToggled;
     }
 
     private void Update()
     {
         if (currentState == EnemyState.Stunned) return;
-
         CheckForPlayer();
-
         switch (currentState)
         {
-            case EnemyState.Patrol:
-                PatrolLogic();
-                break;
-            case EnemyState.Chase:
-                ChaseLogic();
-                break;
+            case EnemyState.Patrol: PatrolLogic(); break;
+            case EnemyState.Chase:  ChaseLogic();  break;
         }
     }
 
@@ -74,15 +79,9 @@ public class BaseEnemy : MonoBehaviour, IDamageable
 
     private void PatrolLogic()
     {
-        // ตรวจจับขอบเหว และ กำแพงด้านหน้า
         bool isGroundedFront = Physics2D.Raycast(groundCheckPoint.position, Vector2.down, checkDistance, groundLayer);
-        bool isWallFront = Physics2D.Raycast(wallCheckPoint.position, movingRight ? Vector2.right : Vector2.left, checkDistance, groundLayer);
-
-        if (!isGroundedFront || isWallFront)
-        {
-            Flip();
-        }
-
+        bool isWallFront     = Physics2D.Raycast(wallCheckPoint.position, movingRight ? Vector2.right : Vector2.left, checkDistance, groundLayer);
+        if (!isGroundedFront || isWallFront) Flip();
         float speed = movingRight ? patrolSpeed : -patrolSpeed;
         rb.linearVelocity = new Vector2(speed, rb.linearVelocity.y);
     }
@@ -90,21 +89,11 @@ public class BaseEnemy : MonoBehaviour, IDamageable
     private void ChaseLogic()
     {
         if (playerTransform == null) return;
-
-        // เช็คว่าผู้เล่นอยู่ทางซ้ายหรือขวา
         float direction = playerTransform.position.x - transform.position.x;
-
         if (direction > 0 && !movingRight) Flip();
         else if (direction < 0 && movingRight) Flip();
-
-        // ตรวจสอบไม่ให้เดินตกเหวขณะวิ่งไล่ผู้เล่น
         bool isGroundedFront = Physics2D.Raycast(groundCheckPoint.position, Vector2.down, checkDistance, groundLayer);
-        if (!isGroundedFront)
-        {
-            rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
-            return;
-        }
-
+        if (!isGroundedFront) { rb.linearVelocity = new Vector2(0, rb.linearVelocity.y); return; }
         float speed = movingRight ? chaseSpeed : -chaseSpeed;
         rb.linearVelocity = new Vector2(speed, rb.linearVelocity.y);
     }
@@ -112,77 +101,47 @@ public class BaseEnemy : MonoBehaviour, IDamageable
     private void CheckForPlayer()
     {
         if (playerTransform == null) return;
-
-        float distanceToPlayer = Vector2.Distance(transform.position, playerTransform.position);
-
-        if (distanceToPlayer <= detectionRange)
-        {
-            currentState = EnemyState.Chase;
-        }
-        else if (currentState == EnemyState.Chase && distanceToPlayer > detectionRange * 1.3f)
-        {
-            // หากผู้เล่นหนีออกไปไกลเกินระยะ ให้กลับไปเดิน Patrol
-            currentState = EnemyState.Patrol;
-        }
+        float dist = Vector2.Distance(transform.position, playerTransform.position);
+        if (dist <= detectionRange) currentState = EnemyState.Chase;
+        else if (currentState == EnemyState.Chase && dist > detectionRange * 1.3f) currentState = EnemyState.Patrol;
     }
 
     private void Flip()
     {
         movingRight = !movingRight;
-        Vector3 scale = transform.localScale;
-        scale.x *= -1;
-        transform.localScale = scale;
+        Vector3 s = transform.localScale;
+        s.x *= -1;
+        transform.localScale = s;
     }
 
     #endregion
 
     #region Combat & Damage Receiver
 
-    /// <summary>
-    /// ฟังก์ชันรับดาเมจจากผู้เล่น
-    /// </summary>
     public void TakeDamage(int damage, Vector3 attackerPosition)
     {
         if (currentHealth <= 0) return;
-
         currentHealth -= damage;
-        Debug.Log($"<color=orange>[ENEMY HIT] {gameObject.name} เหลือ HP: {currentHealth}/{maxHealth}</color>");
-
-        if (currentHealth <= 0)
-        {
-            Die();
-        }
-        else
-        {
-            StartCoroutine(HitStunRoutine(attackerPosition));
-        }
+        Debug.Log($"<color=orange>[ENEMY HIT] {gameObject.name} HP: {currentHealth}/{maxHealth}</color>");
+        if (currentHealth <= 0) Die();
+        else StartCoroutine(HitStunRoutine(attackerPosition));
     }
 
     private IEnumerator HitStunRoutine(Vector3 attackerPosition)
     {
         currentState = EnemyState.Stunned;
-
-        // คำนวณทิศทาง Knockback ถอยหลัง
         float knockbackDir = transform.position.x < attackerPosition.x ? -1f : 1f;
         rb.linearVelocity = Vector2.zero;
         rb.AddForce(new Vector2(knockbackDir * knockbackForce, knockbackForce * 0.5f), ForceMode2D.Impulse);
-
-        // แสดง Effect สีแดงกระพริบตอนโดนตี
         if (spriteRenderer != null) spriteRenderer.color = Color.red;
-
         yield return new WaitForSeconds(stunDuration);
-
         if (spriteRenderer != null) spriteRenderer.color = Color.white;
-
-        // กลับสู่สถานะ Chase ผู้เล่นทันทีหลังหายมึน
         currentState = EnemyState.Chase;
     }
 
     private void Die()
     {
-        Debug.Log($"<color=red><b>[ENEMY DIED] {gameObject.name} พ่ายแพ้!</b></color>");
-        
-        // ปิด Collider และทำลาย GameObject
+        Debug.Log($"<color=red><b>[ENEMY DIED] {gameObject.name}</b></color>");
         GetComponent<Collider2D>().enabled = false;
         this.enabled = false;
         Destroy(gameObject, 0.5f);
@@ -190,21 +149,29 @@ public class BaseEnemy : MonoBehaviour, IDamageable
 
     #endregion
 
+    #region IFormSwappable Implementation
+
+    public void SwapForm(bool isHoodWorn)
+    {
+        if (spriteRenderer != null)
+            spriteRenderer.sprite = isHoodWorn ? monsterSprite : villagerSprite;
+    }
+
+    private void OnHoodToggled(bool isHoodWorn) => SwapForm(isHoodWorn);
+
+    #endregion
+
     #region Debug Gizmos
 
     private void OnDrawGizmosSelected()
     {
-        // วาดวงกลมระยะตรวจจับ Player
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, detectionRange);
-
-        // วาดเส้น Raycast ตรวจจับพื้นและกำแพง
         if (groundCheckPoint != null)
         {
             Gizmos.color = Color.red;
             Gizmos.DrawLine(groundCheckPoint.position, groundCheckPoint.position + Vector3.down * checkDistance);
         }
-
         if (wallCheckPoint != null)
         {
             Gizmos.color = Color.blue;

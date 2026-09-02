@@ -41,15 +41,8 @@ public class VisualEffectsManager : MonoBehaviour
 
     public void TriggerHitstop(float duration)
     {
-        if (hitstopCoroutine != null) StopCoroutine(hitstopCoroutine);
-        hitstopCoroutine = StartCoroutine(HitstopRoutine(duration));
-    }
-
-    private IEnumerator HitstopRoutine(float duration)
-    {
-        Time.timeScale = 0f;
-        yield return new WaitForSecondsRealtime(duration);
-        Time.timeScale = 1f;
+        // Delegate to HitStopManager to avoid conflicting with ZZZ parry slow-motion
+        HitStopManager.Instance?.TriggerHit(duration);
     }
 
     /// <summary>

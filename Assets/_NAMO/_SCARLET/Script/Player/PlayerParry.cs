@@ -63,7 +63,7 @@ public class PlayerParry : MonoBehaviour
                         
                         // ให้ i-frames สั้นๆ แก่ผู้เล่นเมื่อ Parry สำเร็จ
                         PlayerHealth health = GetComponent<PlayerHealth>();
-                        if (health != null) health.StartCoroutine("InvincibilityRoutine");
+                        if (health != null) health.ActivateInvincibility();
 
                         break; 
                     }

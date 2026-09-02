@@ -100,6 +100,11 @@ public class PlayerHealth : MonoBehaviour, IDamageable
         isKnockedBack = false;
     }
 
+    public void ActivateInvincibility()
+    {
+        if (!isInvincible) StartCoroutine(InvincibilityRoutine());
+    }
+
     private IEnumerator InvincibilityRoutine()
     {
         isInvincible = true;
