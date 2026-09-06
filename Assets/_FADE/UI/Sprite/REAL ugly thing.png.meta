@@ -1,0 +1,7449 @@
+fileFormatVersion: 2
+guid: 5abfdaf7dd593774eae4cdb9af284839
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8612291606555858145
+    second: REAL ugly thing_0
+  - first:
+      213: 6582133280664229841
+    second: REAL ugly thing_1
+  - first:
+      213: 8387459359285059549
+    second: REAL ugly thing_2
+  - first:
+      213: -4177839355837464501
+    second: REAL ugly thing_3
+  - first:
+      213: -4907652973146861437
+    second: REAL ugly thing_4
+  - first:
+      213: -8694012775189864587
+    second: REAL ugly thing_5
+  - first:
+      213: 5113996066143149153
+    second: REAL ugly thing_6
+  - first:
+      213: -6974503268420763648
+    second: REAL ugly thing_7
+  - first:
+      213: -1156245856828616193
+    second: REAL ugly thing_8
+  - first:
+      213: 8412262242547542912
+    second: REAL ugly thing_9
+  - first:
+      213: 7998281900718574459
+    second: REAL ugly thing_10
+  - first:
+      213: 173709028255912939
+    second: REAL ugly thing_11
+  - first:
+      213: 150907756743744569
+    second: REAL ugly thing_12
+  - first:
+      213: 4753712283278955589
+    second: REAL ugly thing_13
+  - first:
+      213: -8950929419406860178
+    second: REAL ugly thing_14
+  - first:
+      213: -2609964988470293716
+    second: REAL ugly thing_15
+  - first:
+      213: 8739007026891816565
+    second: REAL ugly thing_16
+  - first:
+      213: 1343315161182728625
+    second: REAL ugly thing_17
+  - first:
+      213: 4909893995572336280
+    second: REAL ugly thing_18
+  - first:
+      213: -791141335759603311
+    second: REAL ugly thing_19
+  - first:
+      213: -7647297512961067116
+    second: REAL ugly thing_20
+  - first:
+      213: -1298239258890054210
+    second: REAL ugly thing_21
+  - first:
+      213: 520447578090670540
+    second: REAL ugly thing_22
+  - first:
+      213: -3198975531369697442
+    second: REAL ugly thing_23
+  - first:
+      213: -2576333950755367813
+    second: REAL ugly thing_24
+  - first:
+      213: 7294408507845015175
+    second: REAL ugly thing_25
+  - first:
+      213: 8718351807469069981
+    second: REAL ugly thing_26
+  - first:
+      213: -6761037986871129886
+    second: REAL ugly thing_27
+  - first:
+      213: 1016505470408971930
+    second: REAL ugly thing_28
+  - first:
+      213: -506327944182060691
+    second: REAL ugly thing_29
+  - first:
+      213: 6699610866609721278
+    second: REAL ugly thing_30
+  - first:
+      213: 3877501328358410151
+    second: REAL ugly thing_31
+  - first:
+      213: -1493415077453421240
+    second: REAL ugly thing_32
+  - first:
+      213: -5705573737822431196
+    second: REAL ugly thing_33
+  - first:
+      213: 6398575456680526487
+    second: REAL ugly thing_34
+  - first:
+      213: 7303679343404091343
+    second: REAL ugly thing_35
+  - first:
+      213: 2879866629225468783
+    second: REAL ugly thing_36
+  - first:
+      213: -1958143996941607053
+    second: REAL ugly thing_37
+  - first:
+      213: 817408456787125928
+    second: REAL ugly thing_38
+  - first:
+      213: -7838328486171743633
+    second: REAL ugly thing_39
+  - first:
+      213: -8249384078005396407
+    second: REAL ugly thing_40
+  - first:
+      213: 4395219559269102818
+    second: REAL ugly thing_41
+  - first:
+      213: 1326860561288362785
+    second: REAL ugly thing_42
+  - first:
+      213: -5698147368274287214
+    second: REAL ugly thing_43
+  - first:
+      213: -7922022255169140250
+    second: REAL ugly thing_44
+  - first:
+      213: -2020652109164317388
+    second: REAL ugly thing_45
+  - first:
+      213: -7868640031404341419
+    second: REAL ugly thing_46
+  - first:
+      213: -7858445260126525446
+    second: REAL ugly thing_47
+  - first:
+      213: 2428989914574073722
+    second: REAL ugly thing_48
+  - first:
+      213: -4669267531119053060
+    second: REAL ugly thing_49
+  - first:
+      213: 3045252669152033822
+    second: REAL ugly thing_50
+  - first:
+      213: 4722831073097290162
+    second: REAL ugly thing_51
+  - first:
+      213: 5059361563595003584
+    second: REAL ugly thing_52
+  - first:
+      213: 9095489489576662974
+    second: REAL ugly thing_53
+  - first:
+      213: 8516996000245466985
+    second: REAL ugly thing_54
+  - first:
+      213: 232191185811786887
+    second: REAL ugly thing_55
+  - first:
+      213: -1806233225138969400
+    second: REAL ugly thing_56
+  - first:
+      213: -8252558691913053269
+    second: REAL ugly thing_57
+  - first:
+      213: -8450561398058902103
+    second: REAL ugly thing_58
+  - first:
+      213: 3335954944522566542
+    second: REAL ugly thing_59
+  - first:
+      213: -6201657259500765527
+    second: REAL ugly thing_60
+  - first:
+      213: 2037827614591223686
+    second: REAL ugly thing_61
+  - first:
+      213: 6664552311515336370
+    second: REAL ugly thing_62
+  - first:
+      213: 2997832026938781943
+    second: REAL ugly thing_63
+  - first:
+      213: -6142758087260668941
+    second: REAL ugly thing_64
+  - first:
+      213: 3508608629884563535
+    second: REAL ugly thing_65
+  - first:
+      213: -2062343944373361249
+    second: REAL ugly thing_66
+  - first:
+      213: 4140941522821622518
+    second: REAL ugly thing_67
+  - first:
+      213: 8785836190310662570
+    second: REAL ugly thing_68
+  - first:
+      213: -7568106845105680443
+    second: REAL ugly thing_69
+  - first:
+      213: -7343124754151444472
+    second: REAL ugly thing_70
+  - first:
+      213: -7537041151443117810
+    second: REAL ugly thing_71
+  - first:
+      213: 6785245057553183179
+    second: REAL ugly thing_72
+  - first:
+      213: -5655264378744770830
+    second: REAL ugly thing_73
+  - first:
+      213: -2427046624504373294
+    second: REAL ugly thing_74
+  - first:
+      213: 7721907006859216286
+    second: REAL ugly thing_75
+  - first:
+      213: -1992967756809852644
+    second: REAL ugly thing_76
+  - first:
+      213: -1825360815320726944
+    second: REAL ugly thing_77
+  - first:
+      213: 9197475056348569880
+    second: REAL ugly thing_78
+  - first:
+      213: -5125014712250736043
+    second: REAL ugly thing_79
+  - first:
+      213: -2077228094919553436
+    second: REAL ugly thing_80
+  - first:
+      213: 1797725667449578028
+    second: REAL ugly thing_81
+  - first:
+      213: 7722427766910940898
+    second: REAL ugly thing_82
+  - first:
+      213: -5329877208774825947
+    second: REAL ugly thing_83
+  - first:
+      213: 8321927497553950511
+    second: REAL ugly thing_84
+  - first:
+      213: 2263980885480920731
+    second: REAL ugly thing_85
+  - first:
+      213: -4053377410381696918
+    second: REAL ugly thing_86
+  - first:
+      213: -8688200122463708991
+    second: REAL ugly thing_87
+  - first:
+      213: 2743352424516420462
+    second: REAL ugly thing_88
+  - first:
+      213: 856782885269243204
+    second: REAL ugly thing_89
+  - first:
+      213: -5353182826633858821
+    second: REAL ugly thing_90
+  - first:
+      213: -424453788900534473
+    second: REAL ugly thing_91
+  - first:
+      213: -7198961208703380411
+    second: REAL ugly thing_92
+  - first:
+      213: -6625434414947364883
+    second: REAL ugly thing_93
+  - first:
+      213: -8081363687439251598
+    second: REAL ugly thing_94
+  - first:
+      213: 6503532310539600015
+    second: REAL ugly thing_95
+  - first:
+      213: -6774272295974818810
+    second: REAL ugly thing_96
+  - first:
+      213: 8522831616615260201
+    second: REAL ugly thing_97
+  - first:
+      213: 1267371464512149572
+    second: REAL ugly thing_98
+  - first:
+      213: 3281848285357701089
+    second: REAL ugly thing_99
+  - first:
+      213: -1961649025503928216
+    second: REAL ugly thing_100
+  - first:
+      213: -6223828182805093637
+    second: REAL ugly thing_101
+  - first:
+      213: 5696977491242079769
+    second: REAL ugly thing_102
+  - first:
+      213: -5300517871276733873
+    second: REAL ugly thing_103
+  - first:
+      213: 4860267482447701790
+    second: REAL ugly thing_104
+  - first:
+      213: 57809929460081903
+    second: REAL ugly thing_105
+  - first:
+      213: 8529112185109395451
+    second: REAL ugly thing_106
+  - first:
+      213: -6199211327717882681
+    second: REAL ugly thing_107
+  - first:
+      213: 8622788693202653360
+    second: REAL ugly thing_108
+  - first:
+      213: -3833450438865600215
+    second: REAL ugly thing_109
+  - first:
+      213: -908268714638032656
+    second: REAL ugly thing_110
+  - first:
+      213: 7713447660554074189
+    second: REAL ugly thing_111
+  - first:
+      213: -3108471173883240328
+    second: REAL ugly thing_112
+  - first:
+      213: -4961615976592873103
+    second: REAL ugly thing_113
+  - first:
+      213: 5420187063135590137
+    second: REAL ugly thing_114
+  - first:
+      213: 5350280624131849614
+    second: REAL ugly thing_115
+  - first:
+      213: -865879890845500966
+    second: REAL ugly thing_116
+  - first:
+      213: -7624717597198012098
+    second: REAL ugly thing_117
+  - first:
+      213: -7512612302381597428
+    second: REAL ugly thing_118
+  - first:
+      213: 3834156565659648702
+    second: REAL ugly thing_119
+  - first:
+      213: 4668962820978870244
+    second: REAL ugly thing_120
+  - first:
+      213: -668319104326595714
+    second: REAL ugly thing_121
+  - first:
+      213: 1124945467719009524
+    second: REAL ugly thing_122
+  - first:
+      213: -2360670120101643402
+    second: REAL ugly thing_123
+  - first:
+      213: -894189445057042075
+    second: REAL ugly thing_124
+  - first:
+      213: 6719190351829696050
+    second: REAL ugly thing_125
+  - first:
+      213: -7650971096943849714
+    second: REAL ugly thing_126
+  - first:
+      213: -7361503087731926265
+    second: REAL ugly thing_127
+  - first:
+      213: 5186711577502789423
+    second: REAL ugly thing_128
+  - first:
+      213: 6939621506218929807
+    second: REAL ugly thing_129
+  - first:
+      213: 1338242101347429700
+    second: REAL ugly thing_130
+  - first:
+      213: 2152394530580879743
+    second: REAL ugly thing_131
+  - first:
+      213: 9175921999466484634
+    second: REAL ugly thing_132
+  - first:
+      213: 9212553148405609198
+    second: REAL ugly thing_133
+  - first:
+      213: 1469657247612049800
+    second: REAL ugly thing_134
+  - first:
+      213: -7928582131350783352
+    second: REAL ugly thing_135
+  - first:
+      213: -6801281352759766662
+    second: REAL ugly thing_136
+  - first:
+      213: 927348774112296422
+    second: REAL ugly thing_137
+  - first:
+      213: -4797074137918305136
+    second: REAL ugly thing_138
+  - first:
+      213: -7795542798344064994
+    second: REAL ugly thing_139
+  - first:
+      213: -5801592111605805748
+    second: REAL ugly thing_140
+  - first:
+      213: 517584716917788201
+    second: REAL ugly thing_141
+  - first:
+      213: 914989991450032831
+    second: REAL ugly thing_142
+  - first:
+      213: -5465658992521195601
+    second: REAL ugly thing_143
+  - first:
+      213: -6267917066027087737
+    second: REAL ugly thing_144
+  - first:
+      213: 6264382171466758077
+    second: REAL ugly thing_145
+  - first:
+      213: -5220446408998311200
+    second: REAL ugly thing_146
+  - first:
+      213: -686886732126451076
+    second: REAL ugly thing_147
+  - first:
+      213: -2552523854534198962
+    second: REAL ugly thing_148
+  - first:
+      213: -3098093960151758379
+    second: REAL ugly thing_149
+  - first:
+      213: -2292143397514874157
+    second: REAL ugly thing_150
+  - first:
+      213: 8223823586150006696
+    second: REAL ugly thing_151
+  - first:
+      213: 5995741345096176951
+    second: REAL ugly thing_152
+  - first:
+      213: -6205188828595267177
+    second: REAL ugly thing_153
+  - first:
+      213: 3580164847393501671
+    second: REAL ugly thing_154
+  - first:
+      213: 4957823974284980255
+    second: REAL ugly thing_155
+  - first:
+      213: 6118039716571169135
+    second: REAL ugly thing_156
+  - first:
+      213: -8296301289986244616
+    second: REAL ugly thing_157
+  - first:
+      213: -8455526611483252079
+    second: REAL ugly thing_158
+  - first:
+      213: 7805042263221183661
+    second: REAL ugly thing_159
+  - first:
+      213: 8374305967017729861
+    second: REAL ugly thing_160
+  - first:
+      213: 6722887710939738076
+    second: REAL ugly thing_161
+  - first:
+      213: 7317939871814625831
+    second: REAL ugly thing_162
+  - first:
+      213: 2198246986065061676
+    second: REAL ugly thing_163
+  - first:
+      213: -7586547695785053858
+    second: REAL ugly thing_164
+  - first:
+      213: -4982313478759481814
+    second: REAL ugly thing_165
+  - first:
+      213: -5782768456615334122
+    second: REAL ugly thing_166
+  - first:
+      213: 826781278258944183
+    second: REAL ugly thing_167
+  - first:
+      213: -2670366445044999592
+    second: REAL ugly thing_168
+  - first:
+      213: 7975921865606863436
+    second: REAL ugly thing_169
+  - first:
+      213: -6184763539874041715
+    second: REAL ugly thing_170
+  - first:
+      213: 6971762300626217954
+    second: REAL ugly thing_171
+  - first:
+      213: -7803927072732767370
+    second: REAL ugly thing_172
+  - first:
+      213: -140998299233594608
+    second: REAL ugly thing_173
+  - first:
+      213: 1276475486167351134
+    second: REAL ugly thing_174
+  - first:
+      213: 5439018140483538760
+    second: REAL ugly thing_175
+  - first:
+      213: 3105649664887440291
+    second: REAL ugly thing_176
+  - first:
+      213: 3537956011024355641
+    second: REAL ugly thing_177
+  - first:
+      213: -2545177322248388610
+    second: REAL ugly thing_178
+  - first:
+      213: -2055307882021893316
+    second: REAL ugly thing_179
+  - first:
+      213: 8271117318045358533
+    second: REAL ugly thing_180
+  - first:
+      213: -8501455259765682762
+    second: REAL ugly thing_181
+  - first:
+      213: 8465573387274533254
+    second: REAL ugly thing_182
+  - first:
+      213: -7475197430188460253
+    second: REAL ugly thing_183
+  - first:
+      213: 8767248147933274371
+    second: REAL ugly thing_184
+  - first:
+      213: 8462522246825354773
+    second: REAL ugly thing_185
+  - first:
+      213: 1376758254237049324
+    second: REAL ugly thing_186
+  - first:
+      213: 38754498258937686
+    second: REAL ugly thing_187
+  - first:
+      213: 7243928333070358373
+    second: REAL ugly thing_188
+  - first:
+      213: 3190562437200190798
+    second: REAL ugly thing_189
+  - first:
+      213: 741531361784958619
+    second: REAL ugly thing_190
+  - first:
+      213: 4485994381873049091
+    second: REAL ugly thing_191
+  - first:
+      213: -4270987306715046047
+    second: REAL ugly thing_192
+  - first:
+      213: 4094736168338633322
+    second: REAL ugly thing_193
+  - first:
+      213: -4423823792742230889
+    second: REAL ugly thing_194
+  - first:
+      213: 2510974871907555401
+    second: REAL ugly thing_195
+  - first:
+      213: 6466345272240486908
+    second: REAL ugly thing_196
+  - first:
+      213: 4547386879298029046
+    second: REAL ugly thing_197
+  - first:
+      213: 541796593978778425
+    second: REAL ugly thing_198
+  - first:
+      213: 1444701649182036547
+    second: REAL ugly thing_199
+  - first:
+      213: 4977938944775453593
+    second: REAL ugly thing_200
+  - first:
+      213: -8380946370917821360
+    second: REAL ugly thing_201
+  - first:
+      213: 2633179746409427574
+    second: REAL ugly thing_202
+  - first:
+      213: 2372724353207148886
+    second: REAL ugly thing_203
+  - first:
+      213: -4217986069879661836
+    second: REAL ugly thing_204
+  - first:
+      213: 7907538509888608985
+    second: REAL ugly thing_205
+  - first:
+      213: 1542334657725584647
+    second: REAL ugly thing_206
+  - first:
+      213: 2356012930821312194
+    second: REAL ugly thing_207
+  - first:
+      213: -5653311965819446331
+    second: REAL ugly thing_208
+  - first:
+      213: -316071296459282797
+    second: REAL ugly thing_209
+  - first:
+      213: -45708925052795304
+    second: REAL ugly thing_210
+  - first:
+      213: 5467670089862638054
+    second: REAL ugly thing_211
+  - first:
+      213: 5322332164946824068
+    second: REAL ugly thing_212
+  - first:
+      213: -5649338469072794888
+    second: REAL ugly thing_213
+  - first:
+      213: -8107060995565847948
+    second: REAL ugly thing_214
+  - first:
+      213: -8799709156050053582
+    second: REAL ugly thing_215
+  - first:
+      213: 6526954579060457484
+    second: REAL ugly thing_216
+  - first:
+      213: -3469640729702063050
+    second: REAL ugly thing_217
+  - first:
+      213: -5011918681277611479
+    second: REAL ugly thing_218
+  - first:
+      213: -1221066623119907433
+    second: REAL ugly thing_219
+  - first:
+      213: -4370153596443388783
+    second: REAL ugly thing_220
+  - first:
+      213: -7059000029610972122
+    second: REAL ugly thing_221
+  - first:
+      213: -8713583811019956964
+    second: REAL ugly thing_222
+  - first:
+      213: -4391158004245772521
+    second: REAL ugly thing_223
+  - first:
+      213: -3901662531520373926
+    second: REAL ugly thing_224
+  - first:
+      213: -254379091701073912
+    second: REAL ugly thing_225
+  - first:
+      213: -2425265087811404918
+    second: REAL ugly thing_226
+  - first:
+      213: -6816541125125157305
+    second: REAL ugly thing_227
+  - first:
+      213: 879393373578071898
+    second: REAL ugly thing_228
+  - first:
+      213: -6364306867179479361
+    second: REAL ugly thing_229
+  - first:
+      213: 2195489981961540974
+    second: REAL ugly thing_230
+  - first:
+      213: 5375227136258829378
+    second: REAL ugly thing_231
+  - first:
+      213: -1958171205385891726
+    second: REAL ugly thing_232
+  - first:
+      213: -4925253291821888024
+    second: REAL ugly thing_233
+  - first:
+      213: 2051520284691343884
+    second: REAL ugly thing_234
+  - first:
+      213: -6284385951079019529
+    second: REAL ugly thing_235
+  - first:
+      213: -4699301845347426244
+    second: REAL ugly thing_236
+  - first:
+      213: 2492160937828313290
+    second: REAL ugly thing_237
+  - first:
+      213: 8704029668807863351
+    second: REAL ugly thing_238
+  - first:
+      213: -5349867415949409025
+    second: REAL ugly thing_239
+  - first:
+      213: 1884267748909307757
+    second: REAL ugly thing_240
+  - first:
+      213: 5587851323246941745
+    second: REAL ugly thing_241
+  - first:
+      213: 6646945647069590074
+    second: REAL ugly thing_242
+  - first:
+      213: -6665272301596233854
+    second: REAL ugly thing_243
+  - first:
+      213: 4432159266537836593
+    second: REAL ugly thing_244
+  - first:
+      213: 7743274113801336085
+    second: REAL ugly thing_245
+  - first:
+      213: 1360242964731097343
+    second: REAL ugly thing_246
+  - first:
+      213: -5858368938690674043
+    second: REAL ugly thing_247
+  - first:
+      213: -4036278843026745637
+    second: REAL ugly thing_248
+  - first:
+      213: 3170171845573298479
+    second: REAL ugly thing_249
+  - first:
+      213: -2630990589475498876
+    second: REAL ugly thing_250
+  - first:
+      213: -5168505104936580228
+    second: REAL ugly thing_251
+  - first:
+      213: 5534168765287956474
+    second: REAL ugly thing_252
+  - first:
+      213: -4716370724406733182
+    second: REAL ugly thing_253
+  - first:
+      213: 1742440206408589515
+    second: REAL ugly thing_254
+  - first:
+      213: -7594628154649914756
+    second: REAL ugly thing_255
+  - first:
+      213: 6152134747477044649
+    second: REAL ugly thing_256
+  - first:
+      213: 4645661581901203049
+    second: REAL ugly thing_257
+  - first:
+      213: 7607125868008397127
+    second: REAL ugly thing_258
+  - first:
+      213: -1404751396222091122
+    second: REAL ugly thing_259
+  - first:
+      213: -3789496915703069483
+    second: REAL ugly thing_260
+  - first:
+      213: 2526579753319180516
+    second: REAL ugly thing_261
+  - first:
+      213: 7567937772800478680
+    second: REAL ugly thing_262
+  - first:
+      213: 4420089975896740102
+    second: REAL ugly thing_263
+  - first:
+      213: 2621378643645434104
+    second: REAL ugly thing_264
+  - first:
+      213: 1207657100352016947
+    second: REAL ugly thing_265
+  - first:
+      213: 5963896137083306852
+    second: REAL ugly thing_266
+  - first:
+      213: 4844374602352488399
+    second: REAL ugly thing_267
+  - first:
+      213: 2057388460818194075
+    second: REAL ugly thing_268
+  - first:
+      213: 7166208239454952518
+    second: REAL ugly thing_269
+  - first:
+      213: -5961479646831300123
+    second: REAL ugly thing_270
+  - first:
+      213: 6203136064416885812
+    second: REAL ugly thing_271
+  - first:
+      213: 6325991985509047070
+    second: REAL ugly thing_272
+  - first:
+      213: 5850700078382028234
+    second: REAL ugly thing_273
+  - first:
+      213: 2093777394619204608
+    second: REAL ugly thing_274
+  - first:
+      213: 5521184989761272664
+    second: REAL ugly thing_275
+  - first:
+      213: 2379283265346698782
+    second: REAL ugly thing_276
+  - first:
+      213: 6883221773285795303
+    second: REAL ugly thing_277
+  - first:
+      213: -4257059940202556843
+    second: REAL ugly thing_278
+  - first:
+      213: 5379981453943292116
+    second: REAL ugly thing_279
+  - first:
+      213: -1943028739430097756
+    second: REAL ugly thing_280
+  - first:
+      213: -7844162702515407289
+    second: REAL ugly thing_281
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: REAL ugly thing_0
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 353
+        width: 14
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1be829e96efa7880800000000000000
+      internalID: -8612291606555858145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_1
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 351
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d7944a585f685b50800000000000000
+      internalID: 6582133280664229841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_2
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 352
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ddf163e39dd366470800000000000000
+      internalID: 8387459359285059549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_3
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 348
+        width: 20
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4049a2bd355506c0800000000000000
+      internalID: -4177839355837464501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_4
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 350
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38011be6f9384ebb0800000000000000
+      internalID: -4907652973146861437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_5
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 338
+        width: 15
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57f991e9179a85780800000000000000
+      internalID: -8694012775189864587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_6
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 350
+        width: 16
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16c1539b35098f640800000000000000
+      internalID: 5113996066143149153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_7
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 327
+        width: 26
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 000caf8da36953f90800000000000000
+      internalID: -6974503268420763648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_8
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 350
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff196bee48034ffe0800000000000000
+      internalID: -1156245856828616193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_9
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 337
+        width: 26
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08b2a7480fb5eb470800000000000000
+      internalID: 8412262242547542912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_10
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 343
+        width: 18
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7b44c1130b9ffe60800000000000000
+      internalID: 7998281900718574459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_11
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 337
+        width: 19
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be3d87bd073296200800000000000000
+      internalID: 173709028255912939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_12
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 331
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93cdf822ec1281200800000000000000
+      internalID: 150907756743744569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_13
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 325
+        width: 24
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 544d049a22498f140800000000000000
+      internalID: 4753712283278955589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_14
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 341
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6029aafd19e7c380800000000000000
+      internalID: -8950929419406860178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_15
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 342
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2b8502dbaa87cbd0800000000000000
+      internalID: -2609964988470293716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_16
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 337
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57e7787f690374970800000000000000
+      internalID: 8739007026891816565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_17
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 331
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b171bb950a64a210800000000000000
+      internalID: 1343315161182728625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_18
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 328
+        width: 19
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89699e24392732440800000000000000
+      internalID: 4909893995572336280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_19
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 332
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 199bbe2952d4505f0800000000000000
+      internalID: -791141335759603311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_20
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 328
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4973a38dd675fd590800000000000000
+      internalID: -7647297512961067116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_21
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 335
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb5546cb54abbfde0800000000000000
+      internalID: -1298239258890054210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_22
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 334
+        width: 14
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc98e489050093700800000000000000
+      internalID: 520447578090670540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_23
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 326
+        width: 30
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5fea8ff3b4fa93d0800000000000000
+      internalID: -3198975531369697442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_24
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 321
+        width: 24
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b74927afbe50f3cd0800000000000000
+      internalID: -2576333950755367813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_25
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 321
+        width: 7
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78670b4f3e1fa3560800000000000000
+      internalID: 7294408507845015175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_26
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 311
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d96241fe6cecdf870800000000000000
+      internalID: 8718351807469069981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_27
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 301
+        width: 17
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e8cf9fb5c7fb22a0800000000000000
+      internalID: -6761037986871129886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_28
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 314
+        width: 9
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a96d7f3f65a5b1e00800000000000000
+      internalID: 1016505470408971930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_29
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 306
+        width: 17
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d69ac2bda6929f8f0800000000000000
+      internalID: -506327944182060691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_30
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 321
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ebf8e9d469cc9fc50800000000000000
+      internalID: 6699610866609721278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_31
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 323
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a788ec0ae6afc530800000000000000
+      internalID: 3877501328358410151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_32
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 322
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8452d2646e2564be0800000000000000
+      internalID: -1493415077453421240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_33
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 315
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 428db453aeab1d0b0800000000000000
+      internalID: -5705573737822431196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_34
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 311
+        width: 19
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 792c9fb0a7e4cc850800000000000000
+      internalID: 6398575456680526487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_35
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 317
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc785f09aa1eb5560800000000000000
+      internalID: 7303679343404091343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_36
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 322
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f635c7be07757f720800000000000000
+      internalID: 2879866629225468783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_37
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 274
+        width: 41
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37f5b33d86643d4e0800000000000000
+      internalID: -1958143996941607053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_38
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 314
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a6623f19a4085b00800000000000000
+      internalID: 817408456787125928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_39
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 298
+        width: 17
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6a68e465c9a83390800000000000000
+      internalID: -7838328486171743633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_40
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 299
+        width: 22
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94c99be53ec448d80800000000000000
+      internalID: -8249384078005396407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_41
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 313
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e4751cf6e4fefc30800000000000000
+      internalID: 4395219559269102818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_42
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 304
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12b711686a4f96210800000000000000
+      internalID: 1326860561288362785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_43
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 309
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2952f2c982d1ce0b0800000000000000
+      internalID: -5698147368274287214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_44
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 293
+        width: 15
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e987e94bb25f0290800000000000000
+      internalID: -7922022255169140250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_45
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 310
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 435fd92dc9335f3e0800000000000000
+      internalID: -2020652109164317388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_46
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 270
+        width: 42
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 557c9bec499fcc290800000000000000
+      internalID: -7868640031404341419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_47
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 290
+        width: 18
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af76e47fba131f290800000000000000
+      internalID: -7858445260126525446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_48
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 314
+        width: 12
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7fa13d357185b120800000000000000
+      internalID: 2428989914574073722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_49
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 289
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf632665bed633fb0800000000000000
+      internalID: -4669267531119053060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_50
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 298
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1cfd1c0b29e24a20800000000000000
+      internalID: 3045252669152033822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_51
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 290
+        width: 29
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b1142e96ddda8140800000000000000
+      internalID: 4722831073097290162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_52
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 294
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c658545986763640800000000000000
+      internalID: 5059361563595003584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_53
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 296
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb71484308ba93e70800000000000000
+      internalID: 9095489489576662974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_54
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 288
+        width: 14
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 967cd0cbcb2723670800000000000000
+      internalID: 8516996000245466985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_55
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 298
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78cc94e37a8e83300800000000000000
+      internalID: 232191185811786887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_56
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 292
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c4651a9378fee6e0800000000000000
+      internalID: -1806233225138969400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_57
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 305
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: babc578f795097d80800000000000000
+      internalID: -8252558691913053269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_58
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 286
+        width: 11
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ad12147e2399ba80800000000000000
+      internalID: -8450561398058902103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_59
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 295
+        width: 23
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8bb9fee851bb4e20800000000000000
+      internalID: 3335954944522566542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_60
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 285
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9aefbbc84994fe9a0800000000000000
+      internalID: -6201657259500765527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_61
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 283
+        width: 15
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68701392b61d74c10800000000000000
+      internalID: 2037827614591223686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_62
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 272
+        width: 22
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2be41ea540f3d7c50800000000000000
+      internalID: 6664552311515336370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_63
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 260
+        width: 18
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f0b9f568507a9920800000000000000
+      internalID: 2997832026938781943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_64
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 267
+        width: 23
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3fb7babb01a80caa0800000000000000
+      internalID: -6142758087260668941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_65
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 281
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f40b320a5f411b030800000000000000
+      internalID: 3508608629884563535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_66
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 288
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f95a2fefb151163e0800000000000000
+      internalID: -2062343944373361249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_67
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 285
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6faa2771064977930800000000000000
+      internalID: 4140941522821622518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_68
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 283
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa10d3a377f8de970800000000000000
+      internalID: 8785836190310662570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_69
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 281
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5cf06430ceea8f690800000000000000
+      internalID: -7568106845105680443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_70
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 281
+        width: 20
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 800fc6f01faf71a90800000000000000
+      internalID: -7343124754151444472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_71
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 285
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e095bb6710d076790800000000000000
+      internalID: -7537041151443117810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_72
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 288
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc1be691e680a2e50800000000000000
+      internalID: 6785245057553183179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_73
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 291
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2fe6ff9a2077481b0800000000000000
+      internalID: -5655264378744770830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_74
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 281
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2df1b1d34f5615ed0800000000000000
+      internalID: -2427046624504373294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_75
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 284
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e958174a289b92b60800000000000000
+      internalID: 7721907006859216286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_76
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 270
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c19aa86626e8754e0800000000000000
+      internalID: -1992967756809852644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_77
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 275
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06204e772040ba6e0800000000000000
+      internalID: -1825360815320726944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_78
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 281
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8112c2c55def3af70800000000000000
+      internalID: 9197475056348569880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_79
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 274
+        width: 20
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 552e4afc54a40e8b0800000000000000
+      internalID: -5125014712250736043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_80
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 259
+        width: 43
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46ecbd4ad043c23e0800000000000000
+      internalID: -2077228094919553436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_81
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 278
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c222fe348fdc2f810800000000000000
+      internalID: 1797725667449578028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_82
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 269
+        width: 26
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e6f65a83239b2b60800000000000000
+      internalID: 7722427766910940898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_83
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 273
+        width: 19
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 528a682eae87806b0800000000000000
+      internalID: -5329877208774825947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_84
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 268
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f273242b7fc6d7370800000000000000
+      internalID: 8321927497553950511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_85
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 256
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b965d59ce964b6f10800000000000000
+      internalID: 2263980885480920731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_86
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 250
+        width: 19
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a603b9198b28fb7c0800000000000000
+      internalID: -4053377410381696918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_87
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 272
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c89b0b45005d6780800000000000000
+      internalID: -8688200122463708991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_88
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 266
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e630205ce78521620800000000000000
+      internalID: 2743352424516420462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_89
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 249
+        width: 13
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4458b16ae77e3eb00800000000000000
+      internalID: 856782885269243204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_90
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 273
+        width: 12
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf074c0e49ca5b5b0800000000000000
+      internalID: -5353182826633858821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_91
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 264
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 737d30127890c1af0800000000000000
+      internalID: -424453788900534473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_92
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 267
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5441b632ce6281c90800000000000000
+      internalID: -7198961208703380411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_93
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 266
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: def0a6ea08abd04a0800000000000000
+      internalID: -6625434414947364883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_94
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 247
+        width: 19
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 277417d0b8a39df80800000000000000
+      internalID: -8081363687439251598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_95
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 255
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f800df2ed20314a50800000000000000
+      internalID: 6503532310539600015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_96
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 254
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60ca6aa0d33fcf1a0800000000000000
+      internalID: -6774272295974818810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_97
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 238
+        width: 23
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92022dc033e274670800000000000000
+      internalID: 8522831616615260201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_98
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 263
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44896b4d1ab969110800000000000000
+      internalID: 1267371464512149572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_99
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 209
+        width: 48
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e77877a0a77b8d20800000000000000
+      internalID: 3281848285357701089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_100
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 241
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 860e8d4ca92d6c4e0800000000000000
+      internalID: -1961649025503928216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_101
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 254
+        width: 23
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf266d43e3580a9a0800000000000000
+      internalID: -6223828182805093637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_102
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 201
+        width: 32
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91651ea28dabf0f40800000000000000
+      internalID: 5696977491242079769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_103
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 249
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4ac0f45417c076b0800000000000000
+      internalID: -5300517871276733873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_104
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 245
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e176da44683237340800000000000000
+      internalID: 4860267482447701790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_105
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 246
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe465f513d16dc000800000000000000
+      internalID: 57809929460081903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_106
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 245
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf7b6ead75e7d5670800000000000000
+      internalID: 8529112185109395451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_107
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 250
+        width: 18
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c44ccb642af7f9a0800000000000000
+      internalID: -6199211327717882681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_108
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 240
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b0599781ac4aa770800000000000000
+      internalID: 8622788693202653360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_109
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 244
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 921c957e229dccac0800000000000000
+      internalID: -3833450438865600215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_110
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 231
+        width: 30
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f0466f8a6e2563f0800000000000000
+      internalID: -908268714638032656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_111
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 232
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d48b4e897cbab0b60800000000000000
+      internalID: 7713447660554074189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_112
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 235
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 870e52ecfed7cd4d0800000000000000
+      internalID: -3108471173883240328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_113
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 224
+        width: 19
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 179674b9e8cc42bb0800000000000000
+      internalID: -4961615976592873103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_114
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 226
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f65d52aa6f583b40800000000000000
+      internalID: 5420187063135590137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_115
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 218
+        width: 20
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8db80271e3004a40800000000000000
+      internalID: 5350280624131849614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_116
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 221
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad9ffffa3d6cbf3f0800000000000000
+      internalID: -865879890845500966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_117
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 216
+        width: 24
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e31b75a2ebf8f2690800000000000000
+      internalID: -7624717597198012098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_118
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 120
+        width: 93
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0db05d1ae6ddb790800000000000000
+      internalID: -7512612302381597428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_119
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 227
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb2006d0519a53530800000000000000
+      internalID: 3834156565659648702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_120
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 223
+        width: 14
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e783fdc2fc7bc040800000000000000
+      internalID: 4668962820978870244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_121
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 220
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7b8106c057a9b6f0800000000000000
+      internalID: -668319104326595714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_122
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 213
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f4c31351fb9c9f00800000000000000
+      internalID: 1124945467719009524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_123
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 201
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67b767b78073d3fd0800000000000000
+      internalID: -2360670120101643402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_124
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 211
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 569a875ff633793f0800000000000000
+      internalID: -894189445057042075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_125
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 204
+        width: 23
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23e7a03760c5f3d50800000000000000
+      internalID: 6719190351829696050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_126
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 211
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0f81ebe25a42d590800000000000000
+      internalID: -7650971096943849714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_127
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 212
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70b1cc2d1ffa6d990800000000000000
+      internalID: -7361503087731926265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_128
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 217
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2fa57903b6eaf740800000000000000
+      internalID: 5186711577502789423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_129
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 217
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8e27d10efc7e4060800000000000000
+      internalID: 6939621506218929807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_130
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 211
+        width: 15
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44d2942d914629210800000000000000
+      internalID: 1338242101347429700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_131
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 212
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7954c3fb67dedd10800000000000000
+      internalID: 2152394530580879743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_132
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 195
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9354e0417c675f70800000000000000
+      internalID: 9175921999466484634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_133
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 199
+        width: 20
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee27f1d374099df70800000000000000
+      internalID: 9212553148405609198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_134
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 199
+        width: 14
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8899e79ea75456410800000000000000
+      internalID: 1469657247612049800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_135
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 186
+        width: 28
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88ab3581f8408f190800000000000000
+      internalID: -7928582131350783352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_136
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 206
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a711447f4aefc91a0800000000000000
+      internalID: -6801281352759766662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_137
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 188
+        width: 18
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ed7bd7fbca9edc00800000000000000
+      internalID: 927348774112296422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_138
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 184
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09c8a20dc7e5d6db0800000000000000
+      internalID: -4797074137918305136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_139
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 184
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e10f851a02ba0d390800000000000000
+      internalID: -7795542798344064994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_140
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 176
+        width: 20
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4d070076ba9c7fa0800000000000000
+      internalID: -5801592111605805748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_141
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 181
+        width: 7
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92e4e09ce84de2700800000000000000
+      internalID: 517584716917788201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_142
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 156
+        width: 26
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbaba65ac82b2bc00800000000000000
+      internalID: 914989991450032831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_143
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 178
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fafca57ca141624b0800000000000000
+      internalID: -5465658992521195601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_144
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 183
+        width: 25
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 788c8d523a2e309a0800000000000000
+      internalID: -6267917066027087737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_145
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 178
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db7f093156e8fe650800000000000000
+      internalID: 6264382171466758077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_146
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 175
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ea21be66af3d87b0800000000000000
+      internalID: -5220446408998311200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_147
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 184
+        width: 9
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7a8caa0820b776f0800000000000000
+      internalID: -686886732126451076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_148
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 177
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4937c1041d939cd0800000000000000
+      internalID: -2552523854534198962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_149
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 172
+        width: 18
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d90f5825fb5105d0800000000000000
+      internalID: -3098093960151758379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_150
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 153
+        width: 27
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d27ed869bba030e0800000000000000
+      internalID: -2292143397514874157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_151
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 185
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8af33fbdaf3e02270800000000000000
+      internalID: 8223823586150006696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_152
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 175
+        width: 23
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 735949f8cf6253350800000000000000
+      internalID: 5995741345096176951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_153
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 186
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7995b5b03adb2e9a0800000000000000
+      internalID: -6205188828595267177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_154
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 182
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e1fa3ec5fc4fa130800000000000000
+      internalID: 3580164847393501671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_155
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 185
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f10fb2e03aabdc440800000000000000
+      internalID: 4957823974284980255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_156
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 184
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f61c4fb15b4a7e450800000000000000
+      internalID: 6118039716571169135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_157
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 186
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ff31c4beed9ddc80800000000000000
+      internalID: -8296301289986244616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_158
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 160
+        width: 11
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19aadad985fe7aa80800000000000000
+      internalID: -8455526611483252079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_159
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 172
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da4a534e594115c60800000000000000
+      internalID: 7805042263221183661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_160
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 179
+        width: 8
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54f968478e2873470800000000000000
+      internalID: 8374305967017729861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_161
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 159
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cdfe663f0ce7c4d50800000000000000
+      internalID: 6722887710939738076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_162
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 161
+        width: 22
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72aad239a8b8e8560800000000000000
+      internalID: 7317939871814625831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_163
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 159
+        width: 13
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c272bfcacfdb18e10800000000000000
+      internalID: 2198246986065061676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_164
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 170
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e517c21e01b27b690800000000000000
+      internalID: -7586547695785053858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_165
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 166
+        width: 10
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2e76ead9444bdab0800000000000000
+      internalID: -4982313478759481814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_166
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 176
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61feb152aba7fbfa0800000000000000
+      internalID: -5782768456615334122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_167
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 172
+        width: 13
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b8519d2131597b00800000000000000
+      internalID: 826781278258944183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_168
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 146
+        width: 13
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85a58fecdd3f0fad0800000000000000
+      internalID: -2670366445044999592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_169
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 153
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4a94c3bdaa20be60800000000000000
+      internalID: 7975921865606863436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_170
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 162
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d80350a245e4b2aa0800000000000000
+      internalID: -6184763539874041715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_171
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 155
+        width: 21
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2eb294bdfdca0c060800000000000000
+      internalID: 6971762300626217954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_172
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 158
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67b95b0aca1e2b390800000000000000
+      internalID: -7803927072732767370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_173
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 165
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0135f3c3bc21b0ef0800000000000000
+      internalID: -140998299233594608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_174
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 160
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5fbf7d01b3f6b110800000000000000
+      internalID: 1276475486167351134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_175
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 145
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84f4d6e7e264b7b40800000000000000
+      internalID: 5439018140483538760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_176
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 148
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a34d607aeb791b20800000000000000
+      internalID: 3105649664887440291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_177
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 145
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93190144f38591130800000000000000
+      internalID: 3537956011024355641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_178
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 138
+        width: 7
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eff3109d5b6bdacd0800000000000000
+      internalID: -2545177322248388610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_179
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 147
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3b460cee541a73e0800000000000000
+      internalID: -2055307882021893316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_180
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 150
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c9dca5e069e8c270800000000000000
+      internalID: 8271117318045358533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_181
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 152
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6bd4acfdb73c40a80800000000000000
+      internalID: -8501455259765682762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_182
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 143
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 689bf78a422cb7570800000000000000
+      internalID: 8465573387274533254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_183
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 148
+        width: 18
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32734b3ea83c24890800000000000000
+      internalID: -7475197430188460253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_184
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 137
+        width: 22
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 301a34b5db58ba970800000000000000
+      internalID: 8767248147933274371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_185
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 154
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 516add9a52be07570800000000000000
+      internalID: 8462522246825354773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_186
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 154
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce1e26d765a3b1310800000000000000
+      internalID: 1376758254237049324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_187
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 142
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6572c26c20fa98000800000000000000
+      internalID: 38754498258937686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_188
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 130
+        width: 27
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 567db0f507a978460800000000000000
+      internalID: 7243928333070358373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_189
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 134
+        width: 24
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4d950fd1a7274c20800000000000000
+      internalID: 3190562437200190798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_190
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 123
+        width: 31
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9e010148d27a4a00800000000000000
+      internalID: 741531361784958619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_191
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 142
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30ee0fb5f14714e30800000000000000
+      internalID: 4485994381873049091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_192
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 145
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16f1c075ca76ab4c0800000000000000
+      internalID: -4270987306715046047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_193
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 137
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a62b4caa9dc63d830800000000000000
+      internalID: 4094736168338633322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_194
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 134
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7949dace2bb6b92c0800000000000000
+      internalID: -4423823792742230889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_195
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 137
+        width: 6
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9485bff9756c8d220800000000000000
+      internalID: 2510974871907555401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_196
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 134
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf9bbe2d3c21db950800000000000000
+      internalID: 6466345272240486908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_197
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 128
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f5c4dc06409b1f30800000000000000
+      internalID: 4547386879298029046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_198
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 138
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9332f94b129d48700800000000000000
+      internalID: 541796593978778425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_199
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 130
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3429aedde7c9c0410800000000000000
+      internalID: 1444701649182036547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_200
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 128
+        width: 19
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99b7ce49811351540800000000000000
+      internalID: 4977938944775453593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_201
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 112
+        width: 15
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05418d70ea5e0bb80800000000000000
+      internalID: -8380946370917821360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_202
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 126
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 672bc76370fea8420800000000000000
+      internalID: 2633179746409427574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_203
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 124
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 651a4de5a3c9de020800000000000000
+      internalID: 2372724353207148886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_204
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 129
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4fad64d6404b675c0800000000000000
+      internalID: -4217986069879661836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_205
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 107
+        width: 42
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9dad1a9f0683dbd60800000000000000
+      internalID: 7907538509888608985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_206
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 119
+        width: 34
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 705d1861339776510800000000000000
+      internalID: 1542334657725584647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_207
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 116
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2cec4d3274d32b020800000000000000
+      internalID: 2356012930821312194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_208
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 106
+        width: 17
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5cbddd838b66b81b0800000000000000
+      internalID: -5653311965819446331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_209
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 118
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 396e8da94d61d9bf0800000000000000
+      internalID: -316071296459282797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_210
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 109
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 856c92f89fb9d5ff0800000000000000
+      internalID: -45708925052795304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_211
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 113
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e96a4f4af011eb40800000000000000
+      internalID: 5467670089862638054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_212
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 116
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48b8a44b7e8bcd940800000000000000
+      internalID: 5322332164946824068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_213
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 107
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8fa87f608948991b0800000000000000
+      internalID: -5649338469072794888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_214
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 114
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47a7fd24afeed7f80800000000000000
+      internalID: -8107060995565847948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_215
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 76
+        width: 49
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23652ea352721e580800000000000000
+      internalID: -8799709156050053582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_216
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 101
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c00020ebb96649a50800000000000000
+      internalID: 6526954579060457484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_217
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 103
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 634a1e7a32c59dfc0800000000000000
+      internalID: -3469640729702063050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_218
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 95
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 922cd4f7386127ab0800000000000000
+      internalID: -5011918681277611479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_219
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 107
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7952ad13066ed0fe0800000000000000
+      internalID: -1221066623119907433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_220
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 98
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 194981645781a53c0800000000000000
+      internalID: -4370153596443388783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_221
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 86
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62ce09d8fd4690e90800000000000000
+      internalID: -7059000029610972122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_222
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 90
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1d9f8fb0b1231780800000000000000
+      internalID: -8713583811019956964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_223
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 90
+        width: 13
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 717415c7f097f03c0800000000000000
+      internalID: -4391158004245772521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_224
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 96
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5bd64779928ad9c0800000000000000
+      internalID: -3901662531520373926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_225
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 81
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 808fed85093487cf0800000000000000
+      internalID: -254379091701073912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_226
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 96
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8b38d2904ab75ed0800000000000000
+      internalID: -2425265087811404918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_227
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 90
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74ec21856f7c661a0800000000000000
+      internalID: -6816541125125157305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_228
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 74
+        width: 22
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5f04f13d9b343c00800000000000000
+      internalID: 879393373578071898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_229
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 64
+        width: 16
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbe1034bf907da7a0800000000000000
+      internalID: -6364306867179479361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_230
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 40
+        width: 53
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e651fb2a182f77e10800000000000000
+      internalID: 2195489981961540974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_231
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 81
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24c6fbbe994a89a40800000000000000
+      internalID: 5375227136258829378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_232
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 78
+        width: 19
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 270539dd9ad23d4e0800000000000000
+      internalID: -1958171205385891726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_233
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 88
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ed0228e93cf5abb0800000000000000
+      internalID: -4925253291821888024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_234
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 84
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0a298a54d6787c10800000000000000
+      internalID: 2051520284691343884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_235
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 66
+        width: 22
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7fbca7a064069c8a0800000000000000
+      internalID: -6284385951079019529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_236
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 75
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c30aabf9ed9b8ceb0800000000000000
+      internalID: -4699301845347426244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_237
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 66
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac86c5e3b2fe59220800000000000000
+      internalID: 2492160937828313290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_238
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 60
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73ce0cb2edceac870800000000000000
+      internalID: 8704029668807863351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_239
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 65
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff406e41ee371c5b0800000000000000
+      internalID: -5349867415949409025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_240
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 63
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d67d67bc883462a10800000000000000
+      internalID: 1884267748909307757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_241
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 55
+        width: 49
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13694db3c290c8d40800000000000000
+      internalID: 5587851323246941745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_242
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 69
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3279e659d1be3c50800000000000000
+      internalID: 6646945647069590074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_243
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 70
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28f2b14e7223083a0800000000000000
+      internalID: -6665272301596233854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_244
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 77
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13091fdce51328d30800000000000000
+      internalID: 4432159266537836593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_245
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 69
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5153b97e7c2a57b60800000000000000
+      internalID: 7743274113801336085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_246
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 62
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff0750105cd80e210800000000000000
+      internalID: 1360242964731097343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_247
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 63
+        width: 24
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 582092e3d74e2bea0800000000000000
+      internalID: -5858368938690674043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_248
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 73
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd657f207c14cf7c0800000000000000
+      internalID: -4036278843026745637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_249
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 51
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f29475c4f76befb20800000000000000
+      internalID: 3170171845573298479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_250
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 56
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 484daea9ff7dc7bd0800000000000000
+      internalID: -2630990589475498876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_251
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 16
+        width: 43
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7b4670bdf7c548b0800000000000000
+      internalID: -5168505104936580228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_252
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 54
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: afffc06bb215dcc40800000000000000
+      internalID: 5534168765287956474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_253
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 38
+        width: 35
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2865fa680d51c8eb0800000000000000
+      internalID: -4716370724406733182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_254
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 58
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc0a759c2246e2810800000000000000
+      internalID: 1742440206408589515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_255
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 47
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7259e07ee57a9690800000000000000
+      internalID: -7594628154649914756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_256
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 43
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ade4b915f5c06550800000000000000
+      internalID: 6152134747477044649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_257
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 43
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96686ef4894b87040800000000000000
+      internalID: 4645661581901203049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_258
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 39
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74953543ca0f19960800000000000000
+      internalID: 7607125868008397127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_259
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 47
+        width: 12
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e80c27e3c02518ce0800000000000000
+      internalID: -1404751396222091122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_260
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 40
+        width: 6
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d4841ef1a0096bc0800000000000000
+      internalID: -3789496915703069483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_261
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 33
+        width: 8
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e8a84536e6301320800000000000000
+      internalID: 2526579753319180516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_262
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 21
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8dd8806ce47b60960800000000000000
+      internalID: 7567937772800478680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_263
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 26
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60117981a60575d30800000000000000
+      internalID: 4420089975896740102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_264
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 31
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f8084cdcf1016420800000000000000
+      internalID: 2621378643645434104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_265
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 32
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 332d5fcfbb572c010800000000000000
+      internalID: 1207657100352016947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_266
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 2
+        width: 25
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 463cc2840f304c250800000000000000
+      internalID: 5963896137083306852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_267
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 6
+        width: 41
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fcfe424c80daa3340800000000000000
+      internalID: 4844374602352488399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_268
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 32
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9e5e0497ef4d8c10800000000000000
+      internalID: 2057388460818194075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_269
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 19
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64c9033fc6c737360800000000000000
+      internalID: 7166208239454952518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_270
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 12
+        width: 25
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e136e2b8d1944da0800000000000000
+      internalID: -5961479646831300123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_271
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 21
+        width: 13
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43cabfc8267f51650800000000000000
+      internalID: 6203136064416885812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_272
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 0
+        width: 19
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1b1c3cb1307ac750800000000000000
+      internalID: 6325991985509047070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_273
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 10
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac59f4319bcd13150800000000000000
+      internalID: 5850700078382028234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_274
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 0
+        width: 38
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 004450572779e0d10800000000000000
+      internalID: 2093777394619204608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_275
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 18
+        width: 22
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85b70f5ee703f9c40800000000000000
+      internalID: 5521184989761272664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_276
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 3
+        width: 19
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1e750b1689e40120800000000000000
+      internalID: 2379283265346698782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_277
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 1
+        width: 25
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e52fe2ebbd168f50800000000000000
+      internalID: 6883221773285795303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_278
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 13
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5525eac0a82ebe4c0800000000000000
+      internalID: -4257059940202556843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_279
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 0
+        width: 18
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d0ca74c0a889aa40800000000000000
+      internalID: 5379981453943292116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_280
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 6
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4acd4e5f7a9f805e0800000000000000
+      internalID: -1943028739430097756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REAL ugly thing_281
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 0
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 746733c059fe32390800000000000000
+      internalID: -7844162702515407289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      REAL ugly thing_0: -8612291606555858145
+      REAL ugly thing_1: 6582133280664229841
+      REAL ugly thing_10: 7998281900718574459
+      REAL ugly thing_100: -1961649025503928216
+      REAL ugly thing_101: -6223828182805093637
+      REAL ugly thing_102: 5696977491242079769
+      REAL ugly thing_103: -5300517871276733873
+      REAL ugly thing_104: 4860267482447701790
+      REAL ugly thing_105: 57809929460081903
+      REAL ugly thing_106: 8529112185109395451
+      REAL ugly thing_107: -6199211327717882681
+      REAL ugly thing_108: 8622788693202653360
+      REAL ugly thing_109: -3833450438865600215
+      REAL ugly thing_11: 173709028255912939
+      REAL ugly thing_110: -908268714638032656
+      REAL ugly thing_111: 7713447660554074189
+      REAL ugly thing_112: -3108471173883240328
+      REAL ugly thing_113: -4961615976592873103
+      REAL ugly thing_114: 5420187063135590137
+      REAL ugly thing_115: 5350280624131849614
+      REAL ugly thing_116: -865879890845500966
+      REAL ugly thing_117: -7624717597198012098
+      REAL ugly thing_118: -7512612302381597428
+      REAL ugly thing_119: 3834156565659648702
+      REAL ugly thing_12: 150907756743744569
+      REAL ugly thing_120: 4668962820978870244
+      REAL ugly thing_121: -668319104326595714
+      REAL ugly thing_122: 1124945467719009524
+      REAL ugly thing_123: -2360670120101643402
+      REAL ugly thing_124: -894189445057042075
+      REAL ugly thing_125: 6719190351829696050
+      REAL ugly thing_126: -7650971096943849714
+      REAL ugly thing_127: -7361503087731926265
+      REAL ugly thing_128: 5186711577502789423
+      REAL ugly thing_129: 6939621506218929807
+      REAL ugly thing_13: 4753712283278955589
+      REAL ugly thing_130: 1338242101347429700
+      REAL ugly thing_131: 2152394530580879743
+      REAL ugly thing_132: 9175921999466484634
+      REAL ugly thing_133: 9212553148405609198
+      REAL ugly thing_134: 1469657247612049800
+      REAL ugly thing_135: -7928582131350783352
+      REAL ugly thing_136: -6801281352759766662
+      REAL ugly thing_137: 927348774112296422
+      REAL ugly thing_138: -4797074137918305136
+      REAL ugly thing_139: -7795542798344064994
+      REAL ugly thing_14: -8950929419406860178
+      REAL ugly thing_140: -5801592111605805748
+      REAL ugly thing_141: 517584716917788201
+      REAL ugly thing_142: 914989991450032831
+      REAL ugly thing_143: -5465658992521195601
+      REAL ugly thing_144: -6267917066027087737
+      REAL ugly thing_145: 6264382171466758077
+      REAL ugly thing_146: -5220446408998311200
+      REAL ugly thing_147: -686886732126451076
+      REAL ugly thing_148: -2552523854534198962
+      REAL ugly thing_149: -3098093960151758379
+      REAL ugly thing_15: -2609964988470293716
+      REAL ugly thing_150: -2292143397514874157
+      REAL ugly thing_151: 8223823586150006696
+      REAL ugly thing_152: 5995741345096176951
+      REAL ugly thing_153: -6205188828595267177
+      REAL ugly thing_154: 3580164847393501671
+      REAL ugly thing_155: 4957823974284980255
+      REAL ugly thing_156: 6118039716571169135
+      REAL ugly thing_157: -8296301289986244616
+      REAL ugly thing_158: -8455526611483252079
+      REAL ugly thing_159: 7805042263221183661
+      REAL ugly thing_16: 8739007026891816565
+      REAL ugly thing_160: 8374305967017729861
+      REAL ugly thing_161: 6722887710939738076
+      REAL ugly thing_162: 7317939871814625831
+      REAL ugly thing_163: 2198246986065061676
+      REAL ugly thing_164: -7586547695785053858
+      REAL ugly thing_165: -4982313478759481814
+      REAL ugly thing_166: -5782768456615334122
+      REAL ugly thing_167: 826781278258944183
+      REAL ugly thing_168: -2670366445044999592
+      REAL ugly thing_169: 7975921865606863436
+      REAL ugly thing_17: 1343315161182728625
+      REAL ugly thing_170: -6184763539874041715
+      REAL ugly thing_171: 6971762300626217954
+      REAL ugly thing_172: -7803927072732767370
+      REAL ugly thing_173: -140998299233594608
+      REAL ugly thing_174: 1276475486167351134
+      REAL ugly thing_175: 5439018140483538760
+      REAL ugly thing_176: 3105649664887440291
+      REAL ugly thing_177: 3537956011024355641
+      REAL ugly thing_178: -2545177322248388610
+      REAL ugly thing_179: -2055307882021893316
+      REAL ugly thing_18: 4909893995572336280
+      REAL ugly thing_180: 8271117318045358533
+      REAL ugly thing_181: -8501455259765682762
+      REAL ugly thing_182: 8465573387274533254
+      REAL ugly thing_183: -7475197430188460253
+      REAL ugly thing_184: 8767248147933274371
+      REAL ugly thing_185: 8462522246825354773
+      REAL ugly thing_186: 1376758254237049324
+      REAL ugly thing_187: 38754498258937686
+      REAL ugly thing_188: 7243928333070358373
+      REAL ugly thing_189: 3190562437200190798
+      REAL ugly thing_19: -791141335759603311
+      REAL ugly thing_190: 741531361784958619
+      REAL ugly thing_191: 4485994381873049091
+      REAL ugly thing_192: -4270987306715046047
+      REAL ugly thing_193: 4094736168338633322
+      REAL ugly thing_194: -4423823792742230889
+      REAL ugly thing_195: 2510974871907555401
+      REAL ugly thing_196: 6466345272240486908
+      REAL ugly thing_197: 4547386879298029046
+      REAL ugly thing_198: 541796593978778425
+      REAL ugly thing_199: 1444701649182036547
+      REAL ugly thing_2: 8387459359285059549
+      REAL ugly thing_20: -7647297512961067116
+      REAL ugly thing_200: 4977938944775453593
+      REAL ugly thing_201: -8380946370917821360
+      REAL ugly thing_202: 2633179746409427574
+      REAL ugly thing_203: 2372724353207148886
+      REAL ugly thing_204: -4217986069879661836
+      REAL ugly thing_205: 7907538509888608985
+      REAL ugly thing_206: 1542334657725584647
+      REAL ugly thing_207: 2356012930821312194
+      REAL ugly thing_208: -5653311965819446331
+      REAL ugly thing_209: -316071296459282797
+      REAL ugly thing_21: -1298239258890054210
+      REAL ugly thing_210: -45708925052795304
+      REAL ugly thing_211: 5467670089862638054
+      REAL ugly thing_212: 5322332164946824068
+      REAL ugly thing_213: -5649338469072794888
+      REAL ugly thing_214: -8107060995565847948
+      REAL ugly thing_215: -8799709156050053582
+      REAL ugly thing_216: 6526954579060457484
+      REAL ugly thing_217: -3469640729702063050
+      REAL ugly thing_218: -5011918681277611479
+      REAL ugly thing_219: -1221066623119907433
+      REAL ugly thing_22: 520447578090670540
+      REAL ugly thing_220: -4370153596443388783
+      REAL ugly thing_221: -7059000029610972122
+      REAL ugly thing_222: -8713583811019956964
+      REAL ugly thing_223: -4391158004245772521
+      REAL ugly thing_224: -3901662531520373926
+      REAL ugly thing_225: -254379091701073912
+      REAL ugly thing_226: -2425265087811404918
+      REAL ugly thing_227: -6816541125125157305
+      REAL ugly thing_228: 879393373578071898
+      REAL ugly thing_229: -6364306867179479361
+      REAL ugly thing_23: -3198975531369697442
+      REAL ugly thing_230: 2195489981961540974
+      REAL ugly thing_231: 5375227136258829378
+      REAL ugly thing_232: -1958171205385891726
+      REAL ugly thing_233: -4925253291821888024
+      REAL ugly thing_234: 2051520284691343884
+      REAL ugly thing_235: -6284385951079019529
+      REAL ugly thing_236: -4699301845347426244
+      REAL ugly thing_237: 2492160937828313290
+      REAL ugly thing_238: 8704029668807863351
+      REAL ugly thing_239: -5349867415949409025
+      REAL ugly thing_24: -2576333950755367813
+      REAL ugly thing_240: 1884267748909307757
+      REAL ugly thing_241: 5587851323246941745
+      REAL ugly thing_242: 6646945647069590074
+      REAL ugly thing_243: -6665272301596233854
+      REAL ugly thing_244: 4432159266537836593
+      REAL ugly thing_245: 7743274113801336085
+      REAL ugly thing_246: 1360242964731097343
+      REAL ugly thing_247: -5858368938690674043
+      REAL ugly thing_248: -4036278843026745637
+      REAL ugly thing_249: 3170171845573298479
+      REAL ugly thing_25: 7294408507845015175
+      REAL ugly thing_250: -2630990589475498876
+      REAL ugly thing_251: -5168505104936580228
+      REAL ugly thing_252: 5534168765287956474
+      REAL ugly thing_253: -4716370724406733182
+      REAL ugly thing_254: 1742440206408589515
+      REAL ugly thing_255: -7594628154649914756
+      REAL ugly thing_256: 6152134747477044649
+      REAL ugly thing_257: 4645661581901203049
+      REAL ugly thing_258: 7607125868008397127
+      REAL ugly thing_259: -1404751396222091122
+      REAL ugly thing_26: 8718351807469069981
+      REAL ugly thing_260: -3789496915703069483
+      REAL ugly thing_261: 2526579753319180516
+      REAL ugly thing_262: 7567937772800478680
+      REAL ugly thing_263: 4420089975896740102
+      REAL ugly thing_264: 2621378643645434104
+      REAL ugly thing_265: 1207657100352016947
+      REAL ugly thing_266: 5963896137083306852
+      REAL ugly thing_267: 4844374602352488399
+      REAL ugly thing_268: 2057388460818194075
+      REAL ugly thing_269: 7166208239454952518
+      REAL ugly thing_27: -6761037986871129886
+      REAL ugly thing_270: -5961479646831300123
+      REAL ugly thing_271: 6203136064416885812
+      REAL ugly thing_272: 6325991985509047070
+      REAL ugly thing_273: 5850700078382028234
+      REAL ugly thing_274: 2093777394619204608
+      REAL ugly thing_275: 5521184989761272664
+      REAL ugly thing_276: 2379283265346698782
+      REAL ugly thing_277: 6883221773285795303
+      REAL ugly thing_278: -4257059940202556843
+      REAL ugly thing_279: 5379981453943292116
+      REAL ugly thing_28: 1016505470408971930
+      REAL ugly thing_280: -1943028739430097756
+      REAL ugly thing_281: -7844162702515407289
+      REAL ugly thing_29: -506327944182060691
+      REAL ugly thing_3: -4177839355837464501
+      REAL ugly thing_30: 6699610866609721278
+      REAL ugly thing_31: 3877501328358410151
+      REAL ugly thing_32: -1493415077453421240
+      REAL ugly thing_33: -5705573737822431196
+      REAL ugly thing_34: 6398575456680526487
+      REAL ugly thing_35: 7303679343404091343
+      REAL ugly thing_36: 2879866629225468783
+      REAL ugly thing_37: -1958143996941607053
+      REAL ugly thing_38: 817408456787125928
+      REAL ugly thing_39: -7838328486171743633
+      REAL ugly thing_4: -4907652973146861437
+      REAL ugly thing_40: -8249384078005396407
+      REAL ugly thing_41: 4395219559269102818
+      REAL ugly thing_42: 1326860561288362785
+      REAL ugly thing_43: -5698147368274287214
+      REAL ugly thing_44: -7922022255169140250
+      REAL ugly thing_45: -2020652109164317388
+      REAL ugly thing_46: -7868640031404341419
+      REAL ugly thing_47: -7858445260126525446
+      REAL ugly thing_48: 2428989914574073722
+      REAL ugly thing_49: -4669267531119053060
+      REAL ugly thing_5: -8694012775189864587
+      REAL ugly thing_50: 3045252669152033822
+      REAL ugly thing_51: 4722831073097290162
+      REAL ugly thing_52: 5059361563595003584
+      REAL ugly thing_53: 9095489489576662974
+      REAL ugly thing_54: 8516996000245466985
+      REAL ugly thing_55: 232191185811786887
+      REAL ugly thing_56: -1806233225138969400
+      REAL ugly thing_57: -8252558691913053269
+      REAL ugly thing_58: -8450561398058902103
+      REAL ugly thing_59: 3335954944522566542
+      REAL ugly thing_6: 5113996066143149153
+      REAL ugly thing_60: -6201657259500765527
+      REAL ugly thing_61: 2037827614591223686
+      REAL ugly thing_62: 6664552311515336370
+      REAL ugly thing_63: 2997832026938781943
+      REAL ugly thing_64: -6142758087260668941
+      REAL ugly thing_65: 3508608629884563535
+      REAL ugly thing_66: -2062343944373361249
+      REAL ugly thing_67: 4140941522821622518
+      REAL ugly thing_68: 8785836190310662570
+      REAL ugly thing_69: -7568106845105680443
+      REAL ugly thing_7: -6974503268420763648
+      REAL ugly thing_70: -7343124754151444472
+      REAL ugly thing_71: -7537041151443117810
+      REAL ugly thing_72: 6785245057553183179
+      REAL ugly thing_73: -5655264378744770830
+      REAL ugly thing_74: -2427046624504373294
+      REAL ugly thing_75: 7721907006859216286
+      REAL ugly thing_76: -1992967756809852644
+      REAL ugly thing_77: -1825360815320726944
+      REAL ugly thing_78: 9197475056348569880
+      REAL ugly thing_79: -5125014712250736043
+      REAL ugly thing_8: -1156245856828616193
+      REAL ugly thing_80: -2077228094919553436
+      REAL ugly thing_81: 1797725667449578028
+      REAL ugly thing_82: 7722427766910940898
+      REAL ugly thing_83: -5329877208774825947
+      REAL ugly thing_84: 8321927497553950511
+      REAL ugly thing_85: 2263980885480920731
+      REAL ugly thing_86: -4053377410381696918
+      REAL ugly thing_87: -8688200122463708991
+      REAL ugly thing_88: 2743352424516420462
+      REAL ugly thing_89: 856782885269243204
+      REAL ugly thing_9: 8412262242547542912
+      REAL ugly thing_90: -5353182826633858821
+      REAL ugly thing_91: -424453788900534473
+      REAL ugly thing_92: -7198961208703380411
+      REAL ugly thing_93: -6625434414947364883
+      REAL ugly thing_94: -8081363687439251598
+      REAL ugly thing_95: 6503532310539600015
+      REAL ugly thing_96: -6774272295974818810
+      REAL ugly thing_97: 8522831616615260201
+      REAL ugly thing_98: 1267371464512149572
+      REAL ugly thing_99: 3281848285357701089
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
