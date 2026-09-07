@@ -1,0 +1,767 @@
+fileFormatVersion: 2
+guid: ed3e2f490160141449c32de6961c2c72
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 9014968661850425377
+    second: ui button 5_0
+  - first:
+      213: -1424829140337601237
+    second: ui button 5_1
+  - first:
+      213: 9182694365751519469
+    second: ui button 5_2
+  - first:
+      213: -4433347513956929024
+    second: ui button 5_3
+  - first:
+      213: -601066999290044948
+    second: ui button 5_4
+  - first:
+      213: 1463987076290286654
+    second: ui button 5_5
+  - first:
+      213: 2864299968960456056
+    second: ui button 5_6
+  - first:
+      213: -5363946860668417225
+    second: ui button 5_7
+  - first:
+      213: 3770507837210403793
+    second: ui button 5_8
+  - first:
+      213: 5260862215723786423
+    second: ui button 5_9
+  - first:
+      213: -8388055567883022739
+    second: ui button 5_10
+  - first:
+      213: -5237850174947679806
+    second: ui button 5_11
+  - first:
+      213: 6619605265664067230
+    second: ui button 5_12
+  - first:
+      213: 4115045919071628701
+    second: ui button 5_13
+  - first:
+      213: -8112632155858575170
+    second: ui button 5_14
+  - first:
+      213: 6054202194746491796
+    second: ui button 5_15
+  - first:
+      213: -180899162647236006
+    second: ui button 5_16
+  - first:
+      213: 1259034166895131765
+    second: ui button 5_17
+  - first:
+      213: -1368845416081544282
+    second: ui button 5_18
+  - first:
+      213: 1085432156308457889
+    second: ui button 5_19
+  - first:
+      213: 357479776907340645
+    second: ui button 5_20
+  - first:
+      213: -5106574764463510980
+    second: ui button 5_21
+  - first:
+      213: 8388163017578708848
+    second: ui button 5_22
+  - first:
+      213: -8736274454678158628
+    second: ui button 5_23
+  - first:
+      213: -4972333764837055231
+    second: ui button 5_24
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ui button 5_0
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 677
+        width: 40
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1288fde0c3a9b1d70800000000000000
+      internalID: 9014968661850425377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui button 5_1
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 691
+        width: 25
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b255d88227df93ce0800000000000000
+      internalID: -1424829140337601237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui button 5_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 31
+        width: 2134
+        height: 653
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de8a997afdb7f6f70800000000000000
+      internalID: 9182694365751519469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui button 5_3
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 683
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0027cb8cce59972c0800000000000000
+      internalID: -4433347513956929024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui button 5_4
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 53
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ced5b1dafb498a7f0800000000000000
+      internalID: -601066999290044948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui button 5_5
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 47
+        width: 21
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e349b064d70215410800000000000000
+      internalID: 1463987076290286654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui button 5_6
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 49
+        width: 17
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 875ec0465a900c720800000000000000
+      internalID: 2864299968960456056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui button 5_7
+      rect:
+        serializedVersion: 2
+        x: 633
+        y: 50
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73b89c7efbe6f85b0800000000000000
+      internalID: -5363946860668417225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui button 5_8
+      rect:
+        serializedVersion: 2
+        x: 875
+        y: 55
+        width: 12
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d3a0c3a6e8835430800000000000000
+      internalID: 3770507837210403793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui button 5_9
+      rect:
+        serializedVersion: 2
+        x: 1038
+        y: 49
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b0ad7cdf46520940800000000000000
+      internalID: 5260862215723786423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui button 5_10
+      rect:
+        serializedVersion: 2
+        x: 1518
+        y: 49
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6e481027e3a79b80800000000000000
+      internalID: -8388055567883022739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui button 5_11
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 49
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c1a687640b6f47b0800000000000000
+      internalID: -5237850174947679806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui button 5_12
+      rect:
+        serializedVersion: 2
+        x: 1808
+        y: 51
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e96463dbaef8ddb50800000000000000
+      internalID: 6619605265664067230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui button 5_13
+      rect:
+        serializedVersion: 2
+        x: 1874
+        y: 23
+        width: 34
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9d6fa006749b1930800000000000000
+      internalID: 4115045919071628701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui button 5_14
+      rect:
+        serializedVersion: 2
+        x: 1367
+        y: 47
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb063ac69042a6f80800000000000000
+      internalID: -8112632155858575170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui button 5_15
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 31
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4934140d1d8d40450800000000000000
+      internalID: 6054202194746491796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui button 5_16
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 31
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a52fe368b215d7df0800000000000000
+      internalID: -180899162647236006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui button 5_17
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 19
+        width: 38
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57c3dd577ecf87110800000000000000
+      internalID: 1259034166895131765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui button 5_18
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 33
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6aba906b852e00de0800000000000000
+      internalID: -1368845416081544282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui button 5_19
+      rect:
+        serializedVersion: 2
+        x: 629
+        y: 31
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a94d889bca301f00800000000000000
+      internalID: 1085432156308457889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui button 5_20
+      rect:
+        serializedVersion: 2
+        x: 1223
+        y: 33
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56ba2fc86f506f400800000000000000
+      internalID: 357479776907340645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui button 5_21
+      rect:
+        serializedVersion: 2
+        x: 1840
+        y: 15
+        width: 21
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3aad29be4dc129b0800000000000000
+      internalID: -5106574764463510980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui button 5_22
+      rect:
+        serializedVersion: 2
+        x: 1864
+        y: 15
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07ff8d472ddb86470800000000000000
+      internalID: 8388163017578708848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui button 5_23
+      rect:
+        serializedVersion: 2
+        x: 1925
+        y: 34
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd2c6949ba482c680800000000000000
+      internalID: -8736274454678158628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui button 5_24
+      rect:
+        serializedVersion: 2
+        x: 1647
+        y: 0
+        width: 45
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 105e43219c8befab0800000000000000
+      internalID: -4972333764837055231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      ui button 5_0: 9014968661850425377
+      ui button 5_1: -1424829140337601237
+      ui button 5_10: -8388055567883022739
+      ui button 5_11: -5237850174947679806
+      ui button 5_12: 6619605265664067230
+      ui button 5_13: 4115045919071628701
+      ui button 5_14: -8112632155858575170
+      ui button 5_15: 6054202194746491796
+      ui button 5_16: -180899162647236006
+      ui button 5_17: 1259034166895131765
+      ui button 5_18: -1368845416081544282
+      ui button 5_19: 1085432156308457889
+      ui button 5_2: 9182694365751519469
+      ui button 5_20: 357479776907340645
+      ui button 5_21: -5106574764463510980
+      ui button 5_22: 8388163017578708848
+      ui button 5_23: -8736274454678158628
+      ui button 5_24: -4972333764837055231
+      ui button 5_3: -4433347513956929024
+      ui button 5_4: -601066999290044948
+      ui button 5_5: 1463987076290286654
+      ui button 5_6: 2864299968960456056
+      ui button 5_7: -5363946860668417225
+      ui button 5_8: 3770507837210403793
+      ui button 5_9: 5260862215723786423
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
