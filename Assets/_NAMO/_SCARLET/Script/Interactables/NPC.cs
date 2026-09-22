@@ -76,7 +76,7 @@ public class NPC : MonoBehaviour, IInteractable
     {
         if (npcType == NPCType.Karen)
         {
-            int hearts = QuestManager.Instance != null ? QuestManager.Instance.CurrentFlameHearts : 0;
+            int hearts = FlameHeartLedger.Instance != null ? FlameHeartLedger.Instance.CurrentFlameHearts : 0;
             if (hearts == 0) return karenInitialQuest;
             if (hearts < 4) return karenIncompleteQuest;
             return karenCompleteQuest;

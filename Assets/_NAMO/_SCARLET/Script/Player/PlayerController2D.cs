@@ -216,8 +216,8 @@ public class PlayerController2D : MonoBehaviour
         float dashDir = isFacingRight ? 1f : -1f;
         SetVelocity(dashDir * dashSpeed, 0f);
 
-        // เสก Ghost Trail เงาตามตัว
-        VisualEffectsManager.Instance?.StartGhostTrail(spriteRenderer, dashDuration);
+        // Domain: emit dash ghost trail via GhostTrailEmitter
+        GhostTrailEmitter.Instance?.EmitDashTrail(spriteRenderer, dashDuration);
         TriggerSquashAndStretch(new Vector3(1.3f, 0.7f, 1f));
 
         yield return new WaitForSeconds(dashDuration);
@@ -297,10 +297,10 @@ public class PlayerController2D : MonoBehaviour
     {
         Vector3 startPosition = transform.position;
 
-        // เสกเงาร่างไฟเรียงตามแนวเส้นทางวาร์ป 4 จุด
-        if (spriteRenderer != null && VisualEffectsManager.Instance != null)
+        // Domain: emit warp ghost trail
+        if (spriteRenderer != null && GhostTrailEmitter.Instance != null)
         {
-            VisualEffectsManager.Instance.CreateWarpGhostTrail(spriteRenderer, startPosition, targetPosition, 4);
+            GhostTrailEmitter.Instance.EmitWarpTrail(spriteRenderer, startPosition, targetPosition, 4);
         }
 
         transform.position = targetPosition;

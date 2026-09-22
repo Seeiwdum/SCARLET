@@ -53,10 +53,10 @@ public class FlameHeartCollectible : MonoBehaviour, IInteractable
             Instantiate(collectVFX, transform.position, Quaternion.identity);
         }
 
-        // เพิ่มคะแนนเควสต์ 1 ดวง
-        if (QuestManager.Instance != null)
+        // Domain: deposit Flame Heart to ledger
+        if (FlameHeartLedger.Instance != null)
         {
-            QuestManager.Instance.CollectFlameHeart();
+            FlameHeartLedger.Instance.Deposit(1);
         }
 
         AnimatePrompt(false);

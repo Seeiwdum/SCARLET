@@ -1,19 +1,14 @@
 using System.Collections;
 using UnityEngine;
 
-public class VisualEffectsManager : MonoBehaviour
+public class GhostTrailEmitter : MonoBehaviour
 {
-    public static VisualEffectsManager Instance { get; private set; }
-
-    [Header("Hitstop Settings (จังหวะฟันหยุดชะงัก)")]
-    [SerializeField] private float defaultHitstopDuration = 0.06f;
+    public static GhostTrailEmitter Instance { get; private set; }
 
     [Header("Ghost Trail Settings (เงาตอน Dash / Warp)")]
     [SerializeField] private GameObject ghostPrefab;
     [SerializeField] private float ghostSpawnInterval = 0.04f;
     [SerializeField] private Color ghostColor = new Color(1f, 0.3f, 0.1f, 0.6f);
-
-    private Coroutine hitstopCoroutine;
 
     private void Awake()
     {
@@ -21,34 +16,10 @@ public class VisualEffectsManager : MonoBehaviour
         else Destroy(gameObject);
     }
 
-    private void OnEnable()
-    {
-        // Subscribe ฟังวิทยุสื่อสาร
-        GameEvents.OnEnemyHit += DoDefaultHitstop;
-        GameEvents.OnSwordVaultPerformed += DoDefaultHitstop;
-    }
-
-    private void OnDisable()
-    {
-        GameEvents.OnEnemyHit -= DoDefaultHitstop;
-        GameEvents.OnSwordVaultPerformed -= DoDefaultHitstop;
-    }
-
-    private void DoDefaultHitstop()
-    {
-        TriggerHitstop(defaultHitstopDuration);
-    }
-
-    public void TriggerHitstop(float duration)
-    {
-        // Delegate to HitStopManager to avoid conflicting with ZZZ parry slow-motion
-        HitStopManager.Instance?.TriggerHit(duration);
-    }
-
     /// <summary>
-    /// สั่งเสกเงาตามติดตัวละคร (Ghost Trail)
+    /// Domain method: Emit dash after-image trail
     /// </summary>
-    public void StartGhostTrail(SpriteRenderer sourceRenderer, float duration)
+    public void EmitDashTrail(SpriteRenderer sourceRenderer, float duration)
     {
         StartCoroutine(GhostTrailRoutine(sourceRenderer, duration));
     }
@@ -99,9 +70,9 @@ public class VisualEffectsManager : MonoBehaviour
     }
 
     /// <summary>
-    /// เสกเงาร่างไฟเรียงตามแนวเส้นทางวาร์ปจากจุดเริ่มต้นไปยังจุดเป้าหมาย
+    /// Domain method: Emit warp trail between positions
     /// </summary>
-    public void CreateWarpGhostTrail(SpriteRenderer sourceRenderer, Vector3 startPos, Vector3 targetPos, int ghostCount = 4)
+    public void EmitWarpTrail(SpriteRenderer sourceRenderer, Vector3 startPos, Vector3 targetPos, int ghostCount = 4)
     {
         if (sourceRenderer == null || ghostPrefab == null) return;
 
@@ -124,4 +95,11 @@ public class VisualEffectsManager : MonoBehaviour
             StartCoroutine(FadeAndDestroyGhost(sr, 0.2f + (t * 0.1f)));
         }
     }
+
+    // Legacy compatibility (will be removed) - delegates to domain methods
+    [System.Obsolete("Use EmitDashTrail")] public void StartGhostTrail(SpriteRenderer r, float d) => EmitDashTrail(r, d);
+    [System.Obsolete("Use EmitWarpTrail")] public void CreateWarpGhostTrail(SpriteRenderer r, Vector3 a, Vector3 b, int c=4) => EmitWarpTrail(r, a, b, c);
 }
+
+// Legacy alias for prefabs still referencing old class name
+[System.Obsolete("Use GhostTrailEmitter")] public class VisualEffectsManager : GhostTrailEmitter {}

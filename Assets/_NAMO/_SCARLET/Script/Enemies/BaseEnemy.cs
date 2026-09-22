@@ -161,6 +161,15 @@ public class BaseEnemy : MonoBehaviour, IDamageable, IFormSwappable
 
     #endregion
 
+    #region Parry Domain - virtual hook for future parryable enemies (IParryable pruned)
+
+    // Domain operation: reaction to being parried. Base enemies ignore by default.
+    public virtual void OnParrySuccess(Vector3 parrySourcePosition) { }
+
+    public virtual bool CanBeParried() => false;
+
+    #endregion
+
     #region Debug Gizmos
 
     private void OnDrawGizmosSelected()

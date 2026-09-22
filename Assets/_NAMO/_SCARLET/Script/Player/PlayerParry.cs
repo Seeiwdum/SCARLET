@@ -37,8 +37,11 @@ public class PlayerParry : MonoBehaviour
             Collider2D[] hits = Physics2D.OverlapCircleAll(parryCenter.position, parryRadius, enemyLayer);
             foreach (var hit in hits)
             {
-                IParryable parryTarget = hit.GetComponent<IParryable>();
-                if (parryTarget != null)
+                // Pruned IParryable (single-use) - use concrete BaseEnemy virtual + GuardianBoss domain object per tech lead
+                BaseEnemy baseEnemy = hit.GetComponent<BaseEnemy>();
+                GuardianBoss boss = hit.GetComponent<GuardianBoss>();
+                bool isParryable = (baseEnemy != null && baseEnemy.CanBeParried()) || boss != null;
+                if (isParryable)
                 {
                     // Directional Parry: ตรวจสอบว่าศัตรูอยู่ด้านหน้าผู้เล่นหรือไม่
                     float dirToEnemy = Mathf.Sign(hit.transform.position.x - transform.position.x);
@@ -48,11 +51,12 @@ public class PlayerParry : MonoBehaviour
                     {
                         parrySuccess = true;
                         
-                        parryTarget.OnParrySuccess(transform.position);
+                        if (boss != null) boss.OnParrySuccess(transform.position);
+                        else baseEnemy.OnParrySuccess(transform.position);
                         
-                        if (HitStopManager.Instance != null)
+                        if (HitStopEffect.Instance != null)
                         {
-                            HitStopManager.Instance.TriggerParryHitStop(0.15f);
+                            HitStopEffect.Instance.TriggerParryHitStop(0.15f);
                         }
                         
                         // Add Screen Shake for impact!

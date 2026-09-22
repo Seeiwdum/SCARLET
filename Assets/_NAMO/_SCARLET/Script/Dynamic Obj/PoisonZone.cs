@@ -11,9 +11,12 @@ public class PoisonZone : MonoBehaviour
     [Tooltip("ความถี่ในการโดนดาเมจ (เช่น โดนทุกๆ 1.5 วินาที)")]
     [SerializeField] private float tickRate = 1.5f;
 
-    // เก็บรายชื่อของทุกอย่างที่มี IDamageable ที่อยู่ในหมอกตอนนี้
+    private Collider2D zoneCollider;
+    // Explicit domain collection: entities currently inside corrosive volume
     private List<IDamageable> targetsInZone = new List<IDamageable>();
     private Coroutine poisonCoroutine;
+
+    private void Awake() { zoneCollider = GetComponent<Collider2D>(); }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -48,30 +51,40 @@ public class PoisonZone : MonoBehaviour
         }
     }
 
+    // --- Explicit domain methods (tech lead point 5) ---
+    public bool Contains(IDamageable target) => targetsInZone.Contains(target);
+    public bool Contains(Collider2D col) => col != null && zoneCollider != null && zoneCollider.OverlapPoint(col.transform.position);
+    public IReadOnlyList<IDamageable> CurrentTargets() => targetsInZone;
+
+    // Domain query: is target protected via Hood or SafeZone? Decoupled via SafeZone
+    public bool IsProtected(IDamageable target)
+    {
+        if (target is MonoBehaviour mb)
+        {
+            // Prefer SafeZone domain check, fall back to HoodState
+            if (SafeZone.IsEntityInAnySafeZone(target)) return true;
+            var hood = mb.GetComponent<PlayerHood>();
+            if (hood != null) return hood.IsProtectedFromPoison();
+        }
+        return false;
+    }
+
+    // Domain operation: apply single poison tick to all unprotected targets
+    public void ApplyPoisonTick()
+    {
+        for (int i = targetsInZone.Count - 1; i >= 0; i--)
+        {
+            if (IsProtected(targetsInZone[i])) continue;
+            targetsInZone[i].TakeDamage(damagePerTick, transform.position);
+        }
+    }
+
     private IEnumerator PoisonTickRoutine()
     {
-        // ตราบใดที่ยังมีคนอยู่ในหมอก จะวนทำดาเมจไปเรื่อยๆ
         while (targetsInZone.Count > 0)
         {
-            yield return new WaitForSeconds(tickRate); // หน่วงเวลาตามค่า Tick
-
-            // วนทำดาเมจถอยหลัง (กัน Error เวลามีตัวละครตายและถูกเตะออกจาก List กลางทาง)
-            for (int i = targetsInZone.Count - 1; i >= 0; i--)
-            {
-                // ตรวจสอบว่าเป้าหมายนี้คือ Player และใส่ฮู้ดอยู่หรือไม่
-                if (targetsInZone[i] is MonoBehaviour mb)
-                {
-                    PlayerHood playerHood = mb.GetComponent<PlayerHood>();
-                    if (playerHood != null && playerHood.IsProtectedFromPoison())
-                    {
-                        // สวมฮู้ดอยู่ ไม่ได้รับดาเมจจากหมอกพิษในรอบนี้
-                        continue;
-                    }
-                }
-
-                // บังคับทำดาเมจใส่ (ทิศทาง = จากจุดศูนย์กลางหมอก)
-                targetsInZone[i].TakeDamage(damagePerTick, transform.position);
-            }
+            yield return new WaitForSeconds(tickRate);
+            ApplyPoisonTick();
         }
         poisonCoroutine = null;
     }

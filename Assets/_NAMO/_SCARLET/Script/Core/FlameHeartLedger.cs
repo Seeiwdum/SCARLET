@@ -1,8 +1,8 @@
 using UnityEngine;
 
-public class QuestManager : MonoBehaviour
+public class FlameHeartLedger : MonoBehaviour
 {
-    public static QuestManager Instance { get; private set; }
+    public static FlameHeartLedger Instance { get; private set; }
 
     [Header("Main Quest: Flame Hearts")]
     [SerializeField] private int totalFlameHearts = 4;
@@ -19,13 +19,22 @@ public class QuestManager : MonoBehaviour
     }
 
     /// <summary>
-    /// เรียกใช้เมื่อกำจัดบอสผู้พิทักษ์และเก็บหัวใจเพลิงได้
+    /// Domain operation: Deposit a Flame Heart
     /// </summary>
-    public void CollectFlameHeart()
+    public void Deposit(int amount = 1)
     {
-        currentFlameHearts = Mathf.Clamp(currentFlameHearts + 1, 0, totalFlameHearts);
+        currentFlameHearts = Mathf.Clamp(currentFlameHearts + amount, 0, totalFlameHearts);
         Debug.Log($"<color=orange>[QUEST] ได้รับหัวใจเพลิง! ({currentFlameHearts}/{totalFlameHearts})</color>");
-        
         GameEvents.OnFlameHeartCollected?.Invoke(currentFlameHearts, totalFlameHearts);
     }
+
+    // Legacy compatibility
+    [System.Obsolete("Use Deposit")] public void CollectFlameHeart() => Deposit(1);
+
+    // Domain queries
+    public bool IsComplete() => IsAllHeartsCollected;
+    public float Progress() => (float)currentFlameHearts / Mathf.Max(1, totalFlameHearts);
 }
+
+// Legacy alias for inspector references
+[System.Obsolete("Use FlameHeartLedger")] public class QuestManager : FlameHeartLedger {}

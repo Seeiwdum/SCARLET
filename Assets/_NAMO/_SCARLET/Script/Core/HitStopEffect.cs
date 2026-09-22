@@ -2,17 +2,17 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class HitStopManager : MonoBehaviour
+public class HitStopEffect : MonoBehaviour
 {
-    private static HitStopManager _instance;
-    public static HitStopManager Instance 
+    private static HitStopEffect _instance;
+    public static HitStopEffect Instance 
     { 
         get 
         { 
             if (_instance == null) 
             {
-                GameObject go = new GameObject("HitStopManager_AutoCreated");
-                _instance = go.AddComponent<HitStopManager>();
+                GameObject go = new GameObject("HitStopEffect_AutoCreated");
+                _instance = go.AddComponent<HitStopEffect>();
             }
             return _instance; 
         } 
@@ -29,8 +29,26 @@ public class HitStopManager : MonoBehaviour
         else if (_instance != this) Destroy(gameObject);
     }
 
+    private void OnEnable()
+    {
+        GameEvents.OnEnemyHit += HandleEnemyHit;
+        GameEvents.OnSwordVaultPerformed += HandleEnemyHit;
+    }
+
+    private void OnDisable()
+    {
+        GameEvents.OnEnemyHit -= HandleEnemyHit;
+        GameEvents.OnSwordVaultPerformed -= HandleEnemyHit;
+    }
+
+    private void HandleEnemyHit() => ApplyHitPause(0.06f);
+
+    // Domain operations - concrete VFX objects per tech lead
+    public void ApplyHitPause(float duration = 0.06f) => TriggerHit(duration);
+    public void ApplyParryFreeze(float duration = 0.15f) => TriggerParryHitStop(duration);
+
     /// <summary>
-    /// เรียกใช้เมื่อ Parry ติด
+    /// Domain: Parry Freeze (ZZZ) + ScreenFlashFX
     /// </summary>
     /// <param name="stopDuration">ระยะเวลาค้างหน้าจอ (Realtime)</param>
     public void TriggerParryHitStop(float stopDuration = 0.15f)
@@ -94,4 +112,10 @@ public class HitStopManager : MonoBehaviour
         c.a = 0f;
         whiteFlashImage.color = c;
     }
+
+    // ScreenFlashFX domain object encapsulation
+    public void FlashScreen(float peakAlpha = 0.8f) => StartCoroutine(ScreenFlashRoutine());
 }
+
+// Legacy alias for prefabs / code still referencing old name
+[System.Obsolete("Use HitStopEffect")] public class HitStopManager : HitStopEffect {}

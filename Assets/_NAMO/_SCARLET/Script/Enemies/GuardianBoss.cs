@@ -2,7 +2,7 @@ using System.Collections;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D), typeof(Collider2D))]
-public class GuardianBoss : MonoBehaviour, IDamageable, IParryable, IFormSwappable // เพิ่ม IFormSwappable
+public class GuardianBoss : MonoBehaviour, IDamageable, IFormSwappable
 {
     public enum BossState { Dormant, Chase, AttackCharge, Stunned, Dead }
 
@@ -147,7 +147,7 @@ public class GuardianBoss : MonoBehaviour, IDamageable, IParryable, IFormSwappab
     }
 
     // ==========================================
-    // [ Parry Reaction ] การตอบสนองเมื่อถูกปัดป้อง
+    // [ Parry Reaction ] Domain method (concrete, was IParryable - single-use pruned)
     // ==========================================
     public void OnParrySuccess(Vector3 parrySourcePosition)
     {
