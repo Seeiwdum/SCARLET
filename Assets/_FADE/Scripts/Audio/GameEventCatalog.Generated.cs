@@ -7,6 +7,72 @@ namespace Scarlet.Audio
     {
         static partial void AddGeneratedEntries(List<Entry> result)
         {
+            result.Add(new Entry("GameEvents.OnDialogueEnded", new Type[] {  }, receiver =>
+            {
+                global::@System.@Action listener = () => receiver(Array.Empty<object>());
+                global::@GameEvents.@OnDialogueEnded += listener;
+                return () => global::@GameEvents.@OnDialogueEnded -= listener;
+            }));
+            result.Add(new Entry("GameEvents.OnDialogueStarted", new Type[] {  }, receiver =>
+            {
+                global::@System.@Action listener = () => receiver(Array.Empty<object>());
+                global::@GameEvents.@OnDialogueStarted += listener;
+                return () => global::@GameEvents.@OnDialogueStarted -= listener;
+            }));
+            result.Add(new Entry("GameEvents.OnEnemyHit", new Type[] {  }, receiver =>
+            {
+                global::@System.@Action listener = () => receiver(Array.Empty<object>());
+                global::@GameEvents.@OnEnemyHit += listener;
+                return () => global::@GameEvents.@OnEnemyHit -= listener;
+            }));
+            result.Add(new Entry("GameEvents.OnFlameEnergyChanged", new Type[] { typeof(global::@System.@Single), typeof(global::@System.@Single) }, receiver =>
+            {
+                global::@System.@Action<global::@System.@Single, global::@System.@Single> listener = (p0, p1) => receiver(new object[] { p0, p1 });
+                global::@GameEvents.@OnFlameEnergyChanged += listener;
+                return () => global::@GameEvents.@OnFlameEnergyChanged -= listener;
+            }));
+            result.Add(new Entry("GameEvents.OnFlameHeartCollected", new Type[] { typeof(global::@System.@Int32), typeof(global::@System.@Int32) }, receiver =>
+            {
+                global::@System.@Action<global::@System.@Int32, global::@System.@Int32> listener = (p0, p1) => receiver(new object[] { p0, p1 });
+                global::@GameEvents.@OnFlameHeartCollected += listener;
+                return () => global::@GameEvents.@OnFlameHeartCollected -= listener;
+            }));
+            result.Add(new Entry("GameEvents.OnHoodToggled", new Type[] { typeof(global::@System.@Boolean) }, receiver =>
+            {
+                global::@System.@Action<global::@System.@Boolean> listener = (p0) => receiver(new object[] { p0 });
+                global::@GameEvents.@OnHoodToggled += listener;
+                return () => global::@GameEvents.@OnHoodToggled -= listener;
+            }));
+            result.Add(new Entry("GameEvents.OnLoreClosed", new Type[] {  }, receiver =>
+            {
+                global::@System.@Action listener = () => receiver(Array.Empty<object>());
+                global::@GameEvents.@OnLoreClosed += listener;
+                return () => global::@GameEvents.@OnLoreClosed -= listener;
+            }));
+            result.Add(new Entry("GameEvents.OnLoreOpened", new Type[] { typeof(global::@LoreData) }, receiver =>
+            {
+                global::@System.@Action<global::@LoreData> listener = (p0) => receiver(new object[] { p0 });
+                global::@GameEvents.@OnLoreOpened += listener;
+                return () => global::@GameEvents.@OnLoreOpened -= listener;
+            }));
+            result.Add(new Entry("GameEvents.OnPlayerDied", new Type[] {  }, receiver =>
+            {
+                global::@System.@Action listener = () => receiver(Array.Empty<object>());
+                global::@GameEvents.@OnPlayerDied += listener;
+                return () => global::@GameEvents.@OnPlayerDied -= listener;
+            }));
+            result.Add(new Entry("GameEvents.OnPlayerHealthChanged", new Type[] { typeof(global::@System.@Int32), typeof(global::@System.@Int32) }, receiver =>
+            {
+                global::@System.@Action<global::@System.@Int32, global::@System.@Int32> listener = (p0, p1) => receiver(new object[] { p0, p1 });
+                global::@GameEvents.@OnPlayerHealthChanged += listener;
+                return () => global::@GameEvents.@OnPlayerHealthChanged -= listener;
+            }));
+            result.Add(new Entry("GameEvents.OnSwordVaultPerformed", new Type[] {  }, receiver =>
+            {
+                global::@System.@Action listener = () => receiver(Array.Empty<object>());
+                global::@GameEvents.@OnSwordVaultPerformed += listener;
+                return () => global::@GameEvents.@OnSwordVaultPerformed -= listener;
+            }));
         }
     }
 }
