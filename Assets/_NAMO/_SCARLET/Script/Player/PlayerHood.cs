@@ -7,14 +7,15 @@ public class PlayerHood : MonoBehaviour
     [SerializeField] private KeyCode toggleHoodKey = KeyCode.C;
 
     [Header("Hood Status")]
-    [SerializeField] private bool isWearingHood = false;
+    [SerializeField] private PlayerState.Hood currentHood = PlayerState.Hood.OFF;
     [SerializeField] private bool isInSafeZone = false;
 
     private Animator anim;
     private float currentHoodWeight = 0f;
     private float blendSpeed = 10f;
 
-    public bool IsWearingHood => isWearingHood;
+    public PlayerState.Hood CurrentHood => currentHood;
+    public bool IsWearingHood => currentHood == PlayerState.Hood.ON;
     public bool IsInSafeZone => isInSafeZone;
 
     private void Awake()
@@ -43,9 +44,9 @@ public class PlayerHood : MonoBehaviour
 
     public void ToggleHood()
     {
-        isWearingHood = !isWearingHood;
-        GameEvents.OnHoodToggled?.Invoke(isWearingHood);
-        Debug.Log($"<color=magenta>[HOOD] {(isWearingHood ? "สวมฮู้ดผ้าคลุมแดง 🧥" : "ถอดฮู้ด 🧒")}</color>");
+        currentHood = currentHood == PlayerState.Hood.ON ? PlayerState.Hood.OFF : PlayerState.Hood.ON;
+        GameEvents.OnHoodToggled?.Invoke(IsWearingHood);
+        Debug.Log($"<color=magenta>[HOOD] {(IsWearingHood ? "สวมฮู้ดผ้าคลุมแดง 🧥" : "ถอดฮู้ด 🧒")}</color>");
     }
 
     public void SetSafeZone(bool isSafe)

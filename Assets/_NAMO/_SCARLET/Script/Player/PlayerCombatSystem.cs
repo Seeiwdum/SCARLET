@@ -38,6 +38,7 @@ public class PlayerCombat : MonoBehaviour
     [SerializeField] private float moveSpeedBuffMultiplier = 1.35f;
 
     // Components
+    private PlayerState playerState;
     private bool isFlameActive = false;
     private float nextAttackTime = 0f;
     private PlayerController2D playerController;
@@ -47,10 +48,12 @@ public class PlayerCombat : MonoBehaviour
     public float MaxFlameEnergy => maxFlameEnergy;
     public int CurrentDamage => Mathf.RoundToInt(baseAttackDamage * (isFlameActive ? flameModeDamageMultiplier : 1f));
     public bool IsPureFlameMode => isFlameActive;
+    public bool IsWOFMode => playerState != null && playerState.IsWOFMode;
 
     private void Awake()
     {
         playerController = GetComponent<PlayerController2D>();
+        playerState = GetComponent<PlayerState>();
         anim = GetComponent<Animator>();
         if (anim == null) anim = GetComponentInChildren<Animator>();
         DisableAllHitboxes();
@@ -148,6 +151,7 @@ public class PlayerCombat : MonoBehaviour
     {
         if (Input.GetKeyDown(pureFlameKey))
         {
+            if (playerState != null) playerState.ToggleWOFMode();
             if (!isFlameActive && currentFlameEnergy > 0 && !playerController.IsOverheated)
             {
                 ActivatePureFlameMode();
