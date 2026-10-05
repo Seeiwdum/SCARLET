@@ -32,13 +32,13 @@ public class PlayerHood : MonoBehaviour
         }
 
         // ค่อยๆ Lerp ค่าแกน Y (0 ถึง 1) ส่งเข้า Blend Tree เพื่อความนุ่มนวล
-        float targetWeight = isWearingHood ? 1f : 0f;
+        float targetWeight = IsWearingHood ? 1f : 0f;
         currentHoodWeight = Mathf.Lerp(currentHoodWeight, targetWeight, Time.deltaTime * blendSpeed);
 
         if (anim != null)
         {
             anim.SetFloat("HoodState", currentHoodWeight);
-            anim.SetBool("IsWearingHood", isWearingHood);
+            anim.SetBool("IsWearingHood", IsWearingHood);
         }
     }
 
@@ -59,6 +59,6 @@ public class PlayerHood : MonoBehaviour
     /// </summary>
     public bool IsProtectedFromPoison()
     {
-        return isWearingHood || isInSafeZone;
+        return IsWearingHood || isInSafeZone;
     }
 }
