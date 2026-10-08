@@ -826,6 +826,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de5d5e9eb879150409cf1db13cb3a1a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::QuestManager
+  totalFlameHearts: 4
 --- !u!4 &321711445
 Transform:
   m_ObjectHideFlags: 0
@@ -1308,10 +1309,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e10d35c439e240842acd5d419871b3bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LoreCollectible
-  loreData: {fileID: 11400000, guid: 13216db698ff8cf4aa441625f741c767, type: 2}
   promptSprite: {fileID: 378528560}
   targetScale: {x: 1, y: 1, z: 1}
   animationSpeed: 8
+  interactKey: 119
+  loreData: {fileID: 11400000, guid: 13216db698ff8cf4aa441625f741c767, type: 2}
 --- !u!61 &420759749
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2789,11 +2791,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bee1cbfe5dc26e4395cebf1a853eccc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Bonfire
-  healAmount: 5
-  interactKey: 122
   promptSprite: {fileID: 656964129}
   targetScale: {x: 1.2, y: 1.2, z: 1}
   animationSpeed: 8
+  interactKey: 122
+  healAmount: 5
 --- !u!61 &788741781
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2869,6 +2871,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a480ea4c37dbb85498c9b33fb969bebf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HitStopManager
+  whiteFlashImage: {fileID: 0}
+  flashFadeSpeed: 5
 --- !u!4 &789624135
 Transform:
   m_ObjectHideFlags: 0
@@ -3683,6 +3687,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65bf52a5f6295ae4bb646458a3f30939, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPC
+  promptSprite: {fileID: 493194055}
+  targetScale: {x: 1, y: 1, z: 1}
+  animationSpeed: 8
+  interactKey: 122
   npcType: 0
   npcName: Karen
   npcPortrait: {fileID: 3588261624887693814, guid: 1c71915f5c7cc6c479f3b453912f5707, type: 3}
@@ -3706,10 +3714,6 @@ MonoBehaviour:
     \u0E21\u0E31\u0E19\u0E14\u0E39\u0E04\u0E38\u0E49\u0E19\u0E15\u0E32\u0E40\u0E2B\u0E25\u0E37\u0E2D\u0E40\u0E01\u0E34\u0E19
     \u0E40\u0E2B\u0E21\u0E37\u0E2D\u0E19\u0E01\u0E31\u0E1A\u0E40\u0E21\u0E37\u0E48\u0E2D\u0E2B\u0E25\u0E32\u0E22\u0E23\u0E49\u0E2D\u0E22\u0E1B\u0E35\u0E01\u0E48\u0E2D\u0E19..."
   - "\u0E17\u0E33\u0E44\u0E21\u0E01\u0E31\u0E19\u0E19\u0E30... \u0E17\u0E33\u0E44\u0E21\u0E40\u0E18\u0E2D\u0E16\u0E36\u0E07\u0E44\u0E21\u0E48\u0E40\u0E04\u0E22\u0E1A\u0E32\u0E14\u0E40\u0E08\u0E47\u0E1A\u0E08\u0E32\u0E01\u0E2B\u0E21\u0E2D\u0E01\u0E1E\u0E34\u0E29\u0E40\u0E25\u0E22\u0E25\u0E48\u0E30?"
-  promptSprite: {fileID: 493194055}
-  targetScale: {x: 1, y: 1, z: 1}
-  animationSpeed: 8
-  interactKey: 122
 --- !u!70 &946434105
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -5904,6 +5908,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c6fac50326d98b4aadb83181a3db820, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::VisualEffectsManager
+  ghostPrefab: {fileID: 0}
+  ghostSpawnInterval: 0.04
+  ghostColor: {r: 1, g: 0.3, b: 0.1, a: 0.6}
 --- !u!4 &1600542721
 Transform:
   m_ObjectHideFlags: 0
@@ -6230,7 +6237,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerHood
   toggleHoodKey: 99
-  isWearingHood: 0
+  currentHood: 0
   isInSafeZone: 0
 --- !u!114 &1606002959
 MonoBehaviour:
@@ -6516,6 +6523,120 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1448867337}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1699152787
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1699152790}
+  - component: {fileID: 1699152789}
+  - component: {fileID: 1699152788}
+  m_Layer: 0
+  m_Name: ScarletMotion6_0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!95 &1699152788
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1699152787}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0e9cec7f02de89b498db1b0c6fa5e8bd, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!212 &1699152789
+SpriteRenderer:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1699152787}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_Sprite: {fileID: 6988449683777255308, guid: 9123855fd1a0a5f41a65aafcf7fd8875, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 4.3910723, y: 8.26}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_SpriteSortPoint: 0
+--- !u!4 &1699152790
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1699152787}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -20.77, y: 8.44, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1734775425
 GameObject:
@@ -7495,12 +7616,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4a5dadb9cfeff84ca26cc764c8bb0cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LoboHomeCompanion
+  promptSprite: {fileID: 742124380}
+  targetScale: {x: 1, y: 1, z: 1}
+  animationSpeed: 8
+  interactKey: 119
   loboRenderer: {fileID: 2039244841}
   loveHeartVFXPrefab: {fileID: 0}
   alertVFXPrefab: {fileID: 0}
-  promptSprite: {fileID: 742124380}
-  promptTargetScale: {x: 1, y: 1, z: 1}
-  promptAnimSpeed: 8
   petCooldown: 2
   healAmountOnPet: 1
 --- !u!61 &2039244840
@@ -8468,3 +8590,4 @@ SceneRoots:
   - {fileID: 1423448154}
   - {fileID: 543452829}
   - {fileID: 1970602726}
+  - {fileID: 1699152790}
